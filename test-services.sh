@@ -63,18 +63,18 @@ else
     frontend_ok=false
 fi
 
-# Verificar Kubernetes
-echo -e "\n${YELLOW}=== Estado de Kubernetes ===${NC}"
-if kubectl get pods --no-headers 2>/dev/null | grep -q "Running"; then
+# Verificar Kubernetes (namespace medical-only)
+echo -e "\n${YELLOW}=== Estado de Kubernetes (namespace medical-only) ===${NC}"
+if kubectl get pods --no-headers -n medical-only 2>/dev/null | grep -q "Running"; then
     echo -e "  ✅ Pods están corriendo"
     
     # Mostrar pods
     echo -e "  📊 Pods activos:"
-    kubectl get pods --no-headers | while read line; do
+    kubectl get pods --no-headers -n medical-only | while read line; do
         echo -e "    $line"
     done
 else
-    echo -e "  ❌ No hay pods corriendo"
+    echo -e "  ❌ No hay pods corriendo en namespace medical-only"
 fi
 
 # Resumen

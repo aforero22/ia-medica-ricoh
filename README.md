@@ -53,31 +53,31 @@ minikube start --cpus=4 --memory=8192 --driver=docker
 kubectl get nodes
 ```
 
-### 2. Desplegar la Demo
+### 2. Desplegar la Demo (Namespace medical-only)
 ```powershell
-# Construir y desplegar todo
+# Construir y desplegar todo en namespace medical-only
 .\start-demo.ps1
 
-# Verificar servicios
-kubectl get pods,services,hpa
+# Verificar servicios en el namespace
+kubectl get pods,services,hpa -n medical-only
 ```
 
 ### 3. Probar el Servicio Médico
 ```powershell
 # Obtener URL del servicio médico
-minikube service medical-service --url
+minikube service medical-service -n medical-only --url
 
 # Verificar estado completo
-kubectl get pods,services,hpa
+kubectl get pods,services,hpa -n medical-only
 ```
 
 ### 4. Monitoreo
 ```powershell
 # Ver métricas en tiempo real
-kubectl top pods
+kubectl top pods -n medical-only
 
 # Ver logs del servicio médico
-kubectl logs -f deployment/medical-service
+kubectl logs -f deployment/medical-service -n medical-only
 ```
 ```
 
@@ -137,13 +137,13 @@ spec:
 ### Actualización de Modelo Médico en Caliente
 ```powershell
 # Actualizar imagen del modelo médico
-kubectl set image deployment/medical-service medical-service=myapp:v2
+kubectl set image deployment/medical-service medical-service=myapp:v2 -n medical-only
 
 # Ver progreso
-kubectl rollout status deployment/medical-service
+kubectl rollout status deployment/medical-service -n medical-only
 
 # Rollback si es necesario
-kubectl rollout undo deployment/medical-service
+kubectl rollout undo deployment/medical-service -n medical-only
 ```
 
 ## 🎤 Guión para la Presentación
@@ -178,19 +178,28 @@ kubectl rollout undo deployment/medical-service
 minikube delete && minikube start
 
 # Si los pods no arrancan
-kubectl describe pod <pod-name>
+kubectl describe pod <pod-name> -n medical-only
 
 # Si el servicio no es accesible
-kubectl get endpoints
+kubectl get endpoints -n medical-only
 ```
 
 ### Logs Útiles
 ```powershell
 # Ver logs del servicio médico
-kubectl logs -l app=medical-service
+kubectl logs -l app=medical-service -n medical-only
 
-# Ver eventos del cluster
-kubectl get events --sort-by='.lastTimestamp'
+# Ver eventos del namespace
+kubectl get events --sort-by='.lastTimestamp' -n medical-only
+```
+
+### Limpieza del Namespace
+```powershell
+# Limpiar recursos del namespace
+.\cleanup-medical.ps1
+
+# Eliminar completamente el namespace
+kubectl delete namespace medical-only
 ```
 
 ## 📁 **Estructura del Proyecto**

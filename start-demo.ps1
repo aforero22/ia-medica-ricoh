@@ -101,14 +101,13 @@ if ($LASTEXITCODE -eq 0 -and $existingPods) {
     docker build -t frontend-app:latest .
     Set-Location ..
     
-    # Desplegar servicios en Kubernetes
-    Write-Host "☸️ Desplegando servicios en Kubernetes..." -ForegroundColor Blue
+    # Desplegar servicios en Kubernetes (namespace medical-only)
+    Write-Host "☸️ Desplegando servicios en Kubernetes (namespace medical-only)..." -ForegroundColor Blue
     kubectl apply -f k8s/
     
     # Esperar a que los pods estén listos
     Write-Host "⏳ Esperando a que los pods estén listos..." -ForegroundColor Yellow
-    kubectl wait --for=condition=ready pod -l app=fraud-service --timeout=300s
-    kubectl wait --for=condition=ready pod -l app=medical-service --timeout=300s
+    kubectl wait --for=condition=ready pod -l app=medical-service -n medical-only --timeout=300s
     
 }
 
@@ -170,8 +169,8 @@ if ($allServicesReady) {
     
     # Mostrar estado del despliegue
     Write-Host ""
-    Write-Host "📊 Estado del despliegue:" -ForegroundColor Cyan
-    kubectl get pods,services,hpa
+    Write-Host "📊 Estado del despliegue (namespace medical-only):" -ForegroundColor Cyan
+    kubectl get pods,services,hpa -n medical-only
     
     Write-Host ""
     Write-Host "✅ ¡Demo de IA Moderna iniciada exitosamente!" -ForegroundColor Green
@@ -187,9 +186,9 @@ if ($allServicesReady) {
     Write-Host "  • Análisis semántico médico avanzado" -ForegroundColor White
     Write-Host ""
     Write-Host "🎯 Comandos útiles:" -ForegroundColor Cyan
-    Write-Host "  Ver pods:        kubectl get pods" -ForegroundColor White
-    Write-Host "  Ver logs:        kubectl logs -f deployment/medical-service" -ForegroundColor White
-    Write-Host "  Ver métricas:    kubectl top pods" -ForegroundColor White
+    Write-Host "  Ver pods:        kubectl get pods -n medical-only" -ForegroundColor White
+    Write-Host "  Ver logs:        kubectl logs -f deployment/medical-service -n medical-only" -ForegroundColor White
+    Write-Host "  Ver métricas:    kubectl top pods -n medical-only" -ForegroundColor White
     Write-Host "  Detener demo:    .\stop-demo.ps1" -ForegroundColor White
     
 } else {
