@@ -310,8 +310,8 @@
 
             // Try multiple URLs for the medical service
             const medicalURLs = [
-                'http://127.0.0.1:8002',
-                'http://localhost:8002'
+                'http://127.0.0.1:8006',
+                'http://localhost:8006'
             ];
 
             let lastError = null;
@@ -328,7 +328,7 @@
                         body: JSON.stringify({
                             text: text,
                             patient_age: parseInt(age) || 0,
-                            symptoms: symptoms
+                            symptoms: symptoms ? symptoms.split(',').map(s => s.trim()) : []
                         })
                     });
 

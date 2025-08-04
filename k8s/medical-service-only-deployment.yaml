@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medical-service-only
+  namespace: medical-only
+  labels:
+    app: medical-service-only
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: medical-service-only
+  template:
+    metadata:
+      labels:
+        app: medical-service-only
+    spec:
+      containers:
+      - name: medical-service-only
+        image: medical-service-only:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: medical-service-only-service
+  namespace: medical-only
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8000
+  selector:
+    app: medical-service-only
