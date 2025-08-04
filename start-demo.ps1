@@ -1,6 +1,6 @@
-# Demo Kubernetes para IA - Script de Inicio Completo (PowerShell)
-# ✨ Versión actualizada con modelos modernos y Speech-to-Text integrado
-# Este script inicia Minikube, despliega servicios con IA avanzada y configura port forwarding
+# Codificación Médica CIE-10 - Script de Inicio (PowerShell)
+# ✨ Versión enfocada en clasificación médica con colores Ricoh España
+# Este script inicia Minikube, despliega el servicio médico y configura port forwarding
 
 Write-Host "🚀 Iniciando Demo Kubernetes para IA..." -ForegroundColor Green
 
@@ -95,9 +95,7 @@ if ($LASTEXITCODE -eq 0 -and $existingPods) {
     docker build -t medical-service:latest .
     Set-Location ..
     
-    Set-Location speech-to-text-service
-    docker build -t speech-service:latest .
-    Set-Location ..
+    
     
     Set-Location frontend-app
     docker build -t frontend-app:latest .
@@ -111,7 +109,7 @@ if ($LASTEXITCODE -eq 0 -and $existingPods) {
     Write-Host "⏳ Esperando a que los pods estén listos..." -ForegroundColor Yellow
     kubectl wait --for=condition=ready pod -l app=fraud-service --timeout=300s
     kubectl wait --for=condition=ready pod -l app=medical-service --timeout=300s
-    kubectl wait --for=condition=ready pod -l app=speech-service --timeout=300s
+    
 }
 
 # Detener procesos kubectl existentes antes de configurar port forwarding
@@ -121,16 +119,10 @@ Stop-KubectlProcesses
 Write-Host "🔗 Configurando port forwarding..." -ForegroundColor Blue
 
 # Port forwarding para los servicios backend
-Write-Host "  📡 Fraud Service - Enhanced Transformer v2.0 (puerto 8001)..." -ForegroundColor Cyan
-Start-Job -ScriptBlock { kubectl port-forward service/fraud-service 8001:80 } | Out-Null
-
-Write-Host "  🏥 Medical Service - Clinical ModernBERT (puerto 8002)..." -ForegroundColor Cyan
+Write-Host "  🏥 Medical Service - Clinical ModernBERT v2.0 (puerto 8002)..." -ForegroundColor Cyan
 Start-Job -ScriptBlock { kubectl port-forward service/medical-service 8002:80 } | Out-Null
 
-Write-Host "  🎤 Speech Service - Whisper Large-v3 (puerto 8003)..." -ForegroundColor Cyan
-Start-Job -ScriptBlock { kubectl port-forward service/speech-service 8003:80 } | Out-Null
-
-Write-Host "  🌐 Frontend Service - Con Speech-to-Text integrado (puerto 8080)..." -ForegroundColor Cyan
+Write-Host "  🌐 Frontend Service - Interfaz web moderna (puerto 8080)..." -ForegroundColor Cyan
 Start-Job -ScriptBlock { kubectl port-forward service/frontend-service 8080:80 } | Out-Null
 
 # Esperar a que los port forwarding estén listos
@@ -147,7 +139,7 @@ do {
     $allServicesReady = $true
     
     # Verificar cada servicio
-    foreach ($port in @(8001, 8002, 8003)) {
+    foreach ($port in @(8002)) {
         if (-not (Test-Port $port)) {
             $allServicesReady = $false
             break
@@ -166,24 +158,10 @@ if ($allServicesReady) {
     Write-Host "🩺 Verificando health de servicios..." -ForegroundColor Blue
     
     try {
-        $fraudHealth = Invoke-RestMethod -Uri "http://localhost:8001/health" -TimeoutSec 5
-        Write-Host "  ✅ Fraud Service: $($fraudHealth.status)" -ForegroundColor Green
-    } catch {
-        Write-Host "  ⚠️ Fraud Service: No responde" -ForegroundColor Yellow
-    }
-    
-    try {
         $medicalHealth = Invoke-RestMethod -Uri "http://localhost:8002/health" -TimeoutSec 5
         Write-Host "  ✅ Medical Service: $($medicalHealth.status)" -ForegroundColor Green
     } catch {
         Write-Host "  ⚠️ Medical Service: No responde" -ForegroundColor Yellow
-    }
-    
-    try {
-        $speechHealth = Invoke-RestMethod -Uri "http://localhost:8003/health" -TimeoutSec 5
-        Write-Host "  ✅ Speech Service: $($speechHealth.status)" -ForegroundColor Green
-    } catch {
-        Write-Host "  ⚠️ Speech Service: No responde" -ForegroundColor Yellow
     }
     
     # Abrir frontend en el navegador
@@ -199,20 +177,18 @@ if ($allServicesReady) {
     Write-Host "✅ ¡Demo de IA Moderna iniciada exitosamente!" -ForegroundColor Green
     Write-Host ""
     Write-Host "🌐 Servicios disponibles:" -ForegroundColor Cyan
-    Write-Host "  🎯 Frontend (Speech-to-Text integrado): http://localhost:8080" -ForegroundColor White
-    Write-Host "  🛡️ Fraud Service (Enhanced Transformer): http://localhost:8001" -ForegroundColor White
-    Write-Host "  🏥 Medical Service (Clinical ModernBERT): http://localhost:8002" -ForegroundColor White
-    Write-Host "  🎤 Speech Service (Whisper Large-v3):    http://localhost:8003" -ForegroundColor White
+    Write-Host "  🎯 Frontend (Codificación Médica): http://localhost:8080" -ForegroundColor White
+    Write-Host "  🏥 Medical Service (Clinical ModernBERT v2.0): http://localhost:8002" -ForegroundColor White
     Write-Host ""
     Write-Host "🎯 Funcionalidades nuevas:" -ForegroundColor Cyan
-    Write-Host "  • Grabación de voz integrada en Fraude y CIE-10" -ForegroundColor White
-    Write-Host "  • Ejemplos aleatorios dinámicos" -ForegroundColor White
-    Write-Host "  • Modelos de IA state-of-the-art" -ForegroundColor White
-    Write-Host "  • Análisis semántico avanzado" -ForegroundColor White
+    Write-Host "  • Interfaz médica con colores Ricoh España" -ForegroundColor White
+    Write-Host "  • Clasificación automática CIE-10" -ForegroundColor White
+    Write-Host "  • Modelo Clinical ModernBERT v2.0" -ForegroundColor White
+    Write-Host "  • Análisis semántico médico avanzado" -ForegroundColor White
     Write-Host ""
     Write-Host "🎯 Comandos útiles:" -ForegroundColor Cyan
     Write-Host "  Ver pods:        kubectl get pods" -ForegroundColor White
-    Write-Host "  Ver logs:        kubectl logs -f deployment/fraud-service" -ForegroundColor White
+    Write-Host "  Ver logs:        kubectl logs -f deployment/medical-service" -ForegroundColor White
     Write-Host "  Ver métricas:    kubectl top pods" -ForegroundColor White
     Write-Host "  Detener demo:    .\stop-demo.ps1" -ForegroundColor White
     

@@ -24,8 +24,7 @@ Eliminar código obsoleto, archivos duplicados y documentación desactualizada p
 
 #### **Scripts de Construcción Obsoletos**
 - ❌ `build-vosk-service.sh` - Reemplazado por Dockerfile
-- ❌ `build-optimized-speech-service.sh` - Obsoleto
-- ❌ `deploy-optimized-speech-k8s.sh` - Obsoleto
+
 - ❌ `deploy-demo.sh` - Reemplazado por start-demo.ps1
 
 #### **Scripts de Pruebas Obsoletos**
@@ -40,13 +39,10 @@ Eliminar código obsoleto, archivos duplicados y documentación desactualizada p
 
 ### **Documentación Obsoleta (8 archivos eliminados)**
 
-#### **Documentación de Vosk Obsoleta**
-- ❌ `RESUMEN-CAMBIO-VOSK.md` - Obsoleto
-- ❌ `speech-to-text-service/README_VOSK.md` - Obsoleto
+
 
 #### **Documentación de Pruebas Obsoleta**
 - ❌ `PRUEBAS-SERVICIOS.md` - Reemplazado por test-services.sh
-- ❌ `speech-to-text-service/README_OPTIMIZATIONS.md` - Obsoleto
 
 #### **Documentación de Configuración Obsoleta**
 - ❌ `AIRGAPPED-MODELS.md` - Obsoleto
@@ -57,11 +53,7 @@ Eliminar código obsoleto, archivos duplicados y documentación desactualizada p
 
 ### **Archivos de Prueba Obsoletos (6 archivos eliminados)**
 
-#### **Tests de Speech-to-Text**
-- ❌ `speech-to-text-service/test_vosk_service.py` - Obsoleto
-- ❌ `speech-to-text-service/example_literal_usage.py` - Obsoleto
-- ❌ `speech-to-text-service/test_literal_mode.py` - Obsoleto
-- ❌ `speech-to-text-service/test_optimized_transcription.py` - Obsoleto
+
 
 ---
 
@@ -93,7 +85,7 @@ Eliminar código obsoleto, archivos duplicados y documentación desactualizada p
 ### **Servicios Backend**
 - ✅ `fraud-service/` - Servicio de detección de fraude
 - ✅ `medical-service/` - Servicio de clasificación médica
-- ✅ `speech-to-text-service/` - Servicio de transcripción
+
 
 ### **Frontend y Configuración**
 - ✅ `frontend-app/` - Aplicación frontend

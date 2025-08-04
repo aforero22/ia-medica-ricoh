@@ -2,7 +2,7 @@
 
 ## ⚡ Reinicio después de reiniciar tu máquina
 
-> **🆕 Versión 2.1 actualizada** con modelos modernos, Speech-to-Text integrado y mejoras UX
+> **🆕 Versión 2.1 actualizada** con modelos modernos de IA y mejoras UX
 
 ### Opción 1: Script Automático (Recomendado)
 ```powershell
@@ -21,7 +21,7 @@ minikube docker-env | Invoke-Expression
 # 3. Construir imágenes (solo si cambiaste código)
 docker build -t fraud-service:latest fraud-service/
 docker build -t medical-service:latest medical-service/
-docker build -t speech-service:latest speech-to-text-service/
+
 docker build -t frontend-app:latest frontend-app/
 
 # 4. Desplegar servicios
@@ -30,7 +30,7 @@ kubectl apply -f k8s/
 # 5. Configurar port forwarding (en ventanas separadas)
 kubectl port-forward service/fraud-service 8001:80
 kubectl port-forward service/medical-service 8002:80
-kubectl port-forward service/speech-service 8003:80
+
 kubectl port-forward service/frontend-service 8080:80
 
 # 6. Abrir navegador
@@ -42,7 +42,7 @@ start http://localhost:8080
 - **Frontend**: http://localhost:8080
 - **Fraud Service**: http://localhost:8001
 - **Medical Service**: http://localhost:8002
-- **Speech Service**: http://localhost:8003
+
 
 ## 🛑 Detener Demo
 

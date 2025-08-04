@@ -23,11 +23,7 @@
 - ✅ **Health checks** optimizados
 - ✅ **Recursos Kubernetes** ajustados
 
-#### **3. Speech Service (Puerto 8003)**
-- ✅ **Modelo Vosk mejorado** (medio en lugar de pequeño)
-- ✅ **Post-procesamiento avanzado** por dominio
-- ✅ **Manejo de errores** robusto
-- ✅ **Configuración flexible** de modelos
+
 
 ### ✅ **Frontend Mejorado**
 
@@ -37,11 +33,7 @@
 - ✅ **Manejo de errores** más informativo
 - ✅ **URLs de fallback** más robustas
 
-#### **2. Speech-to-Text Integrado**
-- ✅ **Timeout configurable** (30 segundos)
-- ✅ **Validación de transcripciones** vacías
-- ✅ **Mejor feedback visual** durante grabación
-- ✅ **Múltiples URLs** de fallback
+
 
 ### ✅ **Kubernetes Optimizado**
 
@@ -100,15 +92,7 @@ alert('Por favor ingresa una descripción');
 showNotification('Por favor ingresa una descripción', 'error');
 ```
 
-### **5. Speech-to-Text Mejorado**
-```python
-# Modelo más robusto
-VOSK_MODEL_CONFIG = {
-    "small": "/app/models/vosk-model-small-es-0.42",
-    "medium": "/app/models/vosk-model-es-0.42", 
-    "large": "/app/models/vosk-model-large-es-0.42"
-}
-```
+
 
 ---
 
@@ -120,7 +104,7 @@ VOSK_MODEL_CONFIG = {
 | **Validaciones** | Mínimas | Robustas | +200% cobertura |
 | **Manejo de errores** | Simple | Completo | +150% detalle |
 | **UX Frontend** | Alerts | Notificaciones | +300% experiencia |
-| **Speech-to-Text** | Modelo pequeño | Modelo medio | +25% precisión |
+
 | **Health Checks** | Básicos | Optimizados | +50% confiabilidad |
 
 ---
@@ -161,7 +145,7 @@ VOSK_MODEL_CONFIG = {
 ```bash
 kubectl logs -f deployment/fraud-service
 kubectl logs -f deployment/medical-service
-kubectl logs -f deployment/speech-service
+
 ```
 
 ### **3. Probar Validaciones**

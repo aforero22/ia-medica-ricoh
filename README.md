@@ -1,46 +1,44 @@
-# 🤖 Demo de IA con Kubernetes - Detección de Fraude y Clasificación Médica
+# 🏥 Codificación Médica CIE-10 - Demo Kubernetes
 
 ## 📋 **Descripción**
 
-Demo completa de microservicios de IA desplegados en Kubernetes (Minikube) para dos casos de uso principales:
+Sistema de codificación automática de diagnósticos médicos según la Clasificación Internacional de Enfermedades (CIE-10) desplegado en Kubernetes (Minikube):
 
-- 🛡️ **Detección de Fraude**: Análisis de transacciones financieras sospechosas
-- 🏥 **Clasificación Médica**: Diagnóstico automático según CIE-10
+- 🏥 **Codificación Médica CIE-10**: Clasificación automática de diagnósticos médicos con IA
 
 ## 🎯 **Características (v2.1)**
 
-- ✅ **Microservicios**: Arquitectura distribuida con Kubernetes
-- ✅ **APIs REST**: FastAPI para servicios backend
-- ✅ **Frontend Moderno**: Interfaz web responsive
-- ✅ **Ejemplos Interactivos**: Carga automática de casos de prueba
+- ✅ **Microservicio Médico**: Arquitectura distribuida con Kubernetes
+- ✅ **API REST**: FastAPI para servicio backend médico
+- ✅ **Frontend Médico**: Interfaz web con colores Ricoh España
+- ✅ **Ejemplos Interactivos**: Carga automática de casos médicos de prueba
 - ✅ **Notificaciones Visuales**: Feedback no bloqueante para el usuario
-- ✅ **Validaciones Robustas**: Verificación de entrada en todos los servicios
+- ✅ **Validaciones Robustas**: Verificación de entrada en el servicio médico
 - ✅ **Logging Mejorado**: Observabilidad completa del sistema
-- ✅ **Health Checks**: Verificación automática de salud de servicios
+- ✅ **Health Checks**: Verificación automática de salud del servicio
 - ✅ **Script de Verificación**: `test-services.sh` para validación completa
 
-## 🏗️ Arquitectura Moderna
+## 🏗️ Arquitectura Médica
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                 Kubernetes Cluster (Minikube)              │
 │                                                             │
 │  ┌──────────────────────────────────────────────────────┐   │
-│  │              Frontend con Speech-to-Text             │   │
-│  │           🎤 Grabación de voz integrada               │   │
+│  │              Frontend Médico                         │   │
+│  │           🌐 Interfaz con colores Ricoh             │   │
 │  │               (puerto 8080)                          │   │
 │  └──────────────────────────────────────────────────────┘   │
 │                              │                               │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌──────────────┐  │
-│  │  🛡️ Fraud Svc   │ │  🏥 Medical Svc │ │🎤 Speech Svc │  │
-│  │Enhanced Trans.  │ │Clinical ModernB.│ │Whisper Large │  │
-│  │   v2.0          │ │      v2.0       │ │     v3       │  │
-│  │  (puerto 8001)  │ │  (puerto 8002)  │ │(puerto 8003) │  │
-│  └─────────────────┘ └─────────────────┘ └──────────────┘  │
-│           │                       │               │          │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌──────────────┐  │
-│  │  Auto-Scaling   │ │  Auto-Scaling   │ │Auto-Scaling  │  │
-│  │     (HPA)       │ │     (HPA)       │ │    (HPA)     │  │
-│  └─────────────────┘ └─────────────────┘ └──────────────┘  │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │              🏥 Medical Service                     │   │
+│  │           Clinical ModernBERT v2.0                  │   │
+│  │              (puerto 8002)                          │   │
+│  └──────────────────────────────────────────────────────┘   │
+│                              │                               │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │              Auto-Scaling (HPA)                     │   │
+│  │           Escalado automático                       │   │
+│  └──────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -64,14 +62,13 @@ kubectl get nodes
 kubectl get pods,services,hpa
 ```
 
-### 3. Probar los Servicios
+### 3. Probar el Servicio Médico
 ```powershell
-# Obtener URLs de los servicios
-minikube service fraud-service --url
+# Obtener URL del servicio médico
 minikube service medical-service --url
 
 # Verificar estado completo
-.\test-services.sh
+kubectl get pods,services,hpa
 ```
 
 ### 4. Monitoreo
@@ -79,24 +76,14 @@ minikube service medical-service --url
 # Ver métricas en tiempo real
 kubectl top pods
 
-# Ver logs mejorados
-kubectl logs -f deployment/fraud-service
+# Ver logs del servicio médico
 kubectl logs -f deployment/medical-service
-kubectl logs -f deployment/speech-service
+```
 ```
 
-## 📊 Casos de Uso Modernos
+## 📊 Caso de Uso Médico
 
-### 🛡️ 1. Detección de Fraude Avanzada
-- **Modelo**: `Enhanced Transformer v2.0` (análisis semántico multi-patrón)
-- **Características**:
-  - Análisis por categorías (urgencia, phishing, inversiones, etc.)
-  - Factores contextuales (tiempo, montos, comercio)
-  - Puntuación adaptativa con pesos dinámicos
-- **Entrada**: Texto descriptivo + monto + comercio
-- **Salida**: `{"fraud": true, "confidence": 0.96, "risk_score": 75, "pattern_matches": {...}}`
-
-### 🏥 2. Clasificación Médica CIE-10 Avanzada
+### 🏥 Codificación Médica CIE-10 Avanzada
 - **Modelo**: `Clinical ModernBERT v2.0` (entrenado en literatura médica)
 - **Características**:
   - Base de conocimiento expandida (10+ categorías médicas)
@@ -105,28 +92,19 @@ kubectl logs -f deployment/speech-service
 - **Entrada**: Diagnóstico + edad + síntomas
 - **Salida**: `{"icd10_code": "I21.9", "confidence": 0.94, "category": "cardiovascular", "alternatives": [...]}`
 
-### 🎤 3. Speech-to-Text Integrado (Whisper Large-v3)
-- **Modelo**: `Whisper Large-v3 Enhanced` (state-of-the-art)
-- **Características**:
-  - Confianza 92-99% según contexto
-  - Análisis de ruido de fondo
-  - Detección automática de idioma
-  - **INTEGRADO** directamente en formularios
-- **Entrada**: Grabación de voz directa desde navegador
-- **Salida**: `{"text": "Transferencia urgente...", "confidence": 0.98, "noise_level": "low"}`
-- **Casos de uso**: Descripción de transacciones y diagnósticos por voz
+
 
 ## 🔧 Componentes Técnicos
 
-### Microservicios
-- **FastAPI** con modelos de Hugging Face
-- **Docker** containers optimizados
+### Microservicio Médico
+- **FastAPI** con modelo Clinical ModernBERT
+- **Docker** container optimizado
 - **Health checks** y **readiness probes**
 - **Logging** estructurado mejorado
 
 ### Kubernetes
-- **Deployments** con múltiples réplicas
-- **Services** tipo LoadBalancer
+- **Deployment** con múltiples réplicas
+- **Service** tipo LoadBalancer
 - **HPA** (Horizontal Pod Autoscaler) basado en CPU
 - **ConfigMaps** para configuración
 - **Rolling updates** sin downtime
@@ -138,7 +116,7 @@ kubectl logs -f deployment/speech-service
 
 ## 📈 Escalabilidad Automática
 
-### Configuración HPA
+### Configuración HPA para Servicio Médico
 ```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -156,16 +134,16 @@ spec:
 
 ## 🔄 Rolling Updates
 
-### Actualización de Modelo en Caliente
+### Actualización de Modelo Médico en Caliente
 ```powershell
-# Actualizar imagen del modelo
-kubectl set image deployment/fraud-service fraud-service=myapp:v2
+# Actualizar imagen del modelo médico
+kubectl set image deployment/medical-service medical-service=myapp:v2
 
 # Ver progreso
-kubectl rollout status deployment/fraud-service
+kubectl rollout status deployment/medical-service
 
 # Rollback si es necesario
-kubectl rollout undo deployment/fraud-service
+kubectl rollout undo deployment/medical-service
 ```
 
 ## 🎤 Guión para la Presentación
@@ -173,15 +151,15 @@ kubectl rollout undo deployment/fraud-service
 ### 1. Introducción (2 min)
 - "Kubernetes no es solo para aplicaciones web"
 - "Es la plataforma ideal para IA/ML en producción"
-- "Hoy veremos dos servicios de IA funcionando en paralelo"
+- "Hoy veremos un servicio de codificación médica con IA"
 
 ### 2. Arquitectura (3 min)
-- Mostrar diagrama de arquitectura
-- Explicar microservicios separados
-- "Cada servicio puede escalar independientemente"
+- Mostrar diagrama de arquitectura médica
+- Explicar microservicio médico
+- "El servicio puede escalar automáticamente según la carga"
 
 ### 3. Demo en Vivo (8 min)
-- Desplegar servicios
+- Desplegar servicio médico
 - Mostrar autoescalado con carga
 - Actualizar modelo en caliente
 - Mostrar métricas de monitoreo
@@ -202,14 +180,14 @@ minikube delete && minikube start
 # Si los pods no arrancan
 kubectl describe pod <pod-name>
 
-# Si los servicios no son accesibles
+# Si el servicio no es accesible
 kubectl get endpoints
 ```
 
 ### Logs Útiles
 ```powershell
-# Ver logs de todos los pods
-kubectl logs -l app=fraud-service
+# Ver logs del servicio médico
+kubectl logs -l app=medical-service
 
 # Ver eventos del cluster
 kubectl get events --sort-by='.lastTimestamp'
@@ -229,41 +207,35 @@ demo-ia/
 ├── 📄 stop-demo.ps1                # Script de parada
 ├── 📄 test-services.sh             # Verificación de salud
 │
-├── 🛡️ fraud-service/               # Servicio de detección de fraude
-│   ├── app.py                      # API FastAPI
-│   └── Dockerfile                  # Configuración Docker
-│
 ├── 🏥 medical-service/             # Servicio de clasificación médica
 │   ├── app.py                      # API FastAPI
 │   └── Dockerfile                  # Configuración Docker
 │
-├── 🌐 frontend-app/                # Aplicación frontend
-│   ├── index.html                  # Interfaz web
+├── 🌐 frontend-app/                # Aplicación frontend médico
+│   ├── index.html                  # Interfaz web con colores Ricoh
 │   ├── server.py                   # Servidor Flask
 │   └── Dockerfile                  # Configuración Docker
 │
 └── ☸️ k8s/                         # Configuraciones Kubernetes
-    ├── fraud-deployment.yaml       # Deployment fraud service
     ├── medical-deployment.yaml     # Deployment medical service
     └── frontend-deployment.yaml    # Deployment frontend
 ```
 
-## 🎯 KPIs de la Demo
+## 🎯 KPIs de la Demo Médica
 - ✅ **Tiempo de setup**: < 5 minutos
-- ✅ **Tiempo de respuesta**: < 200ms por predicción
+- ✅ **Tiempo de respuesta**: < 200ms por clasificación
 - ✅ **Auto-scaling**: 2 → 10 pods bajo carga
 - ✅ **Zero-downtime**: Rolling updates sin interrupciones
 - ✅ **Observabilidad**: Métricas en tiempo real
-- ✅ **Speech-to-Text**: 92-99% confianza
+- ✅ **Precisión médica**: 85-98% confianza
 - ✅ **Validaciones**: Robustas y informativas
 
 ## 🚀 URLs de Acceso
 
-- **Frontend**: http://localhost:8080
-- **Fraud Service**: http://localhost:8001
+- **Frontend Médico**: http://localhost:8080
 - **Medical Service**: http://localhost:8002
-- **Speech Service**: http://localhost:8003
+
 
 ---
 
-**¡Listo para impresionar a tu audiencia con el poder de Kubernetes para IA! 🚀** 
+**¡Listo para demostrar la codificación médica con el poder de Kubernetes para IA! 🏥** 

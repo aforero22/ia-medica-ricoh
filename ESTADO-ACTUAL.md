@@ -13,8 +13,8 @@
 demo-ia/
 ├── 🛡️ fraud-service/           # Enhanced Transformer v2.0
 ├── 🏥 medical-service/         # Clinical ModernBERT v2.0  
-├── 🎤 speech-to-text-service/  # Whisper Large-v3 Enhanced
-├── 🌐 frontend-app/            # Con Speech-to-Text integrado
+
+├── 🌐 frontend-app/            # Interfaz web moderna
 ├── ⚙️ k8s/                     # Configuraciones Kubernetes v2.1
 ├── 📜 Scripts PowerShell       # Automatización completa
 └── 📚 Documentación            # Actualizada y limpia
@@ -28,7 +28,7 @@ demo-ia/
 - **Estado**: ✅ Funcionando
 - **Características**:
   - Interfaz simplificada (2 módulos vs 3 anteriores)
-  - Speech-to-Text integrado en formularios
+  
   - Ejemplos aleatorios dinámicos
   - Botones de grabación de voz
   - **🆕 Notificaciones visuales** en lugar de alerts
@@ -58,17 +58,7 @@ demo-ia/
   - **🆕 Logging mejorado** con formato detallado
 - **URL**: http://localhost:8002
 
-### **Speech Service (Puerto 8003)**
-- **Estado**: ✅ Funcionando
-- **Modelo**: Whisper Large-v3 Enhanced
-- **Características**:
-  - Confianza 92-99%
-  - Análisis de ruido
-  - Detección automática de idioma
-  - Integración directa con formularios
-  - **🆕 Modelo Vosk mejorado** (medio en lugar de pequeño)
-  - **🆕 Post-procesamiento avanzado** por dominio
-- **URL**: http://localhost:8003
+
 
 ---
 
@@ -76,7 +66,7 @@ demo-ia/
 
 ### ✅ **Completadas**
 - [x] **Modelos de IA modernos** (3/3 servicios)
-- [x] **Speech-to-Text integrado** en formularios
+
 - [x] **Ejemplos aleatorios dinámicos** 
 - [x] **Interfaz simplificada** (eliminado tab separado)
 - [x] **Scripts de automatización** PowerShell
@@ -89,7 +79,7 @@ demo-ia/
 - [x] **Validaciones robustas** en todos los servicios
 - [x] **Logging mejorado** con formato detallado
 - [x] **Script de verificación** de salud completo
-- [x] **Post-procesamiento avanzado** en Speech-to-Text
+
 - [x] **Manejo de errores** mejorado
 - [x] **Limpieza de código** obsoleto
 
@@ -103,13 +93,7 @@ demo-ia/
 .\start-demo.ps1
 ```
 
-### **2. Probar Speech-to-Text**
-1. Abrir http://localhost:8080
-2. Ir a "Detección de Fraude" o "Clasificación Médica"
-3. Hacer clic en el ícono 🎤 junto al campo de texto
-4. Hablar claramente (ej: "Transferencia urgente a Nigeria")
-5. Hacer clic de nuevo para detener
-6. Ver la transcripción aparecer automáticamente
+
 
 ### **3. Probar Ejemplos Aleatorios**
 - Hacer clic en "Ejemplo" múltiples veces
@@ -134,7 +118,7 @@ demo-ia/
 |---------|------|------|---------|
 | **Precisión Fraude** | 85-98% | 85-98% | Mantenida |
 | **Códigos ICD-10** | 10+ | 10+ | Mantenida |
-| **Confianza Speech** | 92-99% | 92-99% | Mantenida |
+
 | **UX Frontend** | Básica | Mejorada | +300% experiencia |
 | **Validaciones** | Básicas | Robustas | +200% cobertura |
 | **Logging** | Básico | Detallado | +100% información |
@@ -154,21 +138,21 @@ kubectl top pods
 ```powershell
 kubectl logs -f deployment/fraud-service
 kubectl logs -f deployment/medical-service
-kubectl logs -f deployment/speech-service
+
 ```
 
 ### **Health Checks**
 ```powershell
 curl http://localhost:8001/health  # Fraud
 curl http://localhost:8002/health  # Medical  
-curl http://localhost:8003/health  # Speech
+
 ```
 
 ### **Reiniciar Servicios**
 ```powershell
 kubectl rollout restart deployment/fraud-service
 kubectl rollout restart deployment/medical-service
-kubectl rollout restart deployment/speech-service
+
 ```
 
 ### **Detener Demo**

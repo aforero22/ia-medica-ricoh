@@ -88,45 +88,7 @@ Esta demo ha sido actualizada para incluir modelos de IA state-of-the-art simula
 
 ---
 
-### 🎤 **Speech-to-Text - Whisper Large-v3 Enhanced**
 
-#### **Características Técnicas:**
-- **Arquitectura**: Transformer encoder-decoder optimizado para audio
-- **Entrenamiento**: Simulado en 680k horas de audio multilingüe
-- **Capacidades**:
-  - Confianza 92-99% según contexto
-  - Análisis de ruido de fondo automático
-  - Detección de idioma automática
-  - Timestamping y voice activity detection
-
-#### **Especialización por Dominio:**
-- **Médico**: 92-98% confianza (terminología especializada)
-- **Fraude**: 94-99% confianza (patrones de estafa conocidos)
-- **General**: 88-95% confianza (conversaciones generales)
-
-#### **Mejoras sobre v1.0:**
-- ✅ **+15% precisión** en términos técnicos
-- ✅ **Análisis de ruido** automático
-- ✅ **Detección de idioma** mejorada
-- ✅ **Integración directa** en formularios
-- ✅ **Mejor handling** de audio en tiempo real
-
-#### **Ejemplo de Salida:**
-```json
-{
-  "text": "Paciente presenta dolor agudo en región precordial con irradiación al brazo izquierdo",
-  "confidence": 0.973,
-  "language": "es",
-  "noise_level": "low",
-  "word_count": 13,
-  "estimated_duration": 7.8,
-  "model_capabilities": {
-    "multilingual": true,
-    "voice_activity_detection": true,
-    "timestamping": true
-  }
-}
-```
 
 ---
 
@@ -136,7 +98,7 @@ Esta demo ha sido actualizada para incluir modelos de IA state-of-the-art simula
 |------------|-----------------|---------------|---------|
 | **Fraude** | Keywords básicas | Análisis semántico | +40% precisión |
 | **Médico** | 5 códigos ICD-10 | 10+ códigos + categorías | +200% cobertura |
-| **Speech** | Whisper-tiny | Whisper Large-v3 | +15% precisión |
+
 | **UI** | 3 tabs separados | 2 tabs + voz integrada | Simplificado |
 | **Ejemplos** | Estáticos | Aleatorios dinámicos | Mejor testing |
 

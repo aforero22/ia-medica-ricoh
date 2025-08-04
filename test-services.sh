@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Script de verificación de salud para todos los servicios
-# Verifica que todos los servicios estén funcionando correctamente
+# Script de verificación de salud para Codificación Médica CIE-10
+# Verifica que el servicio médico esté funcionando correctamente
 
-echo "🔍 Verificando salud de todos los servicios..."
+echo "🔍 Verificando salud del servicio de Codificación Médica CIE-10..."
 
 # Colores para output
 RED='\033[0;31m'
@@ -44,24 +44,16 @@ check_service() {
     fi
 }
 
-# Verificar servicios backend
-echo -e "\n${YELLOW}=== Servicios Backend ===${NC}"
+# Verificar servicio médico
+echo -e "\n${YELLOW}=== Servicio Médico ===${NC}"
 
-fraud_ok=false
 medical_ok=false
-speech_ok=false
-
-if check_service "Fraud Service" "http://localhost:8001" 8001; then
-    fraud_ok=true
-fi
 
 if check_service "Medical Service" "http://localhost:8002" 8002; then
     medical_ok=true
 fi
 
-if check_service "Speech Service" "http://localhost:8003" 8003; then
-    speech_ok=true
-fi
+
 
 # Verificar frontend
 echo -e "\n${YELLOW}=== Frontend ===${NC}"
@@ -87,23 +79,13 @@ fi
 
 # Resumen
 echo -e "\n${YELLOW}=== Resumen ===${NC}"
-if $fraud_ok; then
-    echo -e "  ✅ Fraud Service: ${GREEN}OK${NC}"
-else
-    echo -e "  ❌ Fraud Service: ${RED}FALLÓ${NC}"
-fi
-
 if $medical_ok; then
     echo -e "  ✅ Medical Service: ${GREEN}OK${NC}"
 else
     echo -e "  ❌ Medical Service: ${RED}FALLÓ${NC}"
 fi
 
-if $speech_ok; then
-    echo -e "  ✅ Speech Service: ${GREEN}OK${NC}"
-else
-    echo -e "  ❌ Speech Service: ${RED}FALLÓ${NC}"
-fi
+
 
 if $frontend_ok; then
     echo -e "  ✅ Frontend: ${GREEN}OK${NC}"
@@ -116,17 +98,17 @@ echo -e "\n${YELLOW}=== Comandos Útiles ===${NC}"
 echo -e "  🌐 Frontend: http://localhost:8080"
 echo -e "  🛡️ Fraud API: http://localhost:8001"
 echo -e "  🏥 Medical API: http://localhost:8002"
-echo -e "  🎤 Speech API: http://localhost:8003"
+
 echo -e "  📊 Ver pods: kubectl get pods"
 echo -e "  📊 Ver logs: kubectl logs -f deployment/fraud-service"
 echo -e "  📊 Ver métricas: kubectl top pods"
 
 # Verificar si todo está OK
-if $fraud_ok && $medical_ok && $speech_ok && $frontend_ok; then
-    echo -e "\n${GREEN}🎉 ¡Todos los servicios están funcionando correctamente!${NC}"
+if $medical_ok && $frontend_ok; then
+    echo -e "\n${GREEN}🎉 ¡El servicio de Codificación Médica está funcionando correctamente!${NC}"
     exit 0
 else
-    echo -e "\n${RED}⚠️ Algunos servicios no están funcionando correctamente${NC}"
-    echo -e "Ejecuta './start-demo.ps1' para reiniciar todos los servicios"
+    echo -e "\n${RED}⚠️ El servicio médico no está funcionando correctamente${NC}"
+    echo -e "Ejecuta './start-demo.ps1' para reiniciar el servicio"
     exit 1
 fi 
