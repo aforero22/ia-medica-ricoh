@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo IA & Transformación Digital - Ricoh España</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Colores oficiales de Ricoh España */
+            --ricoh-red: #E60012;
+            --ricoh-dark-red: #CC0010;
+            --ricoh-blue: #0066CC;
+            --ricoh-dark-blue: #004499;
+            --ricoh-gray: #333333;
+            --ricoh-light-gray: #F5F5F5;
+            --ricoh-white: #FFFFFF;
+            --ricoh-black: #000000;
+        }
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .ricoh-gradient {
+            background: linear-gradient(135deg, var(--ricoh-red) 0%, var(--ricoh-dark-red) 100%);
+        }
+        
+        .ricoh-blue-gradient {
+            background: linear-gradient(135deg, var(--ricoh-blue) 0%, var(--ricoh-dark-blue) 100%);
+        }
+        
+        .ricoh-red-text {
+            color: var(--ricoh-red);
+        }
+        
+        .ricoh-blue-text {
+            color: var(--ricoh-blue);
+        }
+        
+        .ricoh-gray-text {
+            color: var(--ricoh-gray);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .ricoh-logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--ricoh-red);
+            letter-spacing: -0.02em;
+        }
+        
+        .ricoh-button {
+            background: linear-gradient(135deg, var(--ricoh-red) 0%, var(--ricoh-dark-red) 100%);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 0, 18, 0.3);
+            font-weight: 600;
+        }
+        
+        .ricoh-button:hover {
+            background: linear-gradient(135deg, var(--ricoh-dark-red) 0%, var(--ricoh-red) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(230, 0, 18, 0.4);
+        }
+        
+        .ricoh-blue-button {
+            background: linear-gradient(135deg, var(--ricoh-blue) 0%, var(--ricoh-dark-blue) 100%);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+            font-weight: 600;
+        }
+        
+        .ricoh-blue-button:hover {
+            background: linear-gradient(135deg, var(--ricoh-dark-blue) 0%, var(--ricoh-blue) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+        }
+        
+        .ricoh-gray-button {
+            background: linear-gradient(135deg, var(--ricoh-gray) 0%, #555555 100%);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+            font-weight: 600;
+        }
+        
+        .ricoh-gray-button:hover {
+            background: linear-gradient(135deg, #555555 0%, var(--ricoh-gray) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(51, 51, 51, 0.4);
+        }
+        
+        .ricoh-nav-button {
+            background: transparent;
+            color: var(--ricoh-gray);
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .ricoh-nav-button:hover {
+            color: var(--ricoh-red);
+            background: rgba(230, 0, 18, 0.1);
+        }
+        
+        .ricoh-nav-button.active {
+            background: linear-gradient(135deg, var(--ricoh-red) 0%, var(--ricoh-dark-red) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(230, 0, 18, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="ricoh-gradient text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center items-center mb-8">
+                <div class="bg-white rounded-2xl px-10 py-6 mr-10 shadow-2xl">
+                    <div class="flex items-center">
+                        <i class="fas fa-brain text-5xl text-red-600 mr-4"></i>
+                        <span class="ricoh-logo text-5xl">RICOH</span>
+                    </div>
+                    <div class="text-center mt-2">
+                        <p class="text-sm text-gray-600 font-medium">imagine. change.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-6xl font-black mb-4 tracking-tight">
+                        <i class="fas fa-robot mr-6 text-yellow-400"></i>
+                        Demo Kubernetes para IA
+                    </h1>
+                    <p class="text-2xl font-medium opacity-95">
+                        Soluciones de Inteligencia Artificial Empresarial
+                    </p>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="text-xl opacity-95 font-medium">
+                    <i class="fas fa-shield-alt text-yellow-400 mr-3"></i>
+                    Detección de Fraude con Speech-to-Text
+                    <i class="fas fa-circle text-xs mx-4 opacity-50"></i>
+                    <i class="fas fa-heartbeat text-yellow-400 mr-3"></i>
+                    Clasificación Médica CIE-10 con Speech-to-Text
+                </p>
+                <p class="text-base opacity-80 mt-3 font-medium">
+                    <i class="fas fa-flag text-yellow-400 mr-2"></i>
+                    Desarrollado por Ricoh España - Transformación Digital & IA
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-2xl border-b-4 border-red-600">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center space-x-6 py-8">
+                <button onclick="showTab('fraud')" class="ricoh-nav-button active px-10 py-5 rounded-2xl font-bold text-lg transform transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-shield-alt mr-4 text-xl"></i>Detección de Fraude
+                    <i class="fas fa-microphone ml-2 text-sm text-yellow-400"></i>
+                </button>
+                <button onclick="showTab('medical')" class="ricoh-nav-button px-10 py-5 rounded-2xl font-bold text-lg transform transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-heartbeat mr-4 text-xl"></i>Clasificación Médica
+                    <i class="fas fa-microphone ml-2 text-sm text-yellow-400"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Fraud Detection Tab -->
+        <div id="fraud-tab" class="tab-content">
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Input Section -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 card-hover border-l-6 border-red-600">
+                    <h2 class="text-3xl font-bold mb-6 ricoh-red-text">
+                        <i class="fas fa-shield-alt mr-3"></i>Detección de Fraude
+                    </h2>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-gray-700 mb-3">Descripción de Transacción:</label>
+                        <div class="relative">
+                            <textarea id="fraud-text" rows="4" class="w-full p-4 pr-16 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-red-500 focus:border-transparent transition-all duration-300" placeholder="Ej: Transferencia urgente de 50000 euros a cuenta desconocida en Nigeria... o presiona el micrófono para grabar"></textarea>
+                            <button onclick="toggleRecording('fraud')" id="fraud-record-btn" class="absolute right-3 top-3 p-3 text-gray-500 hover:text-red-500 transition-colors rounded-lg hover:bg-red-50" title="Grabar descripción por voz">
+                                <i id="fraud-record-icon" class="fas fa-microphone text-xl"></i>
+                            </button>
+                        </div>
+                        <div id="fraud-recording-status" class="hidden mt-2 text-sm text-red-600 font-medium">
+                            <i class="fas fa-circle animate-pulse mr-2"></i>Grabando... presiona de nuevo para detener
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">Monto (€):</label>
+                            <input type="number" id="fraud-amount" class="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-red-500 focus:border-transparent transition-all duration-300" placeholder="50000">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">Comercio:</label>
+                            <input type="text" id="fraud-merchant" class="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-red-500 focus:border-transparent transition-all duration-300" placeholder="Unknown">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <button onclick="detectFraud()" class="ricoh-button py-5 px-8 rounded-xl text-lg font-bold">
+                            <i class="fas fa-search mr-3"></i>Detectar Fraude
+                        </button>
+                        <button onclick="loadFraudExample()" class="ricoh-gray-button py-5 px-8 rounded-xl text-lg font-bold">
+                            <i class="fas fa-play mr-3"></i>Ejemplo
+                        </button>
+                    </div>
+                    <div class="mt-6 p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <p class="text-sm text-red-800 font-medium">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <strong>Tip:</strong> Prueba con transacciones sospechosas como transferencias urgentes, pagos en horarios extraños, o montos inusuales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Resultado</h3>
+                    <div id="fraud-result" class="space-y-6">
+                        <div class="text-center text-gray-500">
+                            <i class="fas fa-chart-line text-5xl mb-4"></i>
+                            <p class="text-lg font-medium">Ingresa los datos y haz clic en "Detectar Fraude"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Classification Tab -->
+        <div id="medical-tab" class="tab-content hidden">
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Input Section -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 card-hover border-l-6 border-blue-600">
+                    <h2 class="text-3xl font-bold mb-6 ricoh-blue-text">
+                        <i class="fas fa-heartbeat mr-3"></i>Clasificación Médica
+                    </h2>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-gray-700 mb-3">Diagnóstico del Paciente:</label>
+                        <div class="relative">
+                            <textarea id="medical-text" rows="4" class="w-full p-4 pr-16 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Ej: Paciente presenta dolor agudo en el pecho, sudoración fría y dificultad para respirar... o presiona el micrófono para grabar"></textarea>
+                            <button onclick="toggleRecording('medical')" id="medical-record-btn" class="absolute right-3 top-3 p-3 text-gray-500 hover:text-blue-500 transition-colors rounded-lg hover:bg-blue-50" title="Grabar diagnóstico por voz">
+                                <i id="medical-record-icon" class="fas fa-microphone text-xl"></i>
+                            </button>
+                        </div>
+                        <div id="medical-recording-status" class="hidden mt-2 text-sm text-blue-600 font-medium">
+                            <i class="fas fa-circle animate-pulse mr-2"></i>Grabando... presiona de nuevo para detener
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">Edad del Paciente:</label>
+                            <input type="number" id="medical-age" class="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="65">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">Síntomas:</label>
+                            <input type="text" id="medical-symptoms" class="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="dolor pecho, sudoración">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <button onclick="classifyMedical()" class="ricoh-blue-button py-5 px-8 rounded-xl text-lg font-bold">
+                            <i class="fas fa-stethoscope mr-3"></i>Clasificar Diagnóstico
+                        </button>
+                        <button onclick="loadMedicalExample()" class="ricoh-gray-button py-5 px-8 rounded-xl text-lg font-bold">
+                            <i class="fas fa-play mr-3"></i>Ejemplo
+                        </button>
+                    </div>
+                    <div class="mt-6 p-4 bg-blue-50 rounded-xl border-l-4 border-blue-400">
+                        <p class="text-sm text-blue-800 font-medium">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <strong>Tip:</strong> Prueba con diagnósticos médicos como síntomas de infarto, diabetes, hipertensión, o problemas respiratorios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Resultado</h3>
+                    <div id="medical-result" class="space-y-6">
+                        <div class="text-center text-gray-500">
+                            <i class="fas fa-user-md text-5xl mb-4"></i>
+                            <p class="text-lg font-medium">Ingresa el diagnóstico y haz clic en "Clasificar"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center mb-8">
+                <div class="bg-white rounded-2xl px-6 py-4 mr-6 shadow-xl">
+                    <div class="text-center">
+                        <span class="ricoh-logo text-2xl">RICOH</span>
+                        <p class="text-xs text-gray-600 mt-1">imagine. change.</p>
+                    </div>
+                </div>
+                <h3 class="text-3xl font-bold">Demo Kubernetes para IA</h3>
+            </div>
+            <p class="text-gray-300 mb-6 text-lg">Transformación Digital & Consultoría en Tecnologías Emergentes</p>
+            <div class="flex justify-center space-x-8 text-sm text-gray-400 mb-6">
+                <span class="flex items-center"><i class="fas fa-cloud mr-2"></i>Cloud</span>
+                <span class="flex items-center"><i class="fas fa-brain mr-2"></i>Machine Learning</span>
+                <span class="flex items-center"><i class="fas fa-microchip mr-2"></i>Auto-Scaling</span>
+                <span class="flex items-center"><i class="fas fa-shield-alt mr-2"></i>Resiliencia</span>
+            </div>
+            <div class="border-t border-gray-700 pt-6">
+                <p class="text-sm text-gray-400">Desarrollado por Ricoh España - Consultoría en Transformación Digital</p>
+                <p class="text-xs text-gray-500 mt-2">© 2025 Ricoh España. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.ricoh-nav-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Speech-to-Text functionality
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let isRecording = false;
+        let currentRecordingType = null;
+        let recordingStartTime = null;
+        let recordingTimer = null;
+
+        async function toggleRecording(type) {
+            console.log(`[DEBUG] Toggle recording called for type: ${type}, isRecording: ${isRecording}`);
+            
+            try {
+                if (!isRecording) {
+                    await startRecording(type);
+                } else {
+                    await stopRecording();
+                }
+            } catch (error) {
+                console.error('[ERROR] Error in toggleRecording:', error);
+                // Ensure state is reset on any error
+                resetRecordingState();
+                updateRecordingUI(type, false);
+            }
+        }
+
+        async function startRecording(type) {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                
+                // Try to get audio/wav format, fallback to default
+                let options = {};
+                if (MediaRecorder.isTypeSupported('audio/wav')) {
+                    options = { mimeType: 'audio/wav' };
+                } else if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
+                    options = { mimeType: 'audio/webm;codecs=opus' };
+                } else if (MediaRecorder.isTypeSupported('audio/ogg;codecs=opus')) {
+                    options = { mimeType: 'audio/ogg;codecs=opus' };
+                }
+                
+                mediaRecorder = new MediaRecorder(stream, options);
+                audioChunks = [];
+                currentRecordingType = type;
+
+                mediaRecorder.ondataavailable = event => {
+                    audioChunks.push(event.data);
+                };
+
+                mediaRecorder.onstop = async () => {
+                    try {
+                        // Use the actual mime type from the MediaRecorder
+                        const mimeType = mediaRecorder.mimeType || 'audio/wav';
+                        const audioBlob = new Blob(audioChunks, { type: mimeType });
+                        console.log(`[DEBUG] Audio blob created with type: ${mimeType}, size: ${audioBlob.size} bytes`);
+                        
+                        // Stop all tracks to release microphone first
+                        stream.getTracks().forEach(track => track.stop());
+                        
+                        // Transcribe the audio
+                        await transcribeAudioBlob(audioBlob, currentRecordingType);
+                        
+                    } catch (error) {
+                        console.error('[ERROR] Error in onstop handler:', error);
+                        // Reset UI on error
+                        updateRecordingUI(currentRecordingType, false);
+                    } finally {
+                        // Always reset recording state
+                        resetRecordingState();
+                    }
+                };
+
+                mediaRecorder.start();
+                isRecording = true;
+                recordingStartTime = Date.now();
+
+                // Update UI and start timer
+                updateRecordingUI(type, true);
+                startRecordingTimer(type);
+
+            } catch (error) {
+                console.error('Error accessing microphone:', error);
+                
+                // Reset state on error
+                resetRecordingState();
+                updateRecordingUI(type, false);
+                
+                alert('Error accediendo al micrófono. Por favor, permite el acceso al micrófono y vuelve a intentar.');
+            }
+        }
+
+        async function stopRecording() {
+            if (mediaRecorder && isRecording) {
+                const duration = getRecordingDuration();
+                console.log(`[DEBUG] Stopping recording... Duration: ${duration.toFixed(1)}s`);
+                
+                // Clear timer immediately
+                if (recordingTimer) {
+                    clearInterval(recordingTimer);
+                    recordingTimer = null;
+                }
+                
+                mediaRecorder.stop();
+                isRecording = false;
+                updateRecordingUI(currentRecordingType, false);
+            }
+        }
+
+        function resetRecordingState() {
+            console.log('[DEBUG] Resetting recording state...');
+            mediaRecorder = null;
+            audioChunks = [];
+            isRecording = false;
+            currentRecordingType = null;
+            recordingStartTime = null;
+            
+            // Clear timer if active
+            if (recordingTimer) {
+                clearInterval(recordingTimer);
+                recordingTimer = null;
+            }
+        }
+
+        function startRecordingTimer(type) {
+            const statusDiv = document.getElementById(`${type}-recording-status`);
+            let seconds = 0;
+            
+            recordingTimer = setInterval(() => {
+                seconds++;
+                if (statusDiv) {
+                    statusDiv.innerHTML = `<i class="fas fa-circle animate-pulse mr-2"></i>Grabando... ${seconds}s (clic para detener)`;
+                }
+            }, 1000);
+        }
+
+        function getRecordingDuration() {
+            if (recordingStartTime) {
+                return (Date.now() - recordingStartTime) / 1000;
+            }
+            return 0;
+        }
+
+        function updateRecordingUI(type, recording) {
+            const recordBtn = document.getElementById(`${type}-record-btn`);
+            const recordIcon = document.getElementById(`${type}-record-icon`);
+            const recordingStatus = document.getElementById(`${type}-recording-status`);
+
+            if (recording) {
+                recordIcon.className = 'fas fa-stop text-xl';
+                recordBtn.classList.add('text-red-500');
+                recordBtn.style.transform = 'scale(1.1)';
+                recordingStatus.classList.remove('hidden');
+                recordingStatus.innerHTML = '<i class="fas fa-circle animate-pulse mr-2"></i>Iniciando grabación...';
+            } else {
+                recordIcon.className = 'fas fa-microphone text-xl';
+                recordBtn.classList.remove('text-red-500');
+                recordBtn.style.transform = 'scale(1)';
+                
+                // Don't hide status immediately if we're processing
+                if (!recordingStatus.innerHTML.includes('Procesando') && !recordingStatus.innerHTML.includes('transcrito')) {
+                    recordingStatus.classList.add('hidden');
+                }
+            }
+        }
+
+        async function transcribeAudioBlob(audioBlob, type) {
+            try {
+                console.log(`[DEBUG] Iniciando transcripción para tipo: ${type}`);
+                console.log(`[DEBUG] Audio blob size: ${audioBlob.size} bytes`);
+                
+                // Show processing message with audio info
+                const statusDiv = document.getElementById(`${type}-recording-status`);
+                const duration = getRecordingDuration();
+                statusDiv.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i>Procesando audio (${duration.toFixed(1)}s)...`;
+                statusDiv.classList.remove('hidden');
+
+                // Validate audio blob
+                if (!audioBlob || audioBlob.size === 0) {
+                    throw new Error('Audio blob está vacío o no válido');
+                }
+
+                // Determine file extension based on mime type
+                let fileName = 'recording.wav';
+                const mimeType = audioBlob.type;
+                console.log(`[DEBUG] Audio mime type: ${mimeType}`);
+                
+                if (mimeType.includes('webm')) {
+                    fileName = 'recording.webm';
+                } else if (mimeType.includes('ogg')) {
+                    fileName = 'recording.ogg';
+                } else if (mimeType.includes('mp4')) {
+                    fileName = 'recording.m4a';
+                } else if (mimeType.includes('wav')) {
+                    fileName = 'recording.wav';
+                } else {
+                    // Fallback to wav
+                    fileName = 'recording.wav';
+                }
+                
+                console.log(`[DEBUG] Using filename: ${fileName}`);
+
+                const formData = new FormData();
+                formData.append('file', audioBlob, fileName);
+                formData.append('language', 'es');
+                formData.append('conversation_type', type);
+
+                console.log('[DEBUG] FormData creado, intentando conexión...');
+
+                const speechURLs = [
+                    'http://localhost:8003',
+                    'http://127.0.0.1:8003'
+                ];
+
+                let transcription = null;
+                let lastError = null;
+                
+                for (const baseURL of speechURLs) {
+                    try {
+                        console.log(`[DEBUG] Intentando con URL: ${baseURL}`);
+                        const response = await fetch(`${baseURL}/transcribe`, {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        console.log(`[DEBUG] Response status: ${response.status}`);
+
+                        if (response.ok) {
+                            const result = await response.json();
+                            console.log('[DEBUG] Respuesta recibida:', result);
+                            transcription = result.text;
+                            break;
+                        } else {
+                            const errorText = await response.text();
+                            lastError = `HTTP ${response.status}: ${errorText}`;
+                            console.error(`[DEBUG] Error HTTP: ${lastError}`);
+                        }
+                    } catch (error) {
+                        lastError = error.message;
+                        console.error(`[DEBUG] Error with ${baseURL}:`, error);
+                    }
+                }
+
+                if (transcription) {
+                    console.log(`[DEBUG] Transcripción exitosa: "${transcription}"`);
+                    
+                    // Insert transcription into the appropriate text field
+                    const textField = document.getElementById(`${type}-text`);
+                    if (textField) {
+                        const currentText = textField.value.trim();
+                        const newText = currentText ? `${currentText}\n${transcription}` : transcription;
+                        textField.value = newText;
+                        console.log(`[DEBUG] Texto insertado en campo ${type}-text: "${newText}"`);
+                        
+                        // Trigger input event to notify any listeners
+                        textField.dispatchEvent(new Event('input', { bubbles: true }));
+                    } else {
+                        console.error(`[ERROR] No se encontró el campo de texto: ${type}-text`);
+                    }
+                    
+                    const audioDuration = getRecordingDuration();
+                    statusDiv.innerHTML = `<i class="fas fa-check mr-2 text-green-500"></i>Audio transcrito correctamente (${audioDuration.toFixed(1)}s)`;
+                    statusDiv.classList.remove('text-red-600', 'text-blue-600');
+                    statusDiv.classList.add('text-green-600');
+                    setTimeout(() => {
+                        statusDiv.classList.add('hidden');
+                        statusDiv.classList.remove('text-green-600');
+                        statusDiv.classList.add(type === 'fraud' ? 'text-red-600' : 'text-blue-600');
+                    }, 4000);
+                } else {
+                    throw new Error(`No se pudo conectar con el servicio de transcripción. Último error: ${lastError}`);
+                }
+
+            } catch (error) {
+                console.error('[ERROR] Error transcribing audio:', error);
+                const statusDiv = document.getElementById(`${type}-recording-status`);
+                if (statusDiv) {
+                    statusDiv.innerHTML = `<i class="fas fa-exclamation-triangle mr-2"></i>Error: ${error.message}`;
+                    statusDiv.classList.remove('hidden');
+                    setTimeout(() => {
+                        statusDiv.classList.add('hidden');
+                    }, 8000);
+                }
+                
+                // Reset recording state on error
+                resetRecordingState();
+                
+                return false;
+            }
+        }
+
+        // Fraud Detection
+        async function detectFraud() {
+            const text = document.getElementById('fraud-text').value;
+            const amount = document.getElementById('fraud-amount').value;
+            const merchant = document.getElementById('fraud-merchant').value;
+
+            if (!text) {
+                alert('Por favor ingresa una descripción de transacción');
+                return;
+            }
+
+            const resultDiv = document.getElementById('fraud-result');
+            resultDiv.innerHTML = '<div class="text-center"><i class="fas fa-spinner fa-spin text-5xl ricoh-red-text"></i><p class="mt-4 text-lg font-medium">Analizando...</p></div>';
+
+            // Try multiple URLs for the fraud service
+            const fraudURLs = [
+                'http://127.0.0.1:8001',
+                'http://localhost:8001'
+            ];
+
+            let lastError = null;
+
+            for (const baseURL of fraudURLs) {
+                try {
+                    console.log(`Trying fraud service at: ${baseURL}`);
+                    
+                    const response = await fetch(`${baseURL}/predict`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            text: text,
+                            amount: parseFloat(amount) || 0,
+                            merchant: merchant
+                        })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    const fraudClass = result.fraud ? 'text-red-600' : 'text-green-600';
+                    const fraudIcon = result.fraud ? 'fas fa-exclamation-triangle' : 'fas fa-check-circle';
+                    const fraudText = result.fraud ? 'FRAUDE DETECTADO' : 'TRANSACCIÓN LEGÍTIMA';
+
+                    resultDiv.innerHTML = `
+                        <div class="space-y-6">
+                            <div class="text-center">
+                                <i class="${fraudIcon} text-5xl ${fraudClass} mb-4"></i>
+                                <h4 class="text-2xl font-bold ${fraudClass}">${fraudText}</h4>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <div class="grid grid-cols-2 gap-6 text-sm">
+                                    <div>
+                                        <span class="font-semibold">Confianza:</span>
+                                        <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
+                                            <div class="bg-blue-600 h-3 rounded-full" style="width: ${result.confidence * 100}%"></div>
+                                        </div>
+                                        <span class="text-xs">${(result.confidence * 100).toFixed(1)}%</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-semibold">Risk Score:</span>
+                                        <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
+                                            <div class="bg-red-600 h-3 rounded-full" style="width: ${result.risk_score}%"></div>
+                                        </div>
+                                        <span class="text-xs">${result.risk_score.toFixed(1)}/100</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-gray-600">
+                                <p><strong>Tiempo de procesamiento:</strong> ${result.processing_time_ms.toFixed(2)}ms</p>
+                                <p><strong>Modelo:</strong> ${result.model_version}</p>
+                            </div>
+                        </div>
+                    `;
+                    return; // Success, exit the function
+                    
+                } catch (error) {
+                    console.error(`Error trying ${baseURL}:`, error);
+                    lastError = error;
+                    continue; // Try next URL
+                }
+            }
+
+            // If we get here, all URLs failed
+            console.error('All fraud service URLs failed:', lastError);
+            resultDiv.innerHTML = `
+                <div class="text-center text-red-600">
+                    <i class="fas fa-exclamation-circle text-5xl mb-4"></i>
+                    <p class="text-lg font-medium">Error al conectar con el servicio</p>
+                    <p class="text-sm">No se pudo conectar a ningún endpoint del servicio de fraude</p>
+                    <p class="text-xs mt-2">URLs probadas: ${fraudURLs.join(', ')}</p>
+                </div>
+            `;
+        }
+
+        // Medical Classification
+        async function classifyMedical() {
+            const text = document.getElementById('medical-text').value;
+            const age = document.getElementById('medical-age').value;
+            const symptoms = document.getElementById('medical-symptoms').value;
+
+            if (!text) {
+                alert('Por favor ingresa un diagnóstico');
+                return;
+            }
+
+            const resultDiv = document.getElementById('medical-result');
+            resultDiv.innerHTML = '<div class="text-center"><i class="fas fa-spinner fa-spin text-5xl ricoh-blue-text"></i><p class="mt-4 text-lg font-medium">Clasificando...</p></div>';
+
+            // Try multiple URLs for the medical service
+            const medicalURLs = [
+                'http://127.0.0.1:8002',
+                'http://localhost:8002'
+            ];
+
+            let lastError = null;
+
+            for (const baseURL of medicalURLs) {
+                try {
+                    console.log(`Trying medical service at: ${baseURL}`);
+                    
+                    const response = await fetch(`${baseURL}/predict`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            text: text,
+                            patient_age: parseInt(age) || 0,
+                            symptoms: symptoms.split(',').map(s => s.trim())
+                        })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    resultDiv.innerHTML = `
+                        <div class="space-y-6">
+                            <div class="text-center">
+                                <i class="fas fa-stethoscope text-5xl ricoh-blue-text mb-4"></i>
+                                <h4 class="text-2xl font-bold ricoh-blue-text">CÓDIGO ICD-10</h4>
+                            </div>
+                            <div class="bg-blue-50 p-6 rounded-xl">
+                                <div class="text-center mb-4">
+                                    <span class="text-3xl font-bold text-blue-800">${result.icd10_code}</span>
+                                </div>
+                                <p class="text-sm text-gray-700">${result.description}</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <div class="grid grid-cols-2 gap-6 text-sm">
+                                    <div>
+                                        <span class="font-semibold">Confianza:</span>
+                                        <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
+                                            <div class="bg-blue-600 h-3 rounded-full" style="width: ${result.confidence * 100}%"></div>
+                                        </div>
+                                        <span class="text-xs">${(result.confidence * 100).toFixed(1)}%</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-semibold">Tiempo:</span>
+                                        <span class="text-xs">${result.processing_time_ms.toFixed(2)}ms</span>
+                                    </div>
+                                </div>
+                            </div>
+                            ${result.alternative_codes && result.alternative_codes.length > 0 ? `
+                                <div class="bg-yellow-50 p-4 rounded-xl">
+                                    <h5 class="font-semibold text-sm mb-3">Códigos Alternativos:</h5>
+                                    ${result.alternative_codes.map(code => `
+                                        <div class="text-xs mb-1">
+                                            <strong>${code.code}:</strong> ${code.description} (${(code.confidence * 100).toFixed(1)}%)
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                            <div class="text-xs text-gray-600">
+                                <p><strong>Modelo:</strong> ${result.model_version}</p>
+                            </div>
+                        </div>
+                    `;
+                    return; // Success, exit the function
+                    
+                } catch (error) {
+                    console.error(`Error trying ${baseURL}:`, error);
+                    lastError = error;
+                    continue; // Try next URL
+                }
+            }
+
+            // If we get here, all URLs failed
+            console.error('All medical service URLs failed:', lastError);
+            resultDiv.innerHTML = `
+                <div class="text-center text-red-600">
+                    <i class="fas fa-exclamation-circle text-5xl mb-4"></i>
+                    <p class="text-lg font-medium">Error al conectar con el servicio</p>
+                    <p class="text-sm">No se pudo conectar a ningún endpoint del servicio médico</p>
+                    <p class="text-xs mt-2">URLs probadas: ${medicalURLs.join(', ')}</p>
+                </div>
+            `;
+        }
+
+
+
+        // Sample data
+        const fraudSamples = [
+            {
+                "text": "Transferencia urgente de 50000 euros a cuenta desconocida en Nigeria",
+                "amount": 50000,
+                "merchant": "Unknown Bank Nigeria"
+            },
+            {
+                "text": "Compra normal de 25 euros en supermercado Carrefour",
+                "amount": 25,
+                "merchant": "Carrefour"
+            },
+            {
+                "text": "Pago con tarjeta robada en gasolinera a las 3 AM",
+                "amount": 45,
+                "merchant": "Gasolinera Shell"
+            },
+            {
+                "text": "Compra online de 120 euros en Amazon para regalo de cumpleaños",
+                "amount": 120,
+                "merchant": "Amazon"
+            },
+            {
+                "text": "Retirada de efectivo de 2000 euros en cajero desconocido",
+                "amount": 2000,
+                "merchant": "ATM Unknown"
+            },
+            {
+                "text": "Pago de 35 euros en restaurante McDonald's",
+                "amount": 35,
+                "merchant": "McDonald's"
+            },
+            {
+                "text": "Transferencia de 15000 euros a cuenta de casino online",
+                "amount": 15000,
+                "merchant": "Casino Online"
+            },
+            {
+                "text": "Compra de 80 euros en farmacia para medicamentos",
+                "amount": 80,
+                "merchant": "Farmacia"
+            },
+            {
+                "text": "Pago fraudulento de 5000 euros en tienda online falsa",
+                "amount": 5000,
+                "merchant": "Fake Store"
+            },
+            {
+                "text": "Compra de 200 euros en supermercado Mercadona",
+                "amount": 200,
+                "merchant": "Mercadona"
+            }
+        ];
+
+        const medicalSamples = [
+            {
+                "text": "Paciente presenta dolor agudo en el pecho, sudoración fría y dificultad para respirar. Sospecha de infarto de miocardio.",
+                "patient_age": 65,
+                "symptoms": "dolor pecho, sudoración, dificultad respirar"
+            },
+            {
+                "text": "Diagnóstico: Diabetes mellitus tipo 2 sin complicaciones. Paciente con glucemia elevada de 280 mg/dL.",
+                "patient_age": 45,
+                "symptoms": "glucemia elevada, sed excesiva"
+            },
+            {
+                "text": "Hipertensión arterial esencial. Presión sistólica de 160 mmHg y diastólica de 95 mmHg.",
+                "patient_age": 52,
+                "symptoms": "presión alta, dolor cabeza"
+            },
+            {
+                "text": "Paciente fumador de 30 años con tos crónica y dificultad para respirar. EPOC diagnosticado.",
+                "patient_age": 30,
+                "symptoms": "tos crónica, dificultad respirar"
+            },
+            {
+                "text": "Dolor abdominal superior, náuseas y vómitos. Gastritis crónica confirmada por endoscopia.",
+                "patient_age": 38,
+                "symptoms": "dolor abdominal, náuseas, vómitos"
+            },
+            {
+                "text": "Fractura de fémur derecho tras caída. Paciente requiere cirugía ortopédica urgente.",
+                "patient_age": 28,
+                "symptoms": "dolor extremo, imposibilidad de caminar"
+            },
+            {
+                "text": "Cefalea intensa con náuseas y fotofobia. Probable migraña con aura.",
+                "patient_age": 35,
+                "symptoms": "dolor cabeza intenso, náuseas, sensibilidad luz"
+            },
+            {
+                "text": "Paciente con fiebre alta de 39°C, tos y dificultad respiratoria. Neumonía bacteriana.",
+                "patient_age": 42,
+                "symptoms": "fiebre alta, tos, dificultad respirar"
+            },
+            {
+                "text": "Depresión mayor con episodios de ansiedad. Paciente refiere tristeza profunda y pérdida de interés.",
+                "patient_age": 29,
+                "symptoms": "tristeza, ansiedad, pérdida interés"
+            },
+            {
+                "text": "Apendicitis aguda. Dolor en fosa ilíaca derecha con signo de McBurney positivo.",
+                "patient_age": 22,
+                "symptoms": "dolor abdominal derecho, náuseas, fiebre"
+            }
+        ];
+
+        // Load example functions with random selection
+        function loadFraudExample() {
+            const randomIndex = Math.floor(Math.random() * fraudSamples.length);
+            const sample = fraudSamples[randomIndex];
+            
+            document.getElementById('fraud-text').value = sample.text;
+            document.getElementById('fraud-amount').value = sample.amount;
+            document.getElementById('fraud-merchant').value = sample.merchant;
+        }
+
+        function loadMedicalExample() {
+            const randomIndex = Math.floor(Math.random() * medicalSamples.length);
+            const sample = medicalSamples[randomIndex];
+            
+            document.getElementById('medical-text').value = sample.text;
+            document.getElementById('medical-age').value = sample.patient_age;
+            document.getElementById('medical-symptoms').value = sample.symptoms;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default tab
+            showTab('fraud');
+        });
+    </script>
+</body>
+</html> 
