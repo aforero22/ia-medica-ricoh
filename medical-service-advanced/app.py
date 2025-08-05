@@ -68,8 +68,8 @@ class HealthResponse(BaseModel):
     version: str
     timestamp: str
 
-# Cargar variables de entorno desde archivo local
-load_dotenv('config.env')
+# Cargar variables de entorno desde archivo local específico
+load_dotenv('config.env', override=True)
 
 # Instancias globales
 client = None

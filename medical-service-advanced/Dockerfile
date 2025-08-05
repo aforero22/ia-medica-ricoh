@@ -12,11 +12,13 @@ RUN pip install --no-cache-dir \
     python-dotenv==1.0.0 \
     requests==2.32.4
 
+# Copiar config.env como .env ANTES de copiar todo lo demás
+COPY config.env .env
+
 # Copiar el código de la aplicación
 COPY . .
-
 # Variable de entorno para la API key (se cargará desde config.env)
-ENV OPENAI_API_KEY=your-openai-api-key-here
+# ENV OPENAI_API_KEY=your-openai-api-key-here
 
 # Exponer puerto
 EXPOSE 8000
