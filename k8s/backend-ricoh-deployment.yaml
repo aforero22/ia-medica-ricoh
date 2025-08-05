@@ -21,9 +21,9 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 8000
-        env:
-        - name: OPENAI_API_KEY
-          value: "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"
+                        env:
+                - name: OPENAI_API_KEY
+                  value: "your-openai-api-key-here"
 ---
 apiVersion: v1
 kind: Service

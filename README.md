@@ -52,6 +52,12 @@ Sistema de **codificación médica automática** que utiliza **IA avanzada** par
 
 ## 🚀 **Inicio Rápido**
 
+### **0. Configurar API Key (Primera vez)**
+```powershell
+# Ejecutar el script de configuración
+.\setup-api-key.ps1
+```
+
 ### **1. Iniciar la Aplicación**
 ```powershell
 .\start-medical-only.ps1

@@ -16,6 +16,7 @@ from datetime import datetime
 # Importar OpenAI y base de datos CIE-10
 from openai import OpenAI
 from models.cie10_database import CIE10Database
+from dotenv import load_dotenv
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
@@ -66,6 +67,9 @@ class HealthResponse(BaseModel):
     base_datos: str
     version: str
     timestamp: str
+
+# Cargar variables de entorno desde archivo local
+load_dotenv('config.env')
 
 # Instancias globales
 client = None

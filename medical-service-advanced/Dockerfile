@@ -15,8 +15,8 @@ RUN pip install --no-cache-dir \
 # Copiar el código de la aplicación
 COPY . .
 
-# Variable de entorno para la API key
-ENV OPENAI_API_KEY=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
+# Variable de entorno para la API key (se cargará desde config.env)
+ENV OPENAI_API_KEY=your-openai-api-key-here
 
 # Exponer puerto
 EXPOSE 8000
