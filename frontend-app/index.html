@@ -3,141 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codificación Médica CIE-10 - Ricoh España</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>IA de Codificación Médica CIE-10-ES | RICOH España</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ricoh-red': '#ED1C24',
+                        'ricoh-gray': '#F5F5F5',
+                        'ricoh-dark': '#1A1A1A',
+                        'ricoh-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'crimson': ['Crimson Text', 'Georgia', 'serif'],
+                        'lato': ['Lato', 'Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
-        :root {
-            /* Colores oficiales de Ricoh España */
-            --ricoh-red: #E60012;
-            --ricoh-dark-red: #CC0010;
-            --ricoh-blue: #0066CC;
-            --ricoh-dark-blue: #004499;
-            --ricoh-gray: #333333;
-            --ricoh-light-gray: #F5F5F5;
-            --ricoh-white: #FFFFFF;
-            --ricoh-black: #000000;
-        }
-        
-        * {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
         .ricoh-gradient {
-            background: linear-gradient(135deg, var(--ricoh-red) 0%, var(--ricoh-dark-red) 100%);
+            background: linear-gradient(135deg, #ED1C24 0%, #B71C1C 100%);
         }
         
-        .ricoh-blue-gradient {
-            background: linear-gradient(135deg, var(--ricoh-blue) 0%, var(--ricoh-dark-blue) 100%);
-        }
-        
-        .ricoh-red-text {
-            color: var(--ricoh-red);
-        }
-        
-        .ricoh-blue-text {
-            color: var(--ricoh-blue);
-        }
-        
-        .ricoh-gray-text {
-            color: var(--ricoh-gray);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .ricoh-logo {
-            font-family: 'Inter', sans-serif;
-            font-weight: 900;
-            font-size: 2rem;
-            color: var(--ricoh-red);
-            letter-spacing: -0.02em;
+        .ricoh-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(237, 28, 36, 0.1);
+            border: 1px solid rgba(237, 28, 36, 0.1);
         }
         
         .ricoh-button {
-            background: linear-gradient(135deg, var(--ricoh-red) 0%, var(--ricoh-dark-red) 100%);
+            background: linear-gradient(135deg, #ED1C24 0%, #B71C1C 100%);
+            border: none;
+            border-radius: 8px;
             color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(230, 0, 18, 0.3);
             font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Lato', sans-serif;
         }
         
         .ricoh-button:hover {
-            background: linear-gradient(135deg, var(--ricoh-dark-red) 0%, var(--ricoh-red) 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(230, 0, 18, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(237, 28, 36, 0.3);
         }
         
-        .ricoh-blue-button {
-            background: linear-gradient(135deg, var(--ricoh-blue) 0%, var(--ricoh-dark-blue) 100%);
-            color: white;
+        .ricoh-input {
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: 'Lato', sans-serif;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
-            font-weight: 600;
         }
         
-        .ricoh-blue-button:hover {
-            background: linear-gradient(135deg, var(--ricoh-dark-blue) 0%, var(--ricoh-blue) 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
-        }
-        
-        .ricoh-gray-button {
-            background: linear-gradient(135deg, var(--ricoh-gray) 0%, #555555 100%);
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
-            font-weight: 600;
-        }
-        
-        .ricoh-gray-button:hover {
-            background: linear-gradient(135deg, #555555 0%, var(--ricoh-gray) 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(51, 51, 51, 0.4);
-        }
-        
-        .medical-gradient {
-            background: linear-gradient(135deg, var(--ricoh-blue) 0%, var(--ricoh-dark-blue) 100%);
-        }
-        
-        .medical-card {
-            border-left: 6px solid var(--ricoh-blue);
-        }
-        
-        .medical-text {
-            color: var(--ricoh-blue);
-        }
-        
-        .medical-button {
-            background: linear-gradient(135deg, var(--ricoh-blue) 0%, var(--ricoh-dark-blue) 100%);
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
-            font-weight: 600;
-        }
-        
-        .medical-button:hover {
-            background: linear-gradient(135deg, var(--ricoh-dark-blue) 0%, var(--ricoh-blue) 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+        .ricoh-input:focus {
+            border-color: #ED1C24;
+            ring: 3px;
+            ring-color: rgba(237, 28, 36, 0.1);
+            outline: none;
         }
         
         .notification {
             position: fixed;
             top: 20px;
             right: 20px;
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
+            padding: 16px 24px;
+            border-radius: 8px;
             color: white;
             font-weight: 600;
+            font-family: 'Lato', sans-serif;
             z-index: 1000;
-            transform: translateX(100%);
+            transform: translateX(400px);
             transition: transform 0.3s ease;
         }
         
@@ -146,306 +88,436 @@
         }
         
         .notification.success {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
         }
         
         .notification.error {
-            background: linear-gradient(135deg, var(--ricoh-red) 0%, var(--ricoh-dark-red) 100%);
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
         }
         
-        .notification.info {
-            background: linear-gradient(135deg, var(--ricoh-blue) 0%, var(--ricoh-dark-blue) 100%);
+        .loading-spinner {
+            border: 4px solid rgba(237, 28, 36, 0.1);
+            border-left: 4px solid #ED1C24;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .code-badge {
+            background: linear-gradient(135deg, #ED1C24 0%, #B71C1C 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            font-size: 14px;
         }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <!-- Header -->
-    <header class="medical-gradient text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex justify-center items-center mb-8">
-                <div class="bg-white rounded-2xl px-10 py-6 mr-10 shadow-2xl">
-                    <div class="flex items-center">
-                        <i class="fas fa-heartbeat text-5xl text-blue-600 mr-4"></i>
-                        <span class="ricoh-logo text-5xl">RICOH</span>
+<body class="bg-ricoh-gray font-lato">
+    <!-- Header RICOH -->
+    <header class="ricoh-gradient shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="text-3xl font-bold text-white">
+                        <i class="fas fa-microscope mr-2"></i>
+                        RICOH
                     </div>
-                    <div class="text-center mt-2">
-                        <p class="text-sm text-gray-600 font-medium">imagine. change.</p>
+                    <div class="hidden md:block text-white/80 font-lato">
+                        IA de Codificación Médica CIE-10-ES
                     </div>
                 </div>
-                <div class="text-center">
-                    <h1 class="text-6xl font-black mb-4 tracking-tight">
-                        <i class="fas fa-brain mr-6 text-yellow-400"></i>
-                        Codificación Médica CIE-10
-                    </h1>
-                    <p class="text-2xl font-medium opacity-95">
-                        Sistema de Clasificación Automática con IA
-                    </p>
+                <div class="text-white/80 text-sm font-lato">
+                    <i class="fas fa-hospital mr-2"></i>
+                    España
                 </div>
-            </div>
-            <div class="text-center">
-                <p class="text-lg opacity-90 max-w-4xl mx-auto">
-                    <i class="fas fa-shield-alt mr-3 text-yellow-400"></i>
-                    Clasificación automática de diagnósticos médicos según la Clasificación Internacional de Enfermedades (CIE-10)
-                    <i class="fas fa-shield-alt ml-3 text-yellow-400"></i>
-                </p>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
-        <div class="grid lg:grid-cols-2 gap-10">
-            <!-- Input Section -->
-            <div class="bg-white rounded-2xl shadow-xl p-8 card-hover medical-card">
-                <h2 class="text-3xl font-bold mb-6 medical-text">
-                    <i class="fas fa-heartbeat mr-3"></i>Codificación Médica CIE-10
-                </h2>
-                <div class="mb-6">
-                    <label class="block text-sm font-semibold text-gray-700 mb-3">Diagnóstico del Paciente:</label>
-                    <div class="relative">
-                        <textarea id="medical-text" rows="4" class="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Ej: Paciente presenta dolor agudo en el pecho, sudoración fría y dificultad para respirar..."></textarea>
+    <main class="container mx-auto px-6 py-8">
+        <!-- Título principal -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-crimson font-bold text-ricoh-dark mb-4">
+                🧠 IA de Codificación Médica con CIE‑10‑ES
+            </h1>
+            <p class="text-lg text-gray-600 font-lato max-w-3xl mx-auto">
+                Solución médica asistida por IA que convierte diagnósticos en lenguaje natural 
+                a códigos CIE-10 estructurados usando OpenAI GPT-4 Turbo
+            </p>
+        </div>
+
+        <!-- Formulario principal -->
+        <div class="max-w-4xl mx-auto">
+            <div class="ricoh-card p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Columna izquierda: Inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-ricoh-dark mb-3 font-lato">
+                                <i class="fas fa-stethoscope mr-2 text-ricoh-red"></i>
+                                Diagnóstico Clínico
+                            </label>
+                            <textarea 
+                                id="diagnostico" 
+                                class="ricoh-input w-full h-32 resize-none"
+                                placeholder="Ej: Poliposis nasal bilateral con sospecha de sinusitis crónica polipoide"
+                            ></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-ricoh-dark mb-3 font-lato">
+                                <i class="fas fa-user mr-2 text-ricoh-red"></i>
+                                Edad del Paciente
+                            </label>
+                            <input 
+                                type="number" 
+                                id="edad" 
+                                class="ricoh-input w-full"
+                                placeholder="42"
+                                min="0" 
+                                max="120"
+                            >
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-ricoh-dark mb-3 font-lato">
+                                <i class="fas fa-clipboard-list mr-2 text-ricoh-red"></i>
+                                Síntomas Relevantes
+                            </label>
+                            <textarea 
+                                id="sintomas" 
+                                class="ricoh-input w-full h-24 resize-none"
+                                placeholder="Ej: Obstrucción nasal crónica, Rinorrea hialina, Hiposmia, Cefalea facial"
+                            ></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="grid grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-3">Edad del Paciente:</label>
-                        <input type="number" id="medical-age" class="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="65">
+                    
+                    <!-- Columna derecha: Motor IA -->
+                    <div class="space-y-6">
+                        <div class="ricoh-card p-6 bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-100">
+                            <div class="text-center">
+                                <div class="text-2xl mb-3">
+                                    <i class="fas fa-robot text-ricoh-red"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-ricoh-dark font-crimson mb-2">
+                                    Motor de IA Médica
+                                </h3>
+                                <div class="text-sm text-gray-600 font-lato">
+                                    <div class="flex items-center justify-center mb-2">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        OpenAI GPT-4 Turbo
+                                    </div>
+                                    <div class="flex items-center justify-center mb-2">
+                                        <i class="fas fa-database text-blue-500 mr-2"></i>
+                                        CIE-10-ES Ministerio Sanidad
+                                    </div>
+                                    <div class="flex items-center justify-center">
+                                        <i class="fas fa-shield-alt text-ricoh-red mr-2"></i>
+                                        Codificación Experta
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button 
+                            onclick="codificarDiagnostico()" 
+                            class="ricoh-button w-full py-4 px-6 text-lg font-bold"
+                        >
+                            <i class="fas fa-search mr-3"></i>
+                            Codificar CIE-10-ES
+                        </button>
+                        
+                        <button 
+                            onclick="cargarEjemplo()" 
+                            class="w-full py-3 px-6 border-2 border-gray-300 rounded-lg text-gray-700 font-semibold hover:bg-gray-50 transition-all"
+                        >
+                            <i class="fas fa-file-medical mr-2"></i>
+                            Cargar Ejemplo Clínico
+                        </button>
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-3">Síntomas Adicionales:</label>
-                        <input type="text" id="medical-symptoms" class="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Dolor, náuseas, etc.">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-6">
-                    <button onclick="classifyMedical()" class="medical-button py-5 px-8 rounded-xl text-lg font-bold">
-                        <i class="fas fa-search mr-3"></i>Clasificar CIE-10
-                    </button>
-                    <button onclick="loadMedicalExample()" class="ricoh-gray-button py-5 px-8 rounded-xl text-lg font-bold">
-                        <i class="fas fa-play mr-3"></i>Ejemplo
-                    </button>
-                </div>
-                <div class="mt-6 p-4 bg-blue-50 rounded-xl border-l-4 border-blue-400">
-                    <p class="text-sm text-blue-800 font-medium">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        <strong>Tip:</strong> Describe los síntomas de manera detallada para obtener una clasificación más precisa. El sistema analiza el contexto médico completo.
-                    </p>
                 </div>
             </div>
 
-            <!-- Results Section -->
-            <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
-                <h3 class="text-2xl font-bold mb-6 text-gray-800">Resultado de Clasificación</h3>
-                <div id="medical-result" class="space-y-6">
-                    <div class="text-center text-gray-500">
-                        <i class="fas fa-stethoscope text-5xl mb-4"></i>
-                        <p class="text-lg font-medium">Ingresa el diagnóstico y haz clic en "Clasificar CIE-10"</p>
-                    </div>
-                </div>
+            <!-- Área de resultados -->
+            <div id="resultados" class="hidden">
+                <!-- Los resultados se cargarán aquí dinámicamente -->
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-16">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center items-center mb-8">
-                <div class="bg-white rounded-2xl px-6 py-4 mr-6 shadow-xl">
-                    <div class="text-center">
-                        <span class="ricoh-logo text-2xl">RICOH</span>
-                        <p class="text-xs text-gray-600 mt-1">imagine. change.</p>
+    <!-- Footer RICOH -->
+    <footer class="bg-ricoh-dark text-white py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-crimson font-bold mb-4">RICOH España</h3>
+                    <p class="text-gray-300 font-lato">
+                        Soluciones tecnológicas avanzadas para el sector sanitario.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 font-lato">Información</h4>
+                    <ul class="space-y-2 text-gray-300 font-lato">
+                        <li><i class="fas fa-shield-alt mr-2"></i>Privacidad de Datos</li>
+                        <li><i class="fas fa-lock mr-2"></i>Seguridad Médica</li>
+                        <li><i class="fas fa-certificate mr-2"></i>Certificación ISO</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 font-lato">Contacto</h4>
+                    <div class="text-gray-300 font-lato">
+                        <div class="mb-2">
+                            <i class="fas fa-envelope mr-2"></i>
+                            soporte.medico@ricoh.es
+                        </div>
+                        <div>
+                            <i class="fas fa-phone mr-2"></i>
+                            +34 900 123 456
+                        </div>
                     </div>
                 </div>
-                <h3 class="text-3xl font-bold">Codificación Médica CIE-10</h3>
             </div>
-            <p class="text-gray-300 mb-6 text-lg">Sistema de Clasificación Automática con Inteligencia Artificial</p>
-            <div class="flex justify-center space-x-8 text-sm text-gray-400 mb-6">
-                <span class="flex items-center"><i class="fas fa-brain mr-2"></i>Machine Learning</span>
-                <span class="flex items-center"><i class="fas fa-heartbeat mr-2"></i>Clasificación Médica</span>
-                <span class="flex items-center"><i class="fas fa-microchip mr-2"></i>Auto-Scaling</span>
-                <span class="flex items-center"><i class="fas fa-shield-alt mr-2"></i>Precisión</span>
-            </div>
-            <div class="border-t border-gray-700 pt-6">
-                <p class="text-sm text-gray-400">Desarrollado por Ricoh España - Consultoría en Transformación Digital</p>
-                <p class="text-xs text-gray-500 mt-2">© 2025 Ricoh España. Todos los derechos reservados.</p>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 font-lato">
+                <p>&copy; 2024 RICOH España. Todos los derechos reservados. | CIE-10-ES basado en datos oficiales del Ministerio de Sanidad</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Notification system
-        function showNotification(message, type = 'info') {
-            const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
-            notification.innerHTML = `
-                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-triangle' : 'info-circle'} mr-2"></i>
-                ${message}
-            `;
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.classList.add('show');
-            }, 100);
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 5000);
-        }
+        // Función principal de codificación
+        async function codificarDiagnostico() {
+            const diagnostico = document.getElementById('diagnostico').value.trim();
+            const edad = document.getElementById('edad').value;
+            const sintomas = document.getElementById('sintomas').value.trim();
 
-        // Medical Classification
-        async function classifyMedical() {
-            const text = document.getElementById('medical-text').value;
-            const age = document.getElementById('medical-age').value;
-            const symptoms = document.getElementById('medical-symptoms').value;
-
-            if (!text) {
-                showNotification('Por favor ingresa un diagnóstico', 'error');
+            if (!diagnostico) {
+                mostrarNotificacion('Por favor, ingresa un diagnóstico clínico', 'error');
                 return;
             }
 
-            const resultDiv = document.getElementById('medical-result');
-            resultDiv.innerHTML = '<div class="text-center"><i class="fas fa-spinner fa-spin text-5xl medical-text"></i><p class="mt-4 text-lg font-medium">Clasificando...</p></div>';
-
-            // Try multiple URLs for the medical service
-            const medicalURLs = [
-                'http://127.0.0.1:8006',
-                'http://localhost:8006'
-            ];
-
-            let lastError = null;
-
-            for (const baseURL of medicalURLs) {
-                try {
-                    console.log(`Trying medical service at: ${baseURL}`);
-                    
-                    const response = await fetch(`${baseURL}/predict`, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            text: text,
-                            patient_age: parseInt(age) || 0,
-                            symptoms: symptoms ? symptoms.split(',').map(s => s.trim()) : []
-                        })
-                    });
-
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-
-                    const result = await response.json();
-                    
-                    const confidenceClass = result.confidence > 0.8 ? 'text-green-600' : result.confidence > 0.6 ? 'text-yellow-600' : 'text-red-600';
-                    const confidenceIcon = result.confidence > 0.8 ? 'fas fa-check-circle' : result.confidence > 0.6 ? 'fas fa-exclamation-circle' : 'fas fa-times-circle';
-
-                    resultDiv.innerHTML = `
-                        <div class="space-y-6">
-                            <div class="text-center">
-                                <i class="${confidenceIcon} text-5xl ${confidenceClass} mb-4"></i>
-                                <h4 class="text-2xl font-bold medical-text">${result.icd10_code}</h4>
-                                <p class="text-lg text-gray-600 mt-2">${result.description}</p>
-                            </div>
-                            <div class="bg-gray-50 p-6 rounded-xl">
-                                <div class="grid grid-cols-2 gap-6 text-sm">
-                                    <div>
-                                        <span class="font-semibold">Confianza:</span>
-                                        <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
-                                            <div class="bg-blue-600 h-3 rounded-full" style="width: ${result.confidence * 100}%"></div>
-                                        </div>
-                                        <span class="text-xs">${(result.confidence * 100).toFixed(1)}%</span>
-                                    </div>
-                                    <div>
-                                        <span class="font-semibold">Categoría:</span>
-                                        <p class="text-sm text-gray-600 mt-1">${result.category}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            ${result.alternative_codes && result.alternative_codes.length > 0 ? `
-                            <div class="bg-blue-50 p-4 rounded-xl">
-                                <h5 class="font-semibold text-blue-800 mb-3">Códigos Alternativos:</h5>
-                                <div class="space-y-2">
-                                    ${result.alternative_codes.map(code => `
-                                        <div class="flex justify-between items-center p-2 bg-white rounded">
-                                            <span class="font-mono text-sm">${code.code}</span>
-                                            <span class="text-xs text-gray-500">${(code.confidence * 100).toFixed(1)}%</span>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
-                            ` : ''}
-                            <div class="text-center text-sm text-gray-500">
-                                <i class="fas fa-brain mr-2"></i>
-                                Modelo: Clinical ModernBERT v2.0
-                            </div>
-                        </div>
-                    `;
-                    
-                    showNotification('Clasificación completada exitosamente', 'success');
-                    return;
-
-                } catch (error) {
-                    lastError = error.message;
-                    console.error(`Error with ${baseURL}:`, error);
-                }
-            }
-
-            resultDiv.innerHTML = `
-                <div class="text-center text-red-600">
-                    <i class="fas fa-exclamation-triangle text-5xl mb-4"></i>
-                    <p class="text-lg font-medium">Error de conexión</p>
-                    <p class="text-sm mt-2">No se pudo conectar con el servicio de clasificación médica.</p>
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.className = '';
+            resultadosDiv.innerHTML = `
+                <div class="ricoh-card p-8 text-center">
+                    <div class="loading-spinner mx-auto mb-4"></div>
+                    <h3 class="text-xl font-semibold text-ricoh-dark font-crimson mb-2">
+                        Analizando con IA Médica...
+                    </h3>
+                    <p class="text-gray-600 font-lato">
+                        GPT-4 Turbo procesando diagnóstico y consultando CIE-10-ES
+                    </p>
                 </div>
             `;
-            
-            showNotification('Error de conexión con el servicio', 'error');
-        }
 
-        // Load medical example
-        function loadMedicalExample() {
-            const examples = [
-                {
-                    text: "Paciente presenta dolor agudo en el pecho, sudoración fría y dificultad para respirar. Síntomas que sugieren posible infarto agudo de miocardio.",
-                    age: "65",
-                    symptoms: "Dolor torácico, sudoración, disnea"
-                },
-                {
-                    text: "Paciente diabético tipo 2 con niveles elevados de glucosa en sangre. Control metabólico deficiente.",
-                    age: "58",
-                    symptoms: "Poliuria, polidipsia, fatiga"
-                },
-                {
-                    text: "Paciente con dolor de cabeza intenso, náuseas y fotofobia. Síntomas típicos de migraña.",
-                    age: "32",
-                    symptoms: "Cefalea, náuseas, fotofobia"
-                },
-                {
-                    text: "Paciente con tos persistente, expectoración y dificultad respiratoria. Posible EPOC.",
-                    age: "70",
-                    symptoms: "Tos, expectoración, disnea"
-                },
-                {
-                    text: "Paciente con dolor abdominal agudo en cuadrante inferior derecho. Sospecha de apendicitis.",
-                    age: "25",
-                    symptoms: "Dolor abdominal, náuseas, fiebre"
+            try {
+                // Preparar datos para envío
+                const datos = {
+                    diagnostico: diagnostico,
+                    edad: edad ? parseInt(edad) : null,
+                    sintomas: sintomas ? sintomas.split(',').map(s => s.trim()) : []
+                };
+
+                console.log('Enviando datos:', datos);
+
+                const response = await fetch('http://localhost:8091/codificar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(datos)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
                 }
-            ];
 
-            const randomExample = examples[Math.floor(Math.random() * examples.length)];
-            
-            document.getElementById('medical-text').value = randomExample.text;
-            document.getElementById('medical-age').value = randomExample.age;
-            document.getElementById('medical-symptoms').value = randomExample.symptoms;
-            
-            showNotification('Ejemplo cargado', 'info');
+                const resultado = await response.json();
+                mostrarResultados(resultado);
+                mostrarNotificacion('Codificación completada exitosamente', 'success');
+
+            } catch (error) {
+                console.error('Error:', error);
+                resultadosDiv.innerHTML = `
+                    <div class="ricoh-card p-8 text-center">
+                        <div class="text-6xl text-red-500 mb-4">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-600 font-crimson mb-2">
+                            Error de Conexión
+                        </h3>
+                        <p class="text-gray-600 font-lato mb-4">
+                            No se pudo conectar con el servicio de codificación médica.
+                        </p>
+                        <p class="text-sm text-gray-500 font-lato">
+                            Error: ${error.message}
+                        </p>
+                    </div>
+                `;
+                mostrarNotificacion('Error al procesar la solicitud', 'error');
+            }
         }
 
-        // Auto-focus on text area
+        // Mostrar resultados de codificación
+        function mostrarResultados(datos) {
+            const resultadosDiv = document.getElementById('resultados');
+            
+            resultadosDiv.innerHTML = `
+                <div class="space-y-6">
+                    <!-- Diagnóstico propuesto -->
+                    <div class="ricoh-card p-6">
+                        <h3 class="text-xl font-semibold text-ricoh-dark font-crimson mb-4">
+                            <i class="fas fa-brain text-ricoh-red mr-2"></i>
+                            Diagnóstico Propuesto
+                        </h3>
+                        <p class="text-gray-700 font-lato text-lg leading-relaxed">
+                            ${datos.diagnostico_propuesto || 'No especificado'}
+                        </p>
+                    </div>
+
+                    <!-- Diagnóstico principal -->
+                    <div class="ricoh-card p-6">
+                        <h3 class="text-xl font-semibold text-ricoh-dark font-crimson mb-4">
+                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                            Diagnóstico Principal
+                        </h3>
+                        <div class="bg-gradient-to-r from-ricoh-red/5 to-red-100/50 p-4 rounded-lg border-l-4 border-ricoh-red">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="code-badge">${datos.diagnostico_principal?.codigo || 'N/A'}</span>
+                                <span class="text-sm text-gray-500 font-lato">Principal</span>
+                            </div>
+                            <h4 class="font-semibold text-ricoh-dark mb-2 font-lato">
+                                ${datos.diagnostico_principal?.descripcion || 'No especificado'}
+                            </h4>
+                            <p class="text-gray-600 font-lato">
+                                <strong>Justificación:</strong> ${datos.diagnostico_principal?.justificacion || 'No disponible'}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Diagnósticos secundarios -->
+                    ${datos.diagnosticos_secundarios && datos.diagnosticos_secundarios.length > 0 ? `
+                        <div class="ricoh-card p-6">
+                            <h3 class="text-xl font-semibold text-ricoh-dark font-crimson mb-4">
+                                <i class="fas fa-list-ul text-blue-500 mr-2"></i>
+                                Diagnósticos Secundarios
+                            </h3>
+                            <div class="space-y-4">
+                                ${datos.diagnosticos_secundarios.map(diag => `
+                                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border-l-4 border-blue-400">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-mono">${diag.codigo}</span>
+                                            <span class="text-xs text-gray-500 font-lato">Secundario</span>
+                                        </div>
+                                        <h5 class="font-semibold text-gray-800 mb-2 font-lato">${diag.descripcion}</h5>
+                                        <p class="text-gray-600 text-sm font-lato">
+                                            <strong>Justificación:</strong> ${diag.justificacion}
+                                        </p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+
+                    <!-- Información técnica -->
+                    <div class="ricoh-card p-6 bg-gray-50">
+                        <div class="grid md:grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl text-ricoh-red mb-2">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="text-sm font-semibold text-gray-700 font-lato">Motor IA</div>
+                                <div class="text-xs text-gray-500 font-lato">GPT-4 Turbo</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl text-blue-500 mb-2">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="text-sm font-semibold text-gray-700 font-lato">Base de Datos</div>
+                                <div class="text-xs text-gray-500 font-lato">CIE-10-ES Oficial</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl text-green-500 mb-2">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="text-sm font-semibold text-gray-700 font-lato">Procesamiento</div>
+                                <div class="text-xs text-gray-500 font-lato">${datos.tiempo_procesamiento || 'N/A'}s</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Cargar ejemplo clínico aleatorio
+        async function cargarEjemplo() {
+            console.log('🔄 Iniciando carga de ejemplo aleatorio...');
+            try {
+                console.log('📡 Haciendo petición a: http://localhost:8091/ejemplos-clinicos/aleatorio');
+                
+                const response = await fetch('http://localhost:8091/ejemplos-clinicos/aleatorio', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Cache-Control': 'no-cache'
+                    }
+                });
+
+                console.log('📊 Status de respuesta:', response.status);
+
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                console.log('📋 Datos recibidos:', data);
+                
+                const ejemplo = data.ejemplo;
+                console.log('🏥 Ejemplo cargado:', ejemplo);
+
+                // Cargar los datos del ejemplo aleatorio
+                document.getElementById('diagnostico').value = ejemplo.diagnostico;
+                document.getElementById('edad').value = ejemplo.edad;
+                document.getElementById('sintomas').value = ejemplo.sintomas.join(', ');
+
+                console.log('✅ Datos cargados en formulario');
+                mostrarNotificacion(`Ejemplo clínico cargado: ${ejemplo.descripcion} (${ejemplo.codigo_esperado})`, 'success');
+            } catch (error) {
+                console.error('❌ Error al cargar ejemplo:', error);
+                mostrarNotificacion(`Error al cargar ejemplo clínico: ${error.message}`, 'error');
+            }
+        }
+
+        // Sistema de notificaciones
+        function mostrarNotificacion(mensaje, tipo) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${tipo}`;
+            notification.innerHTML = `
+                <i class="fas fa-${tipo === 'success' ? 'check-circle' : 'exclamation-circle'} mr-2"></i>
+                ${mensaje}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.classList.add('show'), 100);
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        // Inicialización
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('medical-text').focus();
+            console.log('🏥 RICOH España - IA de Codificación Médica CIE-10-ES iniciado');
         });
     </script>
 </body>
-</html> 
+</html>

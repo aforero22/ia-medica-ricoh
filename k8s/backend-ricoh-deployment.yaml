@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-ricoh
+  namespace: medical-only
+  labels:
+    app: backend-ricoh
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend-ricoh
+  template:
+    metadata:
+      labels:
+        app: backend-ricoh
+    spec:
+      containers:
+      - name: backend-ricoh
+        image: backend-ricoh:v7
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        env:
+        - name: OPENAI_API_KEY
+          value: "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"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-ricoh-service
+  namespace: medical-only
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8000
+  selector:
+    app: backend-ricoh

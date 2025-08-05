@@ -1,0 +1,276 @@
+﻿{
+    "metadata":  {
+                     "fuente":  "CIE-10-ES Ministerio de Sanidad España",
+                     "url_oficial":  "https://eciemaps.mscbs.gob.es/ecieMaps/browser/index_10_mc.html",
+                     "version":  "2024",
+                     "descripcion":  "Base de datos oficial CIE-10-ES para codificación médica"
+                 },
+    "codigos":  {
+                    "A00-B99":  {
+                                    "categoria":  "Ciertas enfermedades infecciosas y parasitarias",
+                                    "subcategorias":  {
+                                                          "A15.0":  "Tuberculosis del pulmón, confirmada por examen microscópico del esputo",
+                                                          "A41.9":  "Sepsis, no especificada",
+                                                          "B34.9":  "Infección viral, no especificada"
+                                                      }
+                                },
+                    "C00-D48":  {
+                                    "categoria":  "Neoplasias",
+                                    "subcategorias":  {
+                                                          "C78.0":  "Neoplasia maligna secundaria del pulmón",
+                                                          "C80.1":  "Neoplasia maligna, no especificada",
+                                                          "D12.6":  "Neoplasia benigna del colon, sitio no especificado"
+                                                      }
+                                },
+                    "D50-D89":  {
+                                    "categoria":  "Enfermedades de la sangre y de los órganos hematopoyéticos",
+                                    "subcategorias":  {
+                                                          "D50.0":  "Anemia por deficiencia de hierro secundaria a pérdida de sangre (crónica)",
+                                                          "D64.9":  "Anemia, no especificada"
+                                                      }
+                                },
+                    "E00-E90":  {
+                                    "categoria":  "Enfermedades endocrinas, nutricionales y metabólicas",
+                                    "subcategorias":  {
+                                                          "E10.9":  "Diabetes mellitus insulinodependiente, sin mención de complicación",
+                                                          "E11.9":  "Diabetes mellitus no insulinodependiente sin mencion de complicacion",
+                                                          "E66.0":  "Obesidad debida a exceso de calorías",
+                                                          "E78.0":  "Hipercolesterolemia pura"
+                                                      }
+                                },
+                    "F00-F99":  {
+                                    "categoria":  "Trastornos mentales y del comportamiento",
+                                    "subcategorias":  {
+                                                          "F32.9":  "Episodio depresivo, no especificado",
+                                                          "F41.9":  "Trastorno de ansiedad, no especificado",
+                                                          "F43.2":  "Trastorno de adaptación",
+                                                          "F60.3":  "Trastorno de personalidad emocionalmente inestable"
+                                                      }
+                                },
+                    "G00-G99":  {
+                                    "categoria":  "Enfermedades del sistema nervioso",
+                                    "subcategorias":  {
+                                                          "G43.0":  "Migrana sin aura",
+                                                          "G43.1":  "Migraña con aura",
+                                                          "G43.9":  "Migraña, no especificada",
+                                                          "G44.2":  "Cefalea de tipo tensional",
+                                                          "G93.1":  "Anoxia cerebral no clasificada en otra parte"
+                                                      }
+                                },
+                    "H00-H59":  {
+                                    "categoria":  "Enfermedades del ojo y sus anexos",
+                                    "subcategorias":  {
+                                                          "H52.1":  "Miopía",
+                                                          "H52.0":  "Hipermetropía",
+                                                          "H25.9":  "Catarata senil, no especificada"
+                                                      }
+                                },
+                    "H60-H95":  {
+                                    "categoria":  "Enfermedades del oído y de la apófisis mastoides",
+                                    "subcategorias":  {
+                                                          "H90.3":  "Pérdida de la audición neurosensorial bilateral",
+                                                          "H61.2":  "Impactación de cerumen"
+                                                      }
+                                },
+                    "I00-I99":  {
+                                    "categoria":  "Enfermedades del sistema circulatorio",
+                                    "subcategorias":  {
+                                                          "I10":  "Hipertension esencial (primaria)",
+                                                          "I25.1":  "Enfermedad aterosclerotica del corazon",
+                                                          "I25.9":  "Enfermedad isquémica crónica del corazón, no especificada",
+                                                          "I50.9":  "Insuficiencia cardiaca no especificada",
+                                                          "I63.9":  "Infarto cerebral, no especificado"
+                                                      }
+                                },
+                    "J00-J99":  {
+                                    "categoria":  "Enfermedades del sistema respiratorio",
+                                    "subcategorias":  {
+                                                          "J00":  "Rinofaringitis aguda (resfriado común)",
+                                                          "J06.9":  "Infección aguda de las vías respiratorias superiores, no especificada",
+                                                          "J18.9":  "Neumonia no especificada",
+                                                          "J32.0":  "Sinusitis maxilar crónica",
+                                                          "J32.9":  "Sinusitis crónica, no especificada",
+                                                          "J33.0":  "Pólipo nasal",
+                                                          "J33.1":  "Pólipos de los senos paranasales",
+                                                          "J33.9":  "Pólipo nasal, no especificado",
+                                                          "J44.0":  "EPOC con infeccion aguda de las vias respiratorias inferiores",
+                                                          "J44.1":  "EPOC con exacerbacion aguda no especificada",
+                                                          "J45.9":  "Asma no especificada"
+                                                      }
+                                },
+                    "K00-K93":  {
+                                    "categoria":  "Enfermedades del sistema digestivo",
+                                    "subcategorias":  {
+                                                          "K21.0":  "Enfermedad de reflujo gastroesofágico con esofagitis",
+                                                          "K25.9":  "Ulcera gastrica no especificada",
+                                                          "K29.7":  "Gastritis, no especificada",
+                                                          "K59.0":  "Estrenimiento"
+                                                      }
+                                },
+                    "L00-L99":  {
+                                    "categoria":  "Enfermedades de la piel y del tejido subcutáneo",
+                                    "subcategorias":  {
+                                                          "L20.9":  "Dermatitis atópica, no especificada",
+                                                          "L30.9":  "Dermatitis, no especificada"
+                                                      }
+                                },
+                    "M00-M99":  {
+                                    "categoria":  "Enfermedades del sistema musculoesquelético y del tejido conectivo",
+                                    "subcategorias":  {
+                                                          "M25.5":  "Dolor articular",
+                                                          "M54.5":  "Dolor en la region lumbar",
+                                                          "M79.3":  "Dolor en la region lumbar",
+                                                          "M15.9":  "Poliartrosis, no especificada",
+                                                          "M06.9":  "Artritis reumatoide, no especificada"
+                                                      }
+                                },
+                    "N00-N99":  {
+                                    "categoria":  "Enfermedades del sistema genitourinario",
+                                    "subcategorias":  {
+                                                          "N18.6":  "Enfermedad renal crónica en estadio terminal",
+                                                          "N20.0":  "Cálculo del riñón",
+                                                          "N39.0":  "Infección de vías urinarias, sitio no especificado"
+                                                      }
+                                },
+                    "O00-O99":  {
+                                    "categoria":  "Embarazo, parto y puerperio",
+                                    "subcategorias":  {
+                                                          "O80":  "Parto único espontáneo",
+                                                          "O21.9":  "Vómito del embarazo, no especificado"
+                                                      }
+                                },
+                    "P00-P96":  {
+                                    "categoria":  "Ciertas afecciones originadas en el período perinatal",
+                                    "subcategorias":  {
+                                                          "P07.3":  "Otros recién nacidos de bajo peso",
+                                                          "P22.0":  "Síndrome de dificultad respiratoria del recién nacido"
+                                                      }
+                                },
+                    "Q00-Q99":  {
+                                    "categoria":  "Malformaciones congénitas, deformidades y anomalías cromosómicas",
+                                    "subcategorias":  {
+                                                          "Q21.0":  "Defecto del tabique ventricular",
+                                                          "Q90.9":  "Síndrome de Down, no especificado"
+                                                      }
+                                },
+                    "R00-R99":  {
+                                    "categoria":  "Síntomas, signos y hallazgos anormales clínicos y de laboratorio",
+                                    "subcategorias":  {
+                                                          "R05":  "Tos",
+                                                          "R06.0":  "Disnea",
+                                                          "R10.4":  "Otros dolores abdominales y los no especificados",
+                                                          "R50.9":  "Fiebre no especificada",
+                                                          "R51":  "Cefalea",
+                                                          "R69":  "Causas desconocidas y no especificadas de morbilidad"
+                                                      }
+                                },
+                    "S00-T98":  {
+                                    "categoria":  "Traumatismos, envenenamientos y algunas otras consecuencias de causas externas",
+                                    "subcategorias":  {
+                                                          "S72.0":  "Fractura del cuello del fémur",
+                                                          "T78.4":  "Alergia, no especificada"
+                                                      }
+                                },
+                    "V01-Y98":  {
+                                    "categoria":  "Causas externas de morbilidad y mortalidad",
+                                    "subcategorias":  {
+                                                          "V89.2":  "Persona lesionada en accidente de vehículo de motor no especificado, sin colisión",
+                                                          "X59":  "Exposición a factores no especificados"
+                                                      }
+                                },
+                    "Z00-Z99":  {
+                                    "categoria":  "Factores que influyen en el estado de salud y contacto con los servicios de salud",
+                                    "subcategorias":  {
+                                                          "Z00.0":  "Examen médico general",
+                                                          "Z51.1":  "Sesión de quimioterapia para neoplasia"
+                                                      }
+                                }
+                },
+    "indice_sintomas":  {
+                            "dolor de cabeza":  [
+                                                    "G43.0",
+                                                    "G43.1",
+                                                    "G43.9",
+                                                    "G44.2",
+                                                    "R51"
+                                                ],
+                            "migraña":  [
+                                            "G43.0",
+                                            "G43.1",
+                                            "G43.9"
+                                        ],
+                            "cefalea":  [
+                                            "G43.0",
+                                            "G43.1",
+                                            "G43.9",
+                                            "G44.2",
+                                            "R51"
+                                        ],
+                            "náuseas":  [
+                                            "G43.0",
+                                            "G43.1",
+                                            "R11",
+                                            "O21.9"
+                                        ],
+                            "obstrucción nasal":  [
+                                                      "J00",
+                                                      "J33.0",
+                                                      "J33.1",
+                                                      "J32.0"
+                                                  ],
+                            "rinorrea":  [
+                                             "J00",
+                                             "J06.9",
+                                             "J32.0"
+                                         ],
+                            "hiposmia":  [
+                                             "J33.1",
+                                             "J32.9"
+                                         ],
+                            "pólipos":  [
+                                            "J33.0",
+                                            "J33.1",
+                                            "J33.9"
+                                        ],
+                            "sinusitis":  [
+                                              "J32.0",
+                                              "J32.9"
+                                          ],
+                            "tos":  [
+                                        "R05",
+                                        "J44.0",
+                                        "J18.9"
+                                    ],
+                            "disnea":  [
+                                           "R06.0",
+                                           "J44.1",
+                                           "I50.9"
+                                       ],
+                            "fiebre":  [
+                                           "R50.9",
+                                           "A41.9",
+                                           "J18.9"
+                                       ],
+                            "dolor abdominal":  [
+                                                    "R10.4",
+                                                    "K25.9",
+                                                    "K29.7"
+                                                ],
+                            "estreñimiento":  [
+                                                  "K59.0"
+                                              ],
+                            "diabetes":  [
+                                             "E10.9",
+                                             "E11.9"
+                                         ],
+                            "hipertensión":  [
+                                                 "I10"
+                                             ],
+                            "ansiedad":  [
+                                             "F41.9"
+                                         ],
+                            "depresión":  [
+                                              "F32.9"
+                                          ]
+                        }
+}

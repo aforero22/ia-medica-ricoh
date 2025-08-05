@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-medical
+  name: frontend-ricoh
   namespace: medical-only
   labels:
-    app: frontend-medical
+    app: frontend-ricoh
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: frontend-medical
+      app: frontend-ricoh
   template:
     metadata:
       labels:
-        app: frontend-medical
+        app: frontend-ricoh
     spec:
       containers:
       - name: frontend-ricoh
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-medical-service
+  name: frontend-ricoh-service
   namespace: medical-only
 spec:
   type: LoadBalancer
@@ -33,4 +33,4 @@ spec:
   - port: 80
     targetPort: 3000
   selector:
-    app: frontend-medical
+    app: frontend-ricoh

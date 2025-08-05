@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medical-service-advanced
+  namespace: medical-only
+  labels:
+    app: medical-service-advanced
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: medical-service-advanced
+  template:
+    metadata:
+      labels:
+        app: medical-service-advanced
+    spec:
+      containers:
+                        - name: backend-ricoh
+                    image: backend-ricoh:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        env:
+        - name: MODEL_CACHE_DIR
+          value: "/tmp/models"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: medical-service-advanced-service
+  namespace: medical-only
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8000
+  selector:
+    app: medical-service-advanced

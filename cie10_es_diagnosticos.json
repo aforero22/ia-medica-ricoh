@@ -1,0 +1,3934 @@
+[
+  {
+    "codigo": "Y84.3",
+    "descripcion": "- - electroshock"
+  },
+  {
+    "codigo": "Y84.3",
+    "descripcion": "- - shock"
+  },
+  {
+    "codigo": "Y84.3",
+    "descripcion": "- - shock de insulina"
+  },
+  {
+    "codigo": "Y84.8",
+    "descripcion": "- - procedimiento"
+  },
+  {
+    "codigo": "Y83.0",
+    "descripcion": "completo, cualquiera) (renal)"
+  },
+  {
+    "codigo": "Y83.6",
+    "descripcion": "- - órgano parcial"
+  },
+  {
+    "codigo": "Y83.3",
+    "descripcion": "- ureterostomía"
+  },
+  {
+    "codigo": "Y84.8",
+    "descripcion": "- - procedimiento"
+  },
+  {
+    "codigo": "T18",
+    "descripcion": "- - alimentos (en esófago) T17-"
+  },
+  {
+    "codigo": "W49.04",
+    "descripcion": "- anillo"
+  },
+  {
+    "codigo": "W49.02",
+    "descripcion": "- cuerda"
+  },
+  {
+    "codigo": "W49.03",
+    "descripcion": "- goma elástica"
+  },
+  {
+    "codigo": "W49.02",
+    "descripcion": "- hilo"
+  },
+  {
+    "codigo": "W49.04",
+    "descripcion": "- joya"
+  },
+  {
+    "codigo": "W49.09",
+    "descripcion": "- objeto especificado NCOC"
+  },
+  {
+    "codigo": "W49.01",
+    "descripcion": "- pelo"
+  },
+  {
+    "codigo": "X12",
+    "descripcion": "- - - - calentada en la estufa"
+  },
+  {
+    "codigo": "X11.1",
+    "descripcion": "- - - - corriente (que corre)"
+  },
+  {
+    "codigo": "X15.3",
+    "descripcion": "- - - olla"
+  },
+  {
+    "codigo": "X16",
+    "descripcion": "- - - - aparato de calefacción"
+  },
+  {
+    "codigo": "W31.82",
+    "descripcion": "- - - - industrial"
+  },
+  {
+    "codigo": "W21.9",
+    "descripcion": "- - - deportivo"
+  },
+  {
+    "codigo": "W31.0",
+    "descripcion": "- - - molino marino"
+  },
+  {
+    "codigo": "V58.9",
+    "descripcion": "construcción (no de tráfico))"
+  },
+  {
+    "codigo": "W30.89",
+    "descripcion": "- - - - equitación"
+  },
+  {
+    "codigo": "W29.8",
+    "descripcion": "- - - - motorizado"
+  },
+  {
+    "codigo": "W56.59",
+    "descripcion": "contacto, con, pez)"
+  },
+  {
+    "codigo": "W26.9",
+    "descripcion": "- - objeto afilado"
+  },
+  {
+    "codigo": "W26.8",
+    "descripcion": "- - - especificado NCOC"
+  },
+  {
+    "codigo": "X78.9",
+    "descripcion": "- - - - autoinfligido"
+  },
+  {
+    "codigo": "W59.89",
+    "descripcion": "- - - especificado NCOC"
+  },
+  {
+    "codigo": "W59.83",
+    "descripcion": "- - - - aplastamiento"
+  },
+  {
+    "codigo": "W59.82",
+    "descripcion": "- - - - golpe"
+  },
+  {
+    "codigo": "W59.81",
+    "descripcion": "- - - - mordedura"
+  },
+  {
+    "codigo": "W53.89",
+    "descripcion": "- - - especificado NCOC"
+  },
+  {
+    "codigo": "W31.0",
+    "descripcion": "tierra (fondo marino)"
+  },
+  {
+    "codigo": "W59.21",
+    "descripcion": "- - - mordedura"
+  },
+  {
+    "codigo": "W31.83",
+    "descripcion": "- - - - no en vía pública"
+  },
+  {
+    "codigo": "X50.9",
+    "descripcion": "- estrés"
+  },
+  {
+    "codigo": "X50.9",
+    "descripcion": "- presión"
+  },
+  {
+    "codigo": "W55.22",
+    "descripcion": "Corneado por un toro"
+  },
+  {
+    "codigo": "W18.40",
+    "descripcion": "- sin caída"
+  },
+  {
+    "codigo": "Y22",
+    "descripcion": "accidental o intencionado"
+  },
+  {
+    "codigo": "X50.9",
+    "descripcion": "- sobreesfuerzo"
+  },
+  {
+    "codigo": "T71",
+    "descripcion": "véase categoría"
+  },
+  {
+    "codigo": "V19.88",
+    "descripcion": "- - rueda de bicicleta"
+  },
+  {
+    "codigo": "W22.02",
+    "descripcion": "- farola"
+  },
+  {
+    "codigo": "W22.03",
+    "descripcion": "- muebles"
+  },
+  {
+    "codigo": "W22.01",
+    "descripcion": "- pared"
+  },
+  {
+    "codigo": "Y65.51",
+    "descripcion": "quirúrgico correcto"
+  },
+  {
+    "codigo": "Y65.1",
+    "descripcion": "- en infusión de líquidos"
+  },
+  {
+    "codigo": "Y65.51",
+    "descripcion": "correcto"
+  },
+  {
+    "codigo": "Y27.2",
+    "descripcion": "accidental o intencional"
+  },
+  {
+    "codigo": "X12",
+    "descripcion": "NCOC"
+  },
+  {
+    "codigo": "Y99.9",
+    "descripcion": "Estado de causa externa"
+  },
+  {
+    "codigo": "Y99.0",
+    "descripcion": "financiera o de otro tipo"
+  },
+  {
+    "codigo": "Y99.0",
+    "descripcion": "- - civil hecha por renta o paga"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "- - de ocio"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "- - especificada NCOC"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "- - estudiantil"
+  },
+  {
+    "codigo": "Y99.1",
+    "descripcion": "- - militar"
+  },
+  {
+    "codigo": "Y99.2",
+    "descripcion": "- - voluntaria"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "- pasatiempo no hecho por ingresos"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "estudiante"
+  },
+  {
+    "codigo": "X50.1",
+    "descripcion": "moverse)"
+  },
+  {
+    "codigo": "Y69",
+    "descripcion": "atención médica o quirúrgica"
+  },
+  {
+    "codigo": "Y63.0",
+    "descripcion": "durante la transfusión o infusión"
+  },
+  {
+    "codigo": "Y64.9",
+    "descripcion": "- - administrados (por) NCOC"
+  },
+  {
+    "codigo": "Y64.0",
+    "descripcion": "- - - infusión"
+  },
+  {
+    "codigo": "Y64.1",
+    "descripcion": "- - - inmunización"
+  },
+  {
+    "codigo": "Y64.1",
+    "descripcion": "- - - inyección"
+  },
+  {
+    "codigo": "Y64.1",
+    "descripcion": "- - - significado especificado NCOC"
+  },
+  {
+    "codigo": "Y64.0",
+    "descripcion": "- - - transfusión"
+  },
+  {
+    "codigo": "Y64.1",
+    "descripcion": "- - - vacunación"
+  },
+  {
+    "codigo": "Y69",
+    "descripcion": "evento adverso, por tipo de infusión)"
+  },
+  {
+    "codigo": "Y63.0",
+    "descripcion": "- - - cantidad excesiva de líquido"
+  },
+  {
+    "codigo": "Y63.1",
+    "descripcion": "- - - dilución incorrecta de líquido"
+  },
+  {
+    "codigo": "Y65.1",
+    "descripcion": "- - - fluido incorrecto"
+  },
+  {
+    "codigo": "Y63.3",
+    "descripcion": "radiación"
+  },
+  {
+    "codigo": "Y63.9",
+    "descripcion": "- -  en dosis"
+  },
+  {
+    "codigo": "Y63.0",
+    "descripcion": "- - - - cantidad excesiva de líquido"
+  },
+  {
+    "codigo": "Y63.6",
+    "descripcion": "sustancia biológica necesarios"
+  },
+  {
+    "codigo": "Y63.2",
+    "descripcion": "- - - - sobredosis"
+  },
+  {
+    "codigo": "Y63.2",
+    "descripcion": "- - - - radiación, terapia"
+  },
+  {
+    "codigo": "Y63.5",
+    "descripcion": "aplicación local y envoltura"
+  },
+  {
+    "codigo": "Y63.4",
+    "descripcion": "- - -  terapia de insulina, shock"
+  },
+  {
+    "codigo": "Y63.4",
+    "descripcion": "- - -  terapia de electroshock"
+  },
+  {
+    "codigo": "Y63.0",
+    "descripcion": "- - - - cantidad excesiva de sangre"
+  },
+  {
+    "codigo": "Y65.8",
+    "descripcion": "procedimiento)"
+  },
+  {
+    "codigo": "Y62.9",
+    "descripcion": "cirugía)"
+  },
+  {
+    "codigo": "Y62.6",
+    "descripcion": "- - - aguja de la biopsia"
+  },
+  {
+    "codigo": "Y62.6",
+    "descripcion": "del corazón)"
+  },
+  {
+    "codigo": "Y62.8",
+    "descripcion": "aguja)"
+  },
+  {
+    "codigo": "Y62.6",
+    "descripcion": "- - - - aguja (aspiración)"
+  },
+  {
+    "codigo": "Y62.6",
+    "descripcion": "- - - cateterización"
+  },
+  {
+    "codigo": "Y62.5",
+    "descripcion": "- - - - corazón"
+  },
+  {
+    "codigo": "Y62.2",
+    "descripcion": "- - - diálisis (riñón)"
+  },
+  {
+    "codigo": "Y62.8",
+    "descripcion": "- - - enema"
+  },
+  {
+    "codigo": "Y62.4",
+    "descripcion": "- - - examen endoscópico"
+  },
+  {
+    "codigo": "Y62.1",
+    "descripcion": "- - - infusión"
+  },
+  {
+    "codigo": "Y62.3",
+    "descripcion": "- - - inmunización"
+  },
+  {
+    "codigo": "Y62.0",
+    "descripcion": "- - - intervención quirúrgica"
+  },
+  {
+    "codigo": "Y62.3",
+    "descripcion": "- - - inyección"
+  },
+  {
+    "codigo": "Y62.2",
+    "descripcion": "- - - perfusión"
+  },
+  {
+    "codigo": "Y62.6",
+    "descripcion": "- - - punción (lumbar)"
+  },
+  {
+    "codigo": "Y62.6",
+    "descripcion": "- - -  tomar muestras de sangre"
+  },
+  {
+    "codigo": "Y62.1",
+    "descripcion": "- - - transfusión"
+  },
+  {
+    "codigo": "Y62.3",
+    "descripcion": "- - - vacunación"
+  },
+  {
+    "codigo": "Y65.2",
+    "descripcion": "procedimiento quirúrgico"
+  },
+  {
+    "codigo": "Y63.5",
+    "descripcion": "empacamiento"
+  },
+  {
+    "codigo": "Y63.6",
+    "descripcion": "biológica necesarios"
+  },
+  {
+    "codigo": "Y69",
+    "descripcion": "error, infusión)"
+  },
+  {
+    "codigo": "Y63.0",
+    "descripcion": "- - cantidad excesiva de líquido"
+  },
+  {
+    "codigo": "Y63.1",
+    "descripcion": "- - dilución incorrecta de líquido"
+  },
+  {
+    "codigo": "Y65.1",
+    "descripcion": "- - fluido incorrecto"
+  },
+  {
+    "codigo": "Y63.2",
+    "descripcion": "- - radiación (en la terapia)"
+  },
+  {
+    "codigo": "Y65.8",
+    "descripcion": "- tipo especificado NCOC"
+  },
+  {
+    "codigo": "Y65.1",
+    "descripcion": "- - - en infusión de líquidos"
+  },
+  {
+    "codigo": "Y65.1",
+    "descripcion": "- - infusión de fluido incorrecto"
+  },
+  {
+    "codigo": "Y65.2",
+    "descripcion": "operación quirúrgica"
+  },
+  {
+    "codigo": "Y63.0",
+    "descripcion": "- - cantidad excesiva de sangre"
+  },
+  {
+    "codigo": "Y65.0",
+    "descripcion": "- - sangre no coincidentes"
+  },
+  {
+    "codigo": "W33.19",
+    "descripcion": "- - - especificado NCOC"
+  },
+  {
+    "codigo": "X75",
+    "descripcion": "- - - suicidio (intento)"
+  },
+  {
+    "codigo": "X96.8",
+    "descripcion": "- - - homicidio (intento)"
+  },
+  {
+    "codigo": "W40.8",
+    "descripcion": "- proyectil (artillería) NCOC"
+  },
+  {
+    "codigo": "T75.0",
+    "descripcion": "- - relámpago véase subcategoría"
+  },
+  {
+    "codigo": "Y08.89",
+    "descripcion": "- - homicidio (intento)"
+  },
+  {
+    "codigo": "Z77.22",
+    "descripcion": "- - - pasivo"
+  },
+  {
+    "codigo": "X50.1",
+    "descripcion": "Extensión (estática) (prolongada)"
+  },
+  {
+    "codigo": "Y90.0",
+    "descripcion": "- - - menos de 20mg/100ml"
+  },
+  {
+    "codigo": "Y90.1",
+    "descripcion": "- - - 20-39mg/100ml"
+  },
+  {
+    "codigo": "Y90.2",
+    "descripcion": "- - - 40-59mg/100ml"
+  },
+  {
+    "codigo": "Y90.3",
+    "descripcion": "- - - 60-79mg/100ml"
+  },
+  {
+    "codigo": "Y90.4",
+    "descripcion": "- - - 80-99mg/100ml"
+  },
+  {
+    "codigo": "Y90.5",
+    "descripcion": "- - - 100-119mg/100ml"
+  },
+  {
+    "codigo": "Y90.6",
+    "descripcion": "- - - 120-199mg/100ml"
+  },
+  {
+    "codigo": "Y90.7",
+    "descripcion": "- - - 200-239mg/100ml"
+  },
+  {
+    "codigo": "Y90.8",
+    "descripcion": "- - - 240mg/100ml o más"
+  },
+  {
+    "codigo": "Y90.9",
+    "descripcion": "especificado"
+  },
+  {
+    "codigo": "Y90.9",
+    "descripcion": "especificado"
+  },
+  {
+    "codigo": "Y95",
+    "descripcion": "- condición nosocomial"
+  },
+  {
+    "codigo": "Y99.0",
+    "descripcion": "- relacionado con el trabajo"
+  },
+  {
+    "codigo": "Y65.4",
+    "descripcion": "- - introducir tubo o instrumento"
+  },
+  {
+    "codigo": "Y65.3",
+    "descripcion": "anestesia"
+  },
+  {
+    "codigo": "Y65.4",
+    "descripcion": "- - quitar tubo o instrumento"
+  },
+  {
+    "codigo": "Y65.2",
+    "descripcion": "procedimiento quirúrgico"
+  },
+  {
+    "codigo": "Y65.8",
+    "descripcion": "procedimiento médico o quirúrgico)"
+  },
+  {
+    "codigo": "Y63.6",
+    "descripcion": "(necesario)"
+  },
+  {
+    "codigo": "X58",
+    "descripcion": "nacido)"
+  },
+  {
+    "codigo": "X50.1",
+    "descripcion": "Flexión, lesión (estática) (prolongada)"
+  },
+  {
+    "codigo": "X37.1",
+    "descripcion": "- - tornado"
+  },
+  {
+    "codigo": "X37.1",
+    "descripcion": "- - torsión"
+  },
+  {
+    "codigo": "W21.9",
+    "descripcion": "- - equipo deportivo NCOC"
+  },
+  {
+    "codigo": "Y08.09",
+    "descripcion": "- - - - - - agresión"
+  },
+  {
+    "codigo": "X39.8",
+    "descripcion": "Granizo, herido por"
+  },
+  {
+    "codigo": "Y70.8",
+    "descripcion": "- - anestesiología"
+  },
+  {
+    "codigo": "Y70.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y70.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y70.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y70.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y70.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y70.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y70.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y70.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y71.8",
+    "descripcion": "- - cardiovascular"
+  },
+  {
+    "codigo": "Y71.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y71.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y71.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y71.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y71.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y71.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y71.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y71.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y81.8",
+    "descripcion": "- - cirugía plástica"
+  },
+  {
+    "codigo": "Y81.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y81.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y81.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y81.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y81.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y81.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y81.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y81.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y73.8",
+    "descripcion": "- - gastroenterología"
+  },
+  {
+    "codigo": "Y73.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y73.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y73.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y73.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y73.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y73.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y73.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y73.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y74.8",
+    "descripcion": "- - - hospital"
+  },
+  {
+    "codigo": "Y74.2",
+    "descripcion": "- - - - accesorio"
+  },
+  {
+    "codigo": "Y74.0",
+    "descripcion": "- - - - diagnóstico"
+  },
+  {
+    "codigo": "Y74.8",
+    "descripcion": "- - - - misceláneo"
+  },
+  {
+    "codigo": "Y74.0",
+    "descripcion": "- - - - monitorización"
+  },
+  {
+    "codigo": "Y74.2",
+    "descripcion": "- - - - protésico"
+  },
+  {
+    "codigo": "Y74.3",
+    "descripcion": "- - - - quirúrgico"
+  },
+  {
+    "codigo": "Y74.1",
+    "descripcion": "- - - - rehabilitación"
+  },
+  {
+    "codigo": "Y74.1",
+    "descripcion": "- - - - terapéutico"
+  },
+  {
+    "codigo": "Y81.8",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y81.2",
+    "descripcion": "- - - - accesorio"
+  },
+  {
+    "codigo": "Y81.0",
+    "descripcion": "- - - - diagnóstico"
+  },
+  {
+    "codigo": "Y81.8",
+    "descripcion": "- - - - misceláneo"
+  },
+  {
+    "codigo": "Y81.0",
+    "descripcion": "- - - - monitorización"
+  },
+  {
+    "codigo": "Y81.2",
+    "descripcion": "- - - - protésico"
+  },
+  {
+    "codigo": "Y81.3",
+    "descripcion": "- - - - quirúrgico"
+  },
+  {
+    "codigo": "Y81.1",
+    "descripcion": "- - - - rehabilitación"
+  },
+  {
+    "codigo": "Y81.1",
+    "descripcion": "- - - - terapéutico"
+  },
+  {
+    "codigo": "Y76.8",
+    "descripcion": "- - ginecológico"
+  },
+  {
+    "codigo": "Y76.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y76.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y76.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y76.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y76.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y76.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y76.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y76.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y80.8",
+    "descripcion": "- - medicina física"
+  },
+  {
+    "codigo": "Y80.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y80.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y80.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y80.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y80.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y80.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y80.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y80.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y82.9",
+    "descripcion": "- - médico"
+  },
+  {
+    "codigo": "Y82.8",
+    "descripcion": "- - - tipo especificado NCOC"
+  },
+  {
+    "codigo": "Y75.8",
+    "descripcion": "- - neurológico"
+  },
+  {
+    "codigo": "Y75.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y75.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y75.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y75.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y75.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y75.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y75.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y75.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y76.8",
+    "descripcion": "- - obstétrico"
+  },
+  {
+    "codigo": "Y76.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y76.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y76.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y76.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y76.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y76.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y76.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y76.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y77.8",
+    "descripcion": "- - oftálmico"
+  },
+  {
+    "codigo": "Y77.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y77.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y77.11",
+    "descripcion": "(rígida gas permeable)"
+  },
+  {
+    "codigo": "Y77.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y77.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y77.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y77.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y77.11",
+    "descripcion": "- - - rehabilitador"
+  },
+  {
+    "codigo": "Y77.11",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y79.8",
+    "descripcion": "- - ortopédico"
+  },
+  {
+    "codigo": "Y79.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y79.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y79.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y79.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y79.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y79.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y79.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y79.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y72.8",
+    "descripcion": "- - otorrinolaringológico"
+  },
+  {
+    "codigo": "Y72.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y72.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y72.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y72.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y72.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y72.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y72.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y72.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y78.8",
+    "descripcion": "- - radiológico"
+  },
+  {
+    "codigo": "Y78.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y78.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y78.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y78.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y78.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y78.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y78.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y78.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y73.8",
+    "descripcion": "- - urología"
+  },
+  {
+    "codigo": "Y73.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y73.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y73.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y73.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y73.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y73.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y73.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y73.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "Y74.8",
+    "descripcion": "- - uso personal"
+  },
+  {
+    "codigo": "Y74.2",
+    "descripcion": "- - - accesorio"
+  },
+  {
+    "codigo": "Y74.0",
+    "descripcion": "- - - diagnóstico"
+  },
+  {
+    "codigo": "Y74.8",
+    "descripcion": "- - - misceláneo"
+  },
+  {
+    "codigo": "Y74.0",
+    "descripcion": "- - - monitorización"
+  },
+  {
+    "codigo": "Y74.2",
+    "descripcion": "- - - protésico"
+  },
+  {
+    "codigo": "Y74.3",
+    "descripcion": "- - - quirúrgico"
+  },
+  {
+    "codigo": "Y74.1",
+    "descripcion": "- - - rehabilitación"
+  },
+  {
+    "codigo": "Y74.1",
+    "descripcion": "- - - terapéutico"
+  },
+  {
+    "codigo": "T18",
+    "descripcion": "categorías T17  y"
+  },
+  {
+    "codigo": "T18",
+    "descripcion": "T17  y"
+  },
+  {
+    "codigo": "V93.83",
+    "descripcion": "- - - - motorizada NCOC"
+  },
+  {
+    "codigo": "V93.83",
+    "descripcion": "- - - - motorizada"
+  },
+  {
+    "codigo": "Y92.9",
+    "descripcion": "Lugar de ocurrencia"
+  },
+  {
+    "codigo": "Y92.79",
+    "descripcion": "(dependencias)"
+  },
+  {
+    "codigo": "Y92.73",
+    "descripcion": "- - campo"
+  },
+  {
+    "codigo": "Y92.72",
+    "descripcion": "- - corral"
+  },
+  {
+    "codigo": "Y92.79",
+    "descripcion": "- - especificado NCOC"
+  },
+  {
+    "codigo": "Y92.72",
+    "descripcion": "- - gallinero"
+  },
+  {
+    "codigo": "Y92.72",
+    "descripcion": "- - gallinero"
+  },
+  {
+    "codigo": "Y92.74",
+    "descripcion": "- - huerto"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- almacén"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- anillo de rodeo"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- aparcamiento garaje"
+  },
+  {
+    "codigo": "Y92.62",
+    "descripcion": "- astillero"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- bolera"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - golf"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- canal"
+  },
+  {
+    "codigo": "Y92.64",
+    "descripcion": "- cantera de arena"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- carrera en"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- - abandonada"
+  },
+  {
+    "codigo": "Y92.29",
+    "descripcion": "- - club"
+  },
+  {
+    "codigo": "Y92.86",
+    "descripcion": "- - - matadero"
+  },
+  {
+    "codigo": "Y92.61",
+    "descripcion": "- - en construcción"
+  },
+  {
+    "codigo": "Y92.26",
+    "descripcion": "- - rodante"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- casino"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - eléctrica"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - nuclear"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - comercial"
+  },
+  {
+    "codigo": "Y92.29",
+    "descripcion": "- - - jóvenes"
+  },
+  {
+    "codigo": "Y92.29",
+    "descripcion": "- - - tercera edad"
+  },
+  {
+    "codigo": "Y92.26",
+    "descripcion": "- cine"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - con arnés"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - de obstáculos"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- depósito de agua"
+  },
+  {
+    "codigo": "Y92.62",
+    "descripcion": "- dique seco"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - de oficinas"
+  },
+  {
+    "codigo": "Y92.61",
+    "descripcion": "- - en construcción"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - equitación"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- especificado sitio NCOC"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - radio"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - televisión"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- estadio"
+  },
+  {
+    "codigo": "Y92.63",
+    "descripcion": "- fábrica (construcción) (local)"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - de gas"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- garaje (comercial)"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- gimnasio"
+  },
+  {
+    "codigo": "Y92.71",
+    "descripcion": "- granero"
+  },
+  {
+    "codigo": "Y92.64",
+    "descripcion": "- gravera"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- hotel"
+  },
+  {
+    "codigo": "Y92.22",
+    "descripcion": "- iglesia"
+  },
+  {
+    "codigo": "Y92.65",
+    "descripcion": "- instalaciones en alta mar"
+  },
+  {
+    "codigo": "Y92.22",
+    "descripcion": "- institución religiosa"
+  },
+  {
+    "codigo": "Y92.85",
+    "descripcion": "- línea de ferrocarril (puente)"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- lugar de remolque NEOM"
+  },
+  {
+    "codigo": "Y92.22",
+    "descripcion": "- mezquita"
+  },
+  {
+    "codigo": "Y92.84",
+    "descripcion": "- - campo de entrenamiento"
+  },
+  {
+    "codigo": "Y92.64",
+    "descripcion": "- mina"
+  },
+  {
+    "codigo": "Y92.64",
+    "descripcion": "- - abierta de carbón"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- motel"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- muelle NEOM"
+  },
+  {
+    "codigo": "Y92.34",
+    "descripcion": "- piscina (pública)"
+  },
+  {
+    "codigo": "Y92.29",
+    "descripcion": "- - construcción NCOC"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- - lugar NEOM"
+  },
+  {
+    "codigo": "Y92.29",
+    "descripcion": "- - sala"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- puente"
+  },
+  {
+    "codigo": "Y92.89",
+    "descripcion": "- puerto"
+  },
+  {
+    "codigo": "Y92.10",
+    "descripcion": "- - institucional"
+  },
+  {
+    "codigo": "Y92.29",
+    "descripcion": "- salón de actos"
+  },
+  {
+    "codigo": "Y92.79",
+    "descripcion": "- silo"
+  },
+  {
+    "codigo": "Y92.22",
+    "descripcion": "- sinagoga"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- taller"
+  },
+  {
+    "codigo": "Y92.65",
+    "descripcion": "- torre de perforación petrolera"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- túnel en construcción"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - comercio"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - almacén"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - casino"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - centro comercial"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - edificio de oficinas"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - - radio"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - - televisión"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - garaje"
+  },
+  {
+    "codigo": "Y92.59",
+    "descripcion": "- - - hotel"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - deportiva"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - - campo de golf"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - - escuela de equitación"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - - estadio"
+  },
+  {
+    "codigo": "Y92.39",
+    "descripcion": "- - - gimnasio"
+  },
+  {
+    "codigo": "Y92.62",
+    "descripcion": "- - - astillero"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - - central eléctrica"
+  },
+  {
+    "codigo": "Y92.62",
+    "descripcion": "- - - dique seco"
+  },
+  {
+    "codigo": "Y92.61",
+    "descripcion": "- - - edificio en construcción"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - - especifícado NCOC"
+  },
+  {
+    "codigo": "Y92.63",
+    "descripcion": "- - - fábrica"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - - - de gas"
+  },
+  {
+    "codigo": "Y92.64",
+    "descripcion": "- - - hoyo"
+  },
+  {
+    "codigo": "Y92.64",
+    "descripcion": "- - - mina"
+  },
+  {
+    "codigo": "Y92.62",
+    "descripcion": "- - - muelle"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - - taller"
+  },
+  {
+    "codigo": "Y92.69",
+    "descripcion": "- - - túnel en construcción"
+  },
+  {
+    "codigo": "Y04.0",
+    "descripcion": "Maltrato (en pelea, lucha)"
+  },
+  {
+    "codigo": "X50.9",
+    "descripcion": "Sobreesfuerzo)"
+  },
+  {
+    "codigo": "Y04.0",
+    "descripcion": "- - pelea, lucha (mano) (puños) (pie)"
+  },
+  {
+    "codigo": "W55.89",
+    "descripcion": "Mutilado por animal NCOC"
+  },
+  {
+    "codigo": "Y95",
+    "descripcion": "Nosocomial, afección"
+  },
+  {
+    "codigo": "W42.0",
+    "descripcion": "- supersónicas"
+  },
+  {
+    "codigo": "Y65.5",
+    "descripcion": "Operación realizada inadecuadamente"
+  },
+  {
+    "codigo": "W50.1",
+    "descripcion": "- persona (-s) (accidentalmente)"
+  },
+  {
+    "codigo": "X50.3",
+    "descripcion": "- tensor de moqueta de rodilla"
+  },
+  {
+    "codigo": "Y65.53",
+    "descripcion": "equivocado)"
+  },
+  {
+    "codigo": "Y65.52",
+    "descripcion": "paciente equivocado"
+  },
+  {
+    "codigo": "Y65.51",
+    "descripcion": "correcto"
+  },
+  {
+    "codigo": "Y65.52",
+    "descripcion": "- realizado en paciente equivocado"
+  },
+  {
+    "codigo": "Y65.52",
+    "descripcion": "para cirugía"
+  },
+  {
+    "codigo": "Y84",
+    "descripcion": "específico de procedimiento Y62-"
+  },
+  {
+    "codigo": "Y63.5",
+    "descripcion": "quirúrgica"
+  },
+  {
+    "codigo": "Y27.3",
+    "descripcion": "accidental o intencional"
+  },
+  {
+    "codigo": "Y63.5",
+    "descripcion": "quirúrgico"
+  },
+  {
+    "codigo": "Y63.5",
+    "descripcion": "procedimiento médico o quirúrgico"
+  },
+  {
+    "codigo": "Y63.2",
+    "descripcion": "- - sobredosis de radiación"
+  },
+  {
+    "codigo": "X08.8",
+    "descripcion": "- partidos"
+  },
+  {
+    "codigo": "X06.2",
+    "descripcion": "- - con ignición de la ropa NCOC"
+  },
+  {
+    "codigo": "X05",
+    "descripcion": "- - - ropa de dormir"
+  },
+  {
+    "codigo": "X16",
+    "descripcion": "- radiador (caliente)"
+  },
+  {
+    "codigo": "T75.0",
+    "descripcion": "- relámpago véase subcategoría"
+  },
+  {
+    "codigo": "X18",
+    "descripcion": "- - fundido (metal)"
+  },
+  {
+    "codigo": "Y63.2",
+    "descripcion": "quirúrgico"
+  },
+  {
+    "codigo": "Y63.2",
+    "descripcion": "o quirúrgico)"
+  },
+  {
+    "codigo": "Y84.9",
+    "descripcion": "de, por tipo de procedimiento)"
+  },
+  {
+    "codigo": "Y65.0",
+    "descripcion": "Sangre no compatible en transfusión"
+  },
+  {
+    "codigo": "X83",
+    "descripcion": "(clasificable de X71  - X83) - véase X71-"
+  },
+  {
+    "codigo": "Y99.0",
+    "descripcion": "- - civil hecho por renta o paga"
+  },
+  {
+    "codigo": "Y99.0",
+    "descripcion": "de otro tipo"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "- - especificado NCOC"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "- - estudiantil"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "de la familia"
+  },
+  {
+    "codigo": "Y99.1",
+    "descripcion": "- - militar"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "familia"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "- -  ocio"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "ingresos"
+  },
+  {
+    "codigo": "Y99.8",
+    "descripcion": "siendo estudiante"
+  },
+  {
+    "codigo": "Y99.2",
+    "descripcion": "- -  voluntarias"
+  },
+  {
+    "codigo": "Y63.2",
+    "descripcion": "- radiación"
+  },
+  {
+    "codigo": "X83",
+    "descripcion": "- efecto tardío de intento - véase X71-"
+  },
+  {
+    "codigo": "X50.9",
+    "descripcion": "Sobreesfuerzo)"
+  },
+  {
+    "codigo": "X50.9",
+    "descripcion": "Sobreesfuerzo)"
+  },
+  {
+    "codigo": "X58",
+    "descripcion": "Tortura"
+  },
+  {
+    "codigo": "Y99.0",
+    "descripcion": "Trabajo, afección relacionado al"
+  },
+  {
+    "codigo": "X50.9",
+    "descripcion": "Sobreesfuerzo)"
+  },
+  {
+    "codigo": "Y65.3",
+    "descripcion": "durante un procedimiento anestésico"
+  },
+  {
+    "codigo": "X81.1",
+    "descripcion": "- metro"
+  },
+  {
+    "codigo": "Y31",
+    "descripcion": "intencionadamente"
+  },
+  {
+    "codigo": "X81.1",
+    "descripcion": "- tren"
+  },
+  {
+    "codigo": "X50.3",
+    "descripcion": "Usar la mano como un martillo"
+  },
+  {
+    "codigo": "T75.3",
+    "descripcion": "Viajes (efectos) (enfermedad)"
+  },
+  {
+    "codigo": "B74",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "B81.8",
+    "descripcion": "más de una de las categorías B65.0-B81.3 y"
+  },
+  {
+    "codigo": "B94",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "C25",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "B12",
+    "descripcion": "D51 Anemia por carencia de vitamina"
+  },
+  {
+    "codigo": "B12",
+    "descripcion": "D51.8 Otras anemias por carencia de vitamina"
+  },
+  {
+    "codigo": "E21",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "B12",
+    "descripcion": "Carencia de vitamina"
+  },
+  {
+    "codigo": "B12",
+    "descripcion": "anemia por carencia de vitamina"
+  },
+  {
+    "codigo": "E63",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F01",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F02",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F03",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F09",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "F31",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F32",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F33",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F50",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "F84",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "H54",
+    "descripcion": "El término \"baja visión\" en la categoría"
+  },
+  {
+    "codigo": "I06.9",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I12.9",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I13.0",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I13.10",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I13.11",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I13.2",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I23.6",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I24",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "I25",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "I27.83",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I31.2",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I31.3",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I34.0",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I34.2",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I36.2",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I47.2",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I50",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "I51.5",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "I70.32",
+    "descripcion": "6º +"
+  },
+  {
+    "codigo": "I70.3",
+    "descripcion": "I70.31, I70.32, I70.33, I70.34,"
+  },
+  {
+    "codigo": "I70.45",
+    "descripcion": "I70.41, I70.42, y I70.43, I70.44,"
+  },
+  {
+    "codigo": "I70.55",
+    "descripcion": "I70.51, I70.52, y I70.53, I70.54,"
+  },
+  {
+    "codigo": "I70.65",
+    "descripcion": "I70.61, I70.62, I70.63, I70.64,"
+  },
+  {
+    "codigo": "I70.75",
+    "descripcion": "I70.71, I70.72, I70.73, I70.74,"
+  },
+  {
+    "codigo": "I71",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "I71.1",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I71.2",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I71.3",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I71.4",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I71.5",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I71.6",
+    "descripcion": "5º +"
+  },
+  {
+    "codigo": "I83",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "J10.83",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "J45",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "A15",
+    "descripcion": "tuberculosis de cualquier tipo clasificable bajo"
+  },
+  {
+    "codigo": "J93.12",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "J96.02",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "J96.12",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "J98",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "J99",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "K43.6",
+    "descripcion": "Cualquier afección enumerada en"
+  },
+  {
+    "codigo": "K77",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "L81",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "L99",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "M48.4",
+    "descripcion": "cada código de la subcategoría"
+  },
+  {
+    "codigo": "M48.5",
+    "descripcion": "cada código de la subcategoría"
+  },
+  {
+    "codigo": "O16",
+    "descripcion": "clasificadas en O10-O14 y"
+  },
+  {
+    "codigo": "O31",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "O32",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "F17",
+    "descripcion": "Utilice código adicional de la categoría"
+  },
+  {
+    "codigo": "T76",
+    "descripcion": "Afecciones en S00-T88, excepto T74 y"
+  },
+  {
+    "codigo": "T76.11",
+    "descripcion": "Afecciones en T74.11 o"
+  },
+  {
+    "codigo": "T76.21",
+    "descripcion": "Afecciones en T74.21 o"
+  },
+  {
+    "codigo": "T76.31",
+    "descripcion": "Afecciones en T74.31 o"
+  },
+  {
+    "codigo": "J10",
+    "descripcion": "materna clasificable bajo A00-B99, J09 y"
+  },
+  {
+    "codigo": "P00.2",
+    "descripcion": "no comprendidas en P00.0,"
+  },
+  {
+    "codigo": "O62.3",
+    "descripcion": "clasificables bajo O62.-, excepto"
+  },
+  {
+    "codigo": "P04",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "P09",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "P28",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "P29",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "P92",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "R05",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "R40.21",
+    "descripcion": "subcategoría"
+  },
+  {
+    "codigo": "R40.22",
+    "descripcion": "subcategoría"
+  },
+  {
+    "codigo": "R40.23",
+    "descripcion": "subcategoría"
+  },
+  {
+    "codigo": "R40.24",
+    "descripcion": "Asigne un código de la subcategoría"
+  },
+  {
+    "codigo": "R52",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "R57",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "S00",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S01",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S02",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S03",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S04",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S05",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S06",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "S06",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S07",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S08",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S09",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S10",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S11",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S12.8",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S12.9",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S13",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S14",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S15",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S16",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S17",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S19",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S20",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S21",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S22",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S23",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S24",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S25",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S26",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S27",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S28",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S29",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S30",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S31",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S32",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S33",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S34",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S35",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S36",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S37",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S38",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S39",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S40",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S41",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S42.27",
+    "descripcion": "cada código de la subcategoría"
+  },
+  {
+    "codigo": "S42.31",
+    "descripcion": "cada código de la subcategoría"
+  },
+  {
+    "codigo": "S42.48",
+    "descripcion": "cada código de la subcategoría"
+  },
+  {
+    "codigo": "S43",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S44",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S45",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S46",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S47",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S48",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S49.1",
+    "descripcion": "de las subcategorías S49.0 y"
+  },
+  {
+    "codigo": "S49.8",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S49.9",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S50",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S51",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S52",
+    "descripcion": "códigos de la categoría"
+  },
+  {
+    "codigo": "S52.01",
+    "descripcion": "todos los códigos de la subcategoría"
+  },
+  {
+    "codigo": "S52.11",
+    "descripcion": "todos los códigos de la subcategoría"
+  },
+  {
+    "codigo": "S52.21",
+    "descripcion": "todos los códigos de la categoría"
+  },
+  {
+    "codigo": "S52.31",
+    "descripcion": "todos los códigos de la categoría"
+  },
+  {
+    "codigo": "S52.52",
+    "descripcion": "todos los códigos de la categoría"
+  },
+  {
+    "codigo": "S52.62",
+    "descripcion": "todos los códigos de la categoría"
+  },
+  {
+    "codigo": "S53",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S54",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S55",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S56",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S57",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S58",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S59.2",
+    "descripcion": "de las subcategorías S59.0, S59.1 y"
+  },
+  {
+    "codigo": "S59.8",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S59.9",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S60",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S61",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S62",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S63",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S64",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S65",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S66",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S67",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S68",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S69",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S70",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S71",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S72",
+    "descripcion": "códigos de la categoría"
+  },
+  {
+    "codigo": "S72.47",
+    "descripcion": "todos los códigos de la subcategoría"
+  },
+  {
+    "codigo": "S73",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S74",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S75",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S76",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S77",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S78",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S79.0",
+    "descripcion": "código de las subcategoría"
+  },
+  {
+    "codigo": "S79.0",
+    "descripcion": "código de las subcategoría"
+  },
+  {
+    "codigo": "S79.8",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S79.9",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S80",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S81",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S82",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "S82",
+    "descripcion": "códigos de la categoría"
+  },
+  {
+    "codigo": "S82.16",
+    "descripcion": "todos los códigos de la subcategoría"
+  },
+  {
+    "codigo": "S82.31",
+    "descripcion": "todos los códigos de la subcategoría"
+  },
+  {
+    "codigo": "S82.81",
+    "descripcion": "todos los códigos de la subcategoría"
+  },
+  {
+    "codigo": "S82.82",
+    "descripcion": "todos los códigos de la subcategoría"
+  },
+  {
+    "codigo": "S83",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S84",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S85",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S86",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S87",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S88",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S89.3",
+    "descripcion": "de las subcategorías S89.0, S89.1, S89.2 y"
+  },
+  {
+    "codigo": "S89.8",
+    "descripcion": "código de las subcategorías"
+  },
+  {
+    "codigo": "S89.9",
+    "descripcion": "código de las subcategorías"
+  },
+  {
+    "codigo": "S90",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S91",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S92",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "S92",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S93",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S94",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S95",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S96",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S97",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S98",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "S99.0",
+    "descripcion": "código de las subcategorías"
+  },
+  {
+    "codigo": "S99.1",
+    "descripcion": "código de las subcategorías"
+  },
+  {
+    "codigo": "S99.2",
+    "descripcion": "código de las subcategorías"
+  },
+  {
+    "codigo": "S99.8",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "S99.9",
+    "descripcion": "código de la subcategoría"
+  },
+  {
+    "codigo": "T14",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T15",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T16",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T17",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T18",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T19",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T32",
+    "descripcion": "Utilice código adicional de las categorías T31 o"
+  },
+  {
+    "codigo": "T20",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T21",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T22",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T23",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T24",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T25",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T26",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T27",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T28",
+    "descripcion": "cada código de la categoría"
+  },
+  {
+    "codigo": "T33",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T34",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T36",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T37",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T38",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T39",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T40",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T41",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T42",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T43",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T44",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T45",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T46",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T47",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T48",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T49",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T50",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T51",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T52",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T53",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T54",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T55",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T56",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T57",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T58",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T59",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T60",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T61",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T62",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T63",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T64",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T65",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T66",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T67",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T68",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T69",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T70",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T71",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T73",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T74",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T75",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T76",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T78",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T79",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T80",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T81",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T82",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T83",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T84",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T85",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "T88",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V00",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V02",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V03",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V04",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V05",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V06",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V09",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V10",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V11",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V12",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V13",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V14",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V15",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V16",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V17",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V18",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V19",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V20",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "V20",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V21",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V22",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V23",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V24",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V25",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V26",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V27",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V28",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V29",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V30",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V31",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V32",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V33",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V34",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V35",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V36",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V37",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V38",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V39",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V40",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V41",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V42",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V43",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V44",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V45",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V46",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V47",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V48",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V49",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V50",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V51",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V52",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V53",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V54",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V55",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V56",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V57",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V58",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V59",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V60",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V61",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V62",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V63",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V64",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V65",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V66",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V67",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V58",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V69",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V70",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V71",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V72",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V73",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V74",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V75",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V76",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V77",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V58",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V79",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V80",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V81",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V82",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V83",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V84",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V85",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V86",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V87",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V88",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V89",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V90",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V91",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V92",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V93",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V94",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V95",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V96",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V97",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "V98",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "Z91.81",
+    "descripcion": "riesgo de caída (historia de caída)"
+  },
+  {
+    "codigo": "W00",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W01",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W09",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W10",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W11",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W13",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W16",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W17",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W18",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W20",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W21",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W22",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W23",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W24",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W26",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W27",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W29",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W30",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W31",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W32",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W33",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W34",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W36",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W37",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W40",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W42",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W45",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W46",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W49",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W50",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W53",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W54",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W55",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W56",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W58",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W59",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W61",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W62",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W86",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W88",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W89",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W90",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W92",
+    "descripcion": "código"
+  },
+  {
+    "codigo": "W93",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "W94",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X00",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X01",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X02",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X03",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X06",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X08",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X10",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X11",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X13",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X14",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X15",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X36",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X37",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X50",
+    "descripcion": "código de la categoría"
+  },
+  {
+    "codigo": "X71",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X72",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "X73",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X74",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X75",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "X76",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "X77",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X78",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X79",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "X80",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "X81",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X82",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X83",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X92",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X93",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "X94",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X95",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X96",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X97",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "X98",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "X99",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y00",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y01",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y02",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y03",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y04",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y08",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y21",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y22",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y23",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y24",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y25",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y26",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y27",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y28",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y29",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y30",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y31",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y32",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y33",
+    "descripcion": "Se debe añadir el 7º carácter apropiado al código"
+  },
+  {
+    "codigo": "Y35",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y36",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "Y36",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y37",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "Y37",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Y38",
+    "descripcion": "de la categoría"
+  },
+  {
+    "codigo": "Z23",
+    "descripcion": "+"
+  },
+  {
+    "codigo": "Z28",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "Z31",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "Z76",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "C80.1",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "F55",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "B20",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "B99",
+    "descripcion": "Afecciones clasificables en A00-B19, B25-B94,"
+  },
+  {
+    "codigo": "C15",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C16",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C18",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C22",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C17",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C25",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C34",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C33",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C32",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C37",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C64",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C81",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C96",
+    "descripcion": "Afecciones clasificables en C88-C90,"
+  },
+  {
+    "codigo": "C43",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C44",
+    "descripcion": "Afecciones clasificables en"
+  },
+  {
+    "codigo": "C80.1",
+    "descripcion": "Afecciones clasificables en C7A.00,"
+  },
+  {
+    "codigo": "D05",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D06",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D07",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D00",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D01",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D02",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D03",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D04",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "D09",
+    "descripcion": "Afecciones clasificadas en"
+  },
+  {
+    "codigo": "B99",
+    "descripcion": "Afecciones clasificadas en A00-B89,"
+  },
+  {
+    "codigo": "Z99",
+    "descripcion": "4º +"
+  },
+  {
+    "codigo": "U07",
+    "descripcion": "U07 Utilización de emergencia del"
+  }
+]
