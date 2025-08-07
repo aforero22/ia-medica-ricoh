@@ -4,6 +4,8 @@
 
 Sistema de **codificación médica automática** que utiliza **Inteligencia Artificial avanzada** para transformar diagnósticos médicos escritos en lenguaje natural a códigos **CIE-10-ES** oficiales del Ministerio de Sanidad español.
 
+**🆕 NUEVA VERSIÓN 2.0:** Ahora con soporte para **GPT-OSS Local** de OpenAI, permitiendo ejecutar la IA completamente offline sin costos de API.
+
 ### **🎯 Propósito Principal**
 - **Automatización** de la codificación médica
 - **Reducción de errores** en clasificación diagnóstica
@@ -14,10 +16,19 @@ Sistema de **codificación médica automática** que utiliza **Inteligencia Arti
 
 ## 🚀 **Inicio Rápido**
 
-### **0. Configurar API Key (Primera vez)**
+### **0. Configurar API Key (Opcional - para fallback)**
 ```powershell
-# Ejecutar el script de configuración
+# Ejecutar el script de configuración (solo si quieres usar API como respaldo)
 .\setup-api-key.ps1
+```
+
+### **0.1. Descargar GPT-OSS Local (Recomendado)**
+```powershell
+# Descargar modelo GPT-OSS de 20B parámetros (requiere 16GB RAM)
+.\download-gpt-oss.ps1
+
+# O descargar modelo de 120B parámetros (requiere 80GB RAM)
+.\download-gpt-oss.ps1 -ModelSize "120b"
 ```
 
 ### **1. Iniciar la Aplicación**
@@ -48,13 +59,14 @@ Sistema de **codificación médica automática** que utiliza **Inteligencia Arti
   - Diseño responsive y profesional
 
 ### **Backend (Puerto 8091)**
-- **Tecnología:** Python, FastAPI, OpenAI GPT-4 Turbo
-- **Función:** Motor de IA para codificación médica
+- **Tecnología:** Python, FastAPI, GPT-OSS Local + OpenAI GPT-4 Turbo
+- **Función:** Motor de IA híbrido para codificación médica
 - **Características:**
   - API REST con endpoints `/codificar` y `/ejemplos-clinicos/aleatorio`
-  - Integración con OpenAI GPT-4 Turbo
+  - **GPT-OSS Local** (offline, sin costos) + **GPT-4 Turbo** (API fallback)
   - Base de datos CIE-10 completa (14,498 códigos)
   - Procesamiento de lenguaje natural en español
+  - **Modo híbrido:** Usa modelo local si está disponible, API como respaldo
 
 ### **Infraestructura**
 - **Orquestación:** Kubernetes (Minikube)
@@ -232,6 +244,30 @@ minikube start --cpus=4 --memory=8192 --driver=docker
 
 ---
 
+## 🆕 **GPT-OSS Local - Ventajas**
+
+### **💰 Costos Cero**
+- **Sin gastos de API:** El modelo se ejecuta localmente
+- **Sin límites de uso:** Procesamiento ilimitado
+- **Sin dependencias externas:** Funciona completamente offline
+
+### **🔒 Privacidad Total**
+- **Datos médicos seguros:** No salen del hospital
+- **Cumplimiento GDPR/HIPAA:** Control total de los datos
+- **Sin monitoreo externo:** Procesamiento completamente privado
+
+### **⚡ Rendimiento Mejorado**
+- **Sin latencia de red:** Respuestas más rápidas
+- **Sin timeouts:** Procesamiento continuo
+- **Mejor disponibilidad:** No depende de servicios externos
+
+### **🎛️ Control Total**
+- **Personalización:** Adaptable a protocolos específicos
+- **Fine-tuning:** Entrenamiento para casos particulares
+- **Independencia:** No atado a proveedores externos
+
+---
+
 ## 🏥 **Casos de Uso**
 
 ### **Para Hospitales**
@@ -260,15 +296,16 @@ minikube start --cpus=4 --memory=8192 --driver=docker
 
 ## 🎉 **Estado Actual**
 
-**✅ APLICACIÓN COMPLETAMENTE FUNCIONAL**
+**✅ APLICACIÓN COMPLETAMENTE FUNCIONAL - VERSIÓN 2.0**
 
 - **Frontend:** Accesible en `http://localhost:8081`
 - **Backend:** API funcionando en `http://localhost:8091`
 - **Base de datos:** 14,498 códigos CIE-10 cargados
-- **IA:** GPT-4 Turbo configurado y operativo
+- **IA:** **GPT-OSS Local** + GPT-4 Turbo (API fallback)
 - **Infraestructura:** Kubernetes con 5 pods ejecutándose
+- **Modo:** Híbrido (local + API)
 
-**¡La aplicación está lista para uso en producción!**
+**¡La aplicación está lista para uso en producción con IA local!**
 
 ---
 

@@ -13,8 +13,8 @@ import time
 import json
 from datetime import datetime
 
-# Importar OpenAI y base de datos CIE-10
-from openai import OpenAI
+# Importar servicios de IA y base de datos CIE-10
+from models.local_ai import HybridAIService
 from models.cie10_database import CIE10Database
 from dotenv import load_dotenv
 
@@ -72,7 +72,7 @@ class HealthResponse(BaseModel):
 load_dotenv('config.env', override=True)
 
 # Instancias globales
-client = None
+ai_service = None
 cie10_db = None
 
 # Prompt médico experto según especificación exacta
@@ -114,24 +114,22 @@ Responde ÚNICAMENTE con el JSON válido, sin texto adicional."""
 
 @app.on_event("startup")
 async def startup_event():
-    """Inicializar OpenAI y base de datos CIE-10-ES al startup"""
-    global client, cie10_db
+    """Inicializar servicio de IA híbrido y base de datos CIE-10-ES al startup"""
+    global ai_service, cie10_db
     try:
         # Inicializar base de datos CIE-10-ES
         cie10_db = CIE10Database()
         stats = cie10_db.get_stats()
         logger.info(f"✅ Base de datos CIE-10-ES cargada: {stats['codigos_totales']} códigos")
         
-        # Verificar API key
-        api_key = os.getenv('OPENAI_API_KEY')
-        if not api_key:
-            logger.error("❌ OPENAI_API_KEY no encontrado en variables de entorno")
-            logger.error("💡 Para configurar: export OPENAI_API_KEY=sk-your-key-here")
-            return
+        # Inicializar servicio de IA híbrido (local + API fallback)
+        ai_service = HybridAIService()
+        service_info = ai_service.get_service_info()
         
-        # Inicializar cliente OpenAI
-        client = OpenAI(api_key=api_key)
-        logger.info("✅ RICOH España - Motor GPT-4 Turbo inicializado correctamente")
+        if service_info['using_local']:
+            logger.info("🚀 RICOH España - Motor GPT-OSS Local inicializado correctamente")
+        else:
+            logger.info("🌐 RICOH España - Motor GPT-4 Turbo (API) inicializado correctamente")
         
     except Exception as e:
         logger.error(f"❌ Error inicializando sistema: {str(e)}")
@@ -139,11 +137,16 @@ async def startup_event():
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
     """Check de salud del servicio RICOH"""
+    service_info = ai_service.get_service_info() if ai_service else {}
+    
+    motor_ia = "GPT-OSS Local" if service_info.get('using_local') else "GPT-4 Turbo (API)"
+    status = "healthy" if ai_service else "error"
+    
     return HealthResponse(
-        status="healthy" if client else "error",
-        motor_ia="OpenAI GPT-4 Turbo" if client else "No disponible",
+        status=status,
+        motor_ia=motor_ia,
         base_datos="CIE-10-ES Ministerio de Sanidad",
-        version="RICOH España v1.0.0",
+        version="RICOH España v2.0.0 (GPT-OSS)",
         timestamp=datetime.now().isoformat()
     )
 
@@ -153,10 +156,10 @@ async def codificar_diagnostico(solicitud: SolicitudCodificacion):
     Endpoint principal para codificación CIE-10-ES
     Según especificación RICOH España
     """
-    if not client:
+    if not ai_service:
         raise HTTPException(
             status_code=503, 
-            detail="Servicio no disponible - GPT-4 no inicializado. Verifique OPENAI_API_KEY."
+            detail="Servicio no disponible - Motor de IA no inicializado."
         )
     
     # Validar entrada
@@ -192,26 +195,12 @@ Síntomas relevantes: {', '.join(solicitud.sintomas) if solicitud.sintomas else 
 
 Analiza estos datos y proporciona la codificación CIE-10-ES según las instrucciones, utilizando preferentemente los códigos del contexto cuando sean apropiados."""
 
-        # Llamada a GPT-4 Turbo
-        response = client.chat.completions.create(
-            model="gpt-4o",  # GPT-4 Omni (modelo actual disponible)
-            messages=[
-                {
-                    "role": "system", 
-                    "content": PROMPT_MEDICO_EXPERTO
-                },
-                {
-                    "role": "user", 
-                    "content": prompt_usuario
-                }
-            ],
-            temperature=0.1,  # Baja creatividad para precisión médica
-            max_tokens=1200,
-            response_format={"type": "json_object"}
-        )
+        # Llamada al servicio híbrido de IA (local o API)
+        prompt_completo = f"{PROMPT_MEDICO_EXPERTO}\n\n{prompt_usuario}"
+        response_text = await ai_service.generate_coding_response(prompt_completo)
         
-        # Procesar respuesta de GPT-4
-        resultado_json = json.loads(response.choices[0].message.content)
+        # Procesar respuesta del modelo local o API
+        resultado_json = json.loads(response_text)
         
         # Validar y estructurar respuesta según el modelo
         diagnostico_principal = DiagnosticoPrincipal(
@@ -257,14 +246,16 @@ Analiza estos datos y proporciona la codificación CIE-10-ES según las instrucc
 async def status_detallado():
     """Estado detallado del sistema RICOH"""
     cie10_stats = cie10_db.get_stats() if cie10_db else {}
+    service_info = ai_service.get_service_info() if ai_service else {}
     
     return {
         "servicio": "RICOH España - IA Codificación Médica CIE-10-ES",
-        "version": "1.0.0",
+        "version": "2.0.0 (GPT-OSS)",
         "motor_ia": {
-            "proveedor": "OpenAI",
-            "modelo": "gpt-4o (GPT-4 Omni)",
-            "disponible": client is not None
+            "tipo": "Híbrido (Local + API)",
+            "modo_actual": "GPT-OSS Local" if service_info.get('using_local') else "GPT-4 Turbo (API)",
+            "modelo_local_disponible": service_info.get('local_model_available', False),
+            "disponible": ai_service is not None
         },
         "base_datos": {
             "fuente": cie10_stats.get('fuente', 'CIE-10-ES Ministerio de Sanidad España'),
