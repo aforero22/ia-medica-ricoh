@@ -1,12 +1,12 @@
-# RICOH España - Script para descargar GPT-OSS
-# Descarga el modelo GPT-OSS de OpenAI para uso local
+# RICOH España - Script para descargar modelo alternativo
+# Descarga un modelo de IA local alternativo mientras GPT-OSS no esté disponible
 
 param(
-    [string]$ModelSize = "20b",  # 20b o 120b
+    [string]$ModelType = "llama2",  # llama2, mistral, codellama
     [string]$OutputPath = "medical-service-advanced/models"
 )
 
-Write-Host "Descargando GPT-OSS de OpenAI..." -ForegroundColor Green
+Write-Host "Descargando modelo alternativo de IA local..." -ForegroundColor Green
 
 # Crear directorio si no existe
 if (!(Test-Path $OutputPath)) {
@@ -14,23 +14,24 @@ if (!(Test-Path $OutputPath)) {
     Write-Host "Directorio creado: $OutputPath" -ForegroundColor Yellow
 }
 
-# URLs de descarga (ejemplo - actualizar con URLs reales cuando estén disponibles)
+# URLs de modelos alternativos disponibles
 $modelUrls = @{
-    "20b" = "https://huggingface.co/openai/gpt-oss-20b/resolve/main/gpt-oss-20b.gguf"
-    "120b" = "https://huggingface.co/openai/gpt-oss-120b/resolve/main/gpt-oss-120b.gguf"
+    "llama2" = "https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q4_K_M.gguf"
+    "mistral" = "https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q4_K_M.gguf"
+    "codellama" = "https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/resolve/main/codellama-7b-instruct.Q4_K_M.gguf"
 }
 
-# Verificar si el tamaño de modelo es válido
-if ($ModelSize -notin @("20b", "120b")) {
-    Write-Host "Error: Tamaño de modelo debe ser '20b' o '120b'" -ForegroundColor Red
+# Verificar si el tipo de modelo es válido
+if ($ModelType -notin @("llama2", "mistral", "codellama")) {
+    Write-Host "Error: Tipo de modelo debe ser 'llama2', 'mistral' o 'codellama'" -ForegroundColor Red
     exit 1
 }
 
-$modelUrl = $modelUrls[$ModelSize]
-$modelFile = "gpt-oss-$ModelSize.gguf"
+$modelUrl = $modelUrls[$ModelType]
+$modelFile = "$ModelType-7b-chat.gguf"
 $outputFile = Join-Path $OutputPath $modelFile
 
-Write-Host "Descargando modelo GPT-OSS-$ModelSize..." -ForegroundColor Yellow
+Write-Host "Descargando modelo $ModelType..." -ForegroundColor Yellow
 Write-Host "URL: $modelUrl" -ForegroundColor Cyan
 Write-Host "Archivo: $outputFile" -ForegroundColor Cyan
 
@@ -38,6 +39,7 @@ Write-Host "Archivo: $outputFile" -ForegroundColor Cyan
 try {
     # Usar Invoke-WebRequest para descarga con progreso
     $ProgressPreference = 'SilentlyContinue'
+    Write-Host "Iniciando descarga (esto puede tomar varios minutos)..." -ForegroundColor Yellow
     Invoke-WebRequest -Uri $modelUrl -OutFile $outputFile -UseBasicParsing
     
     # Verificar que el archivo se descargó correctamente
@@ -61,8 +63,8 @@ Write-Host ""
 Write-Host "Descarga completada!" -ForegroundColor Green
 Write-Host "Próximos pasos:" -ForegroundColor Yellow
 Write-Host "   1. Verifica que el archivo esté en: $outputFile" -ForegroundColor White
-Write-Host "   2. Ejecuta el backend para cargar el modelo local" -ForegroundColor White
-Write-Host "   3. El sistema usará automáticamente GPT-OSS local" -ForegroundColor White
+Write-Host "   2. Reinicia el backend para cargar el modelo local" -ForegroundColor White
+Write-Host "   3. El sistema usará automáticamente el modelo local" -ForegroundColor White
 Write-Host ""
 Write-Host "Para usar el modelo:" -ForegroundColor Cyan
 Write-Host "   - Reinicia el backend: kubectl rollout restart deployment/backend-ricoh -n medical-only" -ForegroundColor White

@@ -19,6 +19,8 @@ RUN mkdir -p /app/models
 # Copiar config.env como .env ANTES de copiar todo lo demás
 COPY config.env .env
 
+# Los modelos se copiarán después del build usando kubectl cp
+
 # Copiar el código de la aplicación
 COPY . .
 

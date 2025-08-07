@@ -24,6 +24,7 @@ spec:
         env:
         - name: OPENAI_API_KEY
           value: "your-openai-api-key-here"
+        # Los modelos se copiarán durante el build del Docker
 ---
 apiVersion: v1
 kind: Service
