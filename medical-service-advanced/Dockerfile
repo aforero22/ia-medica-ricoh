@@ -11,18 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 # Instalar dependencias Python
 COPY requirements.txt .
-RUN pip install --no-cache-dir \
-    fastapi==0.104.1 \
-    uvicorn==0.24.0 \
-    pydantic==2.5.0 \
-    openai>=1.50.0 \
-    python-dotenv==1.0.0 \
-    requests==2.32.4 \
-    llama-cpp-python==0.2.11 \
-    vllm==0.2.5 \
-    transformers==4.36.0 \
-    torch==2.1.0 \
-    accelerate==0.24.0
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Crear directorio para modelos locales
 RUN mkdir -p /app/models

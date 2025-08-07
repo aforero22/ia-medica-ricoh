@@ -17,13 +17,13 @@ spec:
     spec:
       containers:
       - name: backend-ricoh
-        image: backend-ricoh:v7
+        image: backend-ricoh:gpt-oss
         imagePullPolicy: Never
         ports:
         - containerPort: 8000
-                        env:
-                - name: OPENAI_API_KEY
-                  value: "your-openai-api-key-here"
+        env:
+        - name: OPENAI_API_KEY
+          value: "your-openai-api-key-here"
 ---
 apiVersion: v1
 kind: Service

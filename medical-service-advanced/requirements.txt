@@ -8,7 +8,6 @@ openai>=1.50.0
 
 # Modelos locales de IA
 llama-cpp-python==0.2.11
-vllm==0.2.5
 transformers==4.36.0
 torch==2.1.0
 accelerate==0.24.0
@@ -17,5 +16,4 @@ accelerate==0.24.0
 python-dotenv==1.0.0
 requests==2.32.4
 
-# Logging
-logging
+# Logging es un módulo built-in de Python, no necesita instalación
