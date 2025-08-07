@@ -4,7 +4,7 @@
 
 Sistema de **codificación médica automática** que utiliza **Inteligencia Artificial avanzada** para transformar diagnósticos médicos escritos en lenguaje natural a códigos **CIE-10-ES** oficiales del Ministerio de Sanidad español.
 
-**🆕 NUEVA VERSIÓN 2.0:** Ahora con soporte para **GPT-OSS Local** de OpenAI, permitiendo ejecutar la IA completamente offline sin costos de API.
+**🆕 NUEVA VERSIÓN 2.0:** Ahora con soporte para **GPT-OSS Local** de OpenAI, permitiendo ejecutar la IA completamente offline sin costos de API. **GPT-OSS ya está disponible oficialmente** en Hugging Face.
 
 ### **🎯 Propósito Principal**
 - **Automatización** de la codificación médica
@@ -14,7 +14,24 @@ Sistema de **codificación médica automática** que utiliza **Inteligencia Arti
 
 ---
 
-## 🚀 **Inicio Rápido**
+## 🚀 **Inicio Rápido con GPT-OSS**
+
+### **📦 Instalación de GPT-OSS**
+```powershell
+# 1. Instalar dependencias
+.\install-gpt-oss.ps1
+
+# 2. Descargar modelo GPT-OSS (20B o 120B)
+.\download-gpt-oss-real.ps1 -ModelSize "20b"
+
+# 3. Iniciar servidor GPT-OSS
+python gpt-oss-server.py
+
+# 4. Probar GPT-OSS
+.\test-gpt-oss.ps1
+```
+
+### **🔧 Configuración Tradicional**
 
 ### **0. Configurar API Key (Opcional - para fallback)**
 ```powershell
@@ -245,6 +262,13 @@ minikube start --cpus=4 --memory=8192 --driver=docker
 ---
 
 ## 🆕 **GPT-OSS Local - Ventajas**
+
+### **🚀 GPT-OSS Oficial de OpenAI**
+- **Modelo oficial:** GPT-OSS-20B y GPT-OSS-120B disponibles
+- **Licencia Apache 2.0:** Libre para uso comercial
+- **Razonamiento configurable:** Niveles bajo, medio, alto
+- **Chain-of-thought completo:** Acceso al proceso de razonamiento
+- **Capacidades agenticas:** Function calling, web browsing, Python execution
 
 ### **💰 Costos Cero**
 - **Sin gastos de API:** El modelo se ejecuta localmente
