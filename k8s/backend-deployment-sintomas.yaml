@@ -4,7 +4,7 @@ metadata:
   name: backend-rag-sintomas
   namespace: medical-rag
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: backend-rag-sintomas
@@ -30,11 +30,11 @@ spec:
               key: api-key
         resources:
           requests:
-            memory: "512Mi"
-            cpu: "250m"
+            memory: "2Gi"
+            cpu: "1000m"
           limits:
-            memory: "1Gi"
-            cpu: "500m"
+            memory: "4Gi"
+            cpu: "2000m"
         imagePullPolicy: Never
 ---
 apiVersion: v1

@@ -1,0 +1,47 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: frontend-ricoh-hpa
+  namespace: medical-rag
+  labels:
+    app: frontend-ricoh
+    component: autoscaler
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: frontend-rag-sintomas
+  minReplicas: 2  # Mínimo 2 pods
+  maxReplicas: 5  # Máximo 5 pods
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 80  # Escala cuando CPU >80%
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 85  # Escala cuando memoria >85%
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 30  # Espera 30s antes de escalar
+      policies:
+      - type: Percent
+        value: 100  # Escala hasta 100% más pods
+        periodSeconds: 30
+      - type: Pods
+        value: 1    # Máximo 1 pod adicional por 30s
+        periodSeconds: 30
+    scaleDown:
+      stabilizationWindowSeconds: 180  # Espera 3min antes de reducir
+      policies:
+      - type: Percent
+        value: 50   # Reduce hasta 50% de pods
+        periodSeconds: 60
+      - type: Pods
+        value: 1    # Máximo 1 pod menos por minuto
+        periodSeconds: 60
