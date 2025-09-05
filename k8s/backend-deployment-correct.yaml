@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-rag
+  namespace: medical-rag
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-rag
+  template:
+    metadata:
+      labels:
+        app: backend-rag
+    spec:
+      containers:
+      - name: backend
+        image: backend-rag:optimized
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 9999
+        env:
+        - name: OLLAMA_HOST
+          value: "host.minikube.internal"
+        - name: OLLAMA_PORT
+          value: "11434"
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: openai-secret
+              key: api-key
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: medical-rag
+spec:
+  selector:
+    app: backend-rag
+  ports:
+  - protocol: TCP
+    port: 9999
+    targetPort: 9999
+  type: ClusterIP

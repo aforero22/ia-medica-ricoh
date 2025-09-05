@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-rag-sintomas
+  namespace: medical-rag
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-rag-sintomas
+  template:
+    metadata:
+      labels:
+        app: frontend-rag-sintomas
+    spec:
+      containers:
+      - name: frontend-rag
+        image: frontend-rag:sintomas-fixed
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-rag-sintomas-service
+  namespace: medical-rag
+spec:
+  selector:
+    app: frontend-rag-sintomas
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP

@@ -44,16 +44,10 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
-# Kubernetes
-*.kubeconfig
-kubeconfig
-
 # Logs
 *.log
 logs/
-
-# Docker
-.dockerignore
+log/
 
 # Environment variables
 .env
@@ -62,29 +56,179 @@ logs/
 .env.test.local
 .env.production.local
 
+# Kubernetes
+*.kubeconfig
+kubeconfig
+
+# Docker
+.dockerignore
+Dockerfile.*
+!Dockerfile
+
 # Temporary files
 *.tmp
 *.temp
 temp/
 tmp/
 
-# Model files (if any large models are added)
-*.pkl
-*.pickle
-*.h5
-*.hdf5
-*.model
-models/
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Index files (RAG system)
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# Backup files
+*.bak
+*.backup
+
+# Cache directories
+.cache/
+cache/
+
+# Node modules (if any frontend dependencies)
+node_modules/
+
+# Build outputs
+build/
+dist/
+out/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# pytest
-.pytest_cache/
-.coverage
-htmlcov/
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
 
 # mypy
 .mypy_cache/
 .dmypy.json
-dmypy.json 
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# RAG system specific
+rag_index/
+rag_cache/
+*.index
+*.cache
+
+# Model files (if any are downloaded)
+models/
+*.bin
+*.safetensors
+
+# Ollama models (if any are stored locally)
+ollama_models/
+
+# API keys and secrets (already in config.env but extra protection)
+secrets/
+keys/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Minikube
+.minikube/
+
+# Kubernetes secrets
+k8s/secrets/
+secrets/
+
+# Docker images (too large for git)
+*.tar
+*.tar.gz
+*.tar.bz2
+
+# Large data files (keep Excel files but ignore processed data)
+processed_data/
+data_cache/
+*.parquet
+*.h5
+*.hdf5
+
+# IDE specific
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/shelf/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Windows
+*.lnk
+
+# Linux
+*~
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk 

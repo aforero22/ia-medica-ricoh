@@ -1,55 +1,376 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-app
-  labels:
-    app: frontend-app
+  name: frontend-ricoh
+  namespace: medical-only
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend-app
+      app: frontend-ricoh
   template:
     metadata:
       labels:
-        app: frontend-app
+        app: frontend-ricoh
     spec:
       containers:
-      - name: frontend-app
-        image: frontend-app:latest
-        imagePullPolicy: Never
+      - name: frontend
+        image: python:3.11-slim
         ports:
-        - containerPort: 3000
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "200m"
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 30
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 5
+        - containerPort: 8091
+        command: ["/bin/bash"]
+        args:
+        - -c
+        - |
+          apt-get update && apt-get install -y curl
+          pip install flask
+          cat > /tmp/app.py << 'EOF'
+          from flask import Flask, render_template_string
+          
+          app = Flask(__name__)
+          
+          @app.route('/')
+          def index():
+              return '''
+              <!DOCTYPE html>
+              <html lang="es">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>IA Médica CIE-10-ES | RICOH España</title>
+                  <script src="https://cdn.tailwindcss.com"></script>
+                  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+                  <script>
+                      tailwind.config = {
+                          theme: {
+                              extend: {
+                                  colors: {
+                                      'ricoh-red': '#ED1C24',
+                                      'ricoh-blue': '#0066CC'
+                                  }
+                              }
+                          }
+                      }
+                  </script>
+              </head>
+              <body class="bg-gray-50">
+                  <!-- Header -->
+                  <header class="bg-white shadow-sm border-b border-gray-200">
+                      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                          <div class="flex justify-between items-center py-4">
+                              <div class="flex items-center">
+                                  <div class="w-12 h-12 bg-ricoh-red rounded-lg flex items-center justify-center mr-4">
+                                      <i class="fas fa-heartbeat text-white text-xl"></i>
+                                  </div>
+                                  <div>
+                                      <h1 class="text-2xl font-bold text-gray-900">IA Médica CIE-10-ES</h1>
+                                      <p class="text-sm text-gray-600">Sistema de Codificación Inteligente</p>
+                                  </div>
+                              </div>
+                              <div class="text-right">
+                                  <div class="text-lg font-semibold text-ricoh-red">RICOH España</div>
+                                  <div class="text-sm text-gray-600">Innovación en Salud Digital</div>
+                              </div>
+                          </div>
+                      </div>
+                  </header>
+                  
+                  <!-- Main Content -->
+                  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                          <!-- Form Section -->
+                          <div class="bg-white rounded-lg shadow-lg p-8">
+                              <div class="flex items-center mb-6">
+                                  <i class="fas fa-stethoscope text-ricoh-blue text-3xl mr-4"></i>
+                                  <h2 class="text-2xl font-bold text-gray-800">Codificación de Diagnósticos</h2>
+                              </div>
+                              
+                              <form id="codificacionForm" class="space-y-6">
+                                  <div>
+                                      <label for="modelo-ia" class="block text-sm font-medium text-gray-700 mb-2">
+                                          <i class="fas fa-brain mr-2"></i>Modelo de IA
+                                      </label>
+                                      <select id="modelo-ia" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ricoh-blue focus:border-transparent">
+                                          <option value="">Cargando modelos...</option>
+                                      </select>
+                                  </div>
+                                  
+                                  <div>
+                                      <label for="diagnostico" class="block text-sm font-medium text-gray-700 mb-2">
+                                          <i class="fas fa-notes-medical mr-2"></i>Diagnóstico Médico
+                                      </label>
+                                      <textarea id="diagnostico" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ricoh-blue focus:border-transparent" placeholder="Ingresa el diagnóstico médico..."></textarea>
+                                  </div>
+                                  
+                                  <div class="grid grid-cols-2 gap-4">
+                                      <div>
+                                          <label for="edad" class="block text-sm font-medium text-gray-700 mb-2">
+                                              <i class="fas fa-user mr-2"></i>Edad del Paciente
+                                          </label>
+                                          <input type="number" id="edad" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ricoh-blue focus:border-transparent" placeholder="Edad">
+                                      </div>
+                                      <div>
+                                          <label for="sintomas" class="block text-sm font-medium text-gray-700 mb-2">
+                                              <i class="fas fa-thermometer-half mr-2"></i>Síntomas Adicionales
+                                          </label>
+                                          <input type="text" id="sintomas" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ricoh-blue focus:border-transparent" placeholder="Síntomas relevantes">
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="flex space-x-4">
+                                      <button type="button" onclick="cargarEjemplo()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-3 px-6 rounded-lg transition duration-200">
+                                          <i class="fas fa-random mr-2"></i>Cargar Ejemplo
+                                      </button>
+                                      <button type="button" onclick="codificarDiagnostico()" class="flex-1 bg-ricoh-red hover:bg-red-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200">
+                                          <i class="fas fa-search mr-2"></i>Codificar Diagnóstico
+                                      </button>
+                                  </div>
+                              </form>
+                          </div>
+                          
+                          <!-- Results Section -->
+                          <div class="bg-white rounded-lg shadow-lg p-8">
+                              <div class="flex items-center mb-6">
+                                  <i class="fas fa-clipboard-list text-ricoh-blue text-3xl mr-4"></i>
+                                  <h2 class="text-2xl font-bold text-gray-800">Resultados de Codificación</h2>
+                              </div>
+                              
+                              <div id="resultados" class="hidden">
+                                  <!-- Los resultados se mostrarán aquí -->
+                              </div>
+                              
+                              <div id="placeholder" class="text-center text-gray-500 py-12">
+                                  <i class="fas fa-arrow-left text-4xl mb-4"></i>
+                                  <p class="text-lg">Ingresa un diagnóstico y haz clic en "Codificar" para ver los resultados</p>
+                              </div>
+                          </div>
+                      </div>
+                  </main>
+                  
+                  <!-- Footer -->
+                  <footer class="bg-gray-800 text-white py-8">
+                      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                              <div>
+                                  <h3 class="text-lg font-semibold mb-4">RICOH España</h3>
+                                  <p class="text-gray-300">Líder en soluciones de impresión y gestión documental para el sector sanitario.</p>
+                              </div>
+                              <div>
+                                  <h3 class="text-lg font-semibold mb-4">IA Médica</h3>
+                                  <p class="text-gray-300">Sistema inteligente de codificación CIE-10-ES para optimizar procesos médicos.</p>
+                              </div>
+                              <div>
+                                  <h3 class="text-lg font-semibold mb-4">Tecnología</h3>
+                                  <p class="text-gray-300">Combinación de modelos locales y en la nube para máxima precisión y confiabilidad.</p>
+                              </div>
+                          </div>
+                          <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                              <p class="text-gray-400">&copy; 2024 RICOH España. Todos los derechos reservados.</p>
+                          </div>
+                      </div>
+                  </footer>
+                  
+                  <script>
+                      async function codificarDiagnostico() {
+                          const diagnostico = document.getElementById('diagnostico').value;
+                          const edad = document.getElementById('edad').value;
+                          const sintomas = document.getElementById('sintomas').value;
+                          const modelo = document.getElementById('modelo-ia').value;
+                          
+                          if (!diagnostico.trim()) {
+                              alert('Por favor, ingresa un diagnóstico');
+                              return;
+                          }
+                          
+                          if (!modelo) {
+                              alert('Por favor, selecciona un modelo de IA');
+                              return;
+                          }
+                          
+                          document.getElementById('resultados').innerHTML = '<div class="bg-white rounded-lg shadow-lg p-8 text-center"><i class="fas fa-spinner fa-spin text-4xl text-ricoh-red"></i><p class="mt-4">Procesando diagnóstico...</p></div>';
+                          document.getElementById('resultados').classList.remove('hidden');
+                          document.getElementById('placeholder').classList.add('hidden');
+                          
+                          try {
+                              const response = await fetch('http://localhost:9999/generate', {
+                                  method: 'POST',
+                                  headers: { 'Content-Type': 'application/json' },
+                                  body: JSON.stringify({
+                                      prompt: 'Diagnóstico: ' + diagnostico + ' Edad: ' + edad + ' Síntomas: ' + sintomas,
+                                      max_tokens: 1500,
+                                      temperature: 0.1,
+                                      model: modelo
+                                  })
+                              });
+                              
+                              const data = await response.json();
+                              
+                              // Formatear la respuesta con estilos consistentes
+                              const formattedResponse = data.response
+                                  .replace(/\*\*(.*?)\*\*/g, '<strong class="text-lg font-semibold text-gray-800">$1</strong>')
+                                  .replace(/\[(.*?)\]/g, '<span class="bg-gray-100 px-2 py-1 rounded text-gray-700 font-medium">$1</span>')
+                                  .replace(/\\n/g, '<br>');
+                              
+                              document.getElementById('resultados').innerHTML = '<div class="bg-white rounded-lg shadow-lg p-8"><div class="flex items-center mb-6"><i class="fas fa-check-circle text-green-500 text-3xl mr-4"></i><h3 class="text-2xl font-bold text-gray-800">Resultado de Codificación</h3></div><div class="bg-gray-50 p-6 rounded-lg"><div class="text-gray-700 leading-relaxed text-base">' + formattedResponse + '</div></div></div>';
+                              
+                          } catch (error) {
+                              document.getElementById('resultados').innerHTML = '<div class="bg-red-50 border border-red-200 rounded-lg p-8"><div class="flex items-center mb-4"><i class="fas fa-exclamation-triangle text-red-500 text-2xl mr-3"></i><h3 class="text-xl font-bold text-red-600">Error en la Codificación</h3></div><p class="text-red-600">Error: ' + error.message + '</p><p class="text-red-500 mt-2">Verifica la conectividad con el servidor de IA.</p></div>';
+                          }
+                      }
+                      
+                      async function cargarModelos() {
+                          console.log('Iniciando carga de modelos...');
+                          try {
+                              console.log('Haciendo fetch a http://localhost:9999/models');
+                              const response = await fetch('http://localhost:9999/models');
+                              console.log('Respuesta recibida:', response.status, response.statusText);
+                              const data = await response.json();
+                              console.log('Datos recibidos:', data);
+                              
+                              const modeloSelect = document.getElementById('modelo-ia');
+                              console.log('Elemento select encontrado:', modeloSelect);
+                              
+                              if (data.status === 'success' && data.models) {
+                                  console.log('Procesando', data.models.length, 'modelos');
+                                  modeloSelect.innerHTML = '';
+                                  
+                                  // Separar modelos por tipo
+                                  const ollamaModels = data.models.filter(model => model.type === 'ollama');
+                                  const openaiModels = data.models.filter(model => model.type === 'openai');
+                                  
+                                  // Función para obtener el tamaño en GB
+                                  function getSizeInGB(model) {
+                                      if (model.size === 'N/A' || !model.size) return 0;
+                                      return model.size / (1024 * 1024 * 1024); // Convertir bytes a GB
+                                  }
+                                  
+                                  // Ordenar modelos Ollama por tamaño (potencia)
+                                  ollamaModels.sort((a, b) => getSizeInGB(b) - getSizeInGB(a));
+                                  
+                                  // Ordenar modelos OpenAI por nombre (gpt-4-turbo, gpt-4, gpt-3.5-turbo)
+                                  openaiModels.sort((a, b) => {
+                                      const order = { 'gpt-4-turbo': 1, 'gpt-4': 2, 'gpt-3.5-turbo': 3 };
+                                      return (order[a.name] || 999) - (order[b.name] || 999);
+                                  });
+                                  
+                                  // Agregar separador para modelos On-prem
+                                  if (ollamaModels.length > 0) {
+                                      const onPremOption = document.createElement('option');
+                                      onPremOption.disabled = true;
+                                      onPremOption.textContent = '🏠 MODELOS ON-PREM (LOCALES)';
+                                      onPremOption.style.fontWeight = 'bold';
+                                      onPremOption.style.backgroundColor = '#f3f4f6';
+                                      modeloSelect.appendChild(onPremOption);
+                                      
+                                      // Agrupar modelos Ollama por proveedor
+                                      const modelGroups = {};
+                                      ollamaModels.forEach(model => {
+                                          const provider = model.name.split(':')[0]; // gemma3, gpt-oss, etc.
+                                          if (!modelGroups[provider]) modelGroups[provider] = [];
+                                          modelGroups[provider].push(model);
+                                      });
+                                      
+                                      // Agregar modelos agrupados por proveedor
+                                      Object.keys(modelGroups).forEach(provider => {
+                                          const models = modelGroups[provider];
+                                          models.forEach(model => {
+                                              const option = document.createElement('option');
+                                              option.value = model.name;
+                                              
+                                              const sizeGB = getSizeInGB(model);
+                                              const sizeText = sizeGB > 0 ? ` (${sizeGB.toFixed(1)}GB)` : '';
+                                              const displayName = `${model.name}${sizeText} 🏠`;
+                                              
+                                              option.textContent = displayName;
+                                              modeloSelect.appendChild(option);
+                                              console.log('Agregado modelo Ollama:', displayName);
+                                          });
+                                      });
+                                  }
+                                  
+                                  // Agregar separador para modelos Cloud
+                                  if (openaiModels.length > 0) {
+                                      const cloudOption = document.createElement('option');
+                                      cloudOption.disabled = true;
+                                      cloudOption.textContent = '☁️ MODELOS CLOUD (OPENAI)';
+                                      cloudOption.style.fontWeight = 'bold';
+                                      cloudOption.style.backgroundColor = '#f3f4f6';
+                                      modeloSelect.appendChild(cloudOption);
+                                      
+                                      // Agregar modelos OpenAI
+                                      openaiModels.forEach(model => {
+                                          const option = document.createElement('option');
+                                          option.value = model.name;
+                                          option.textContent = `${model.name} ☁️`;
+                                          modeloSelect.appendChild(option);
+                                          console.log('Agregado modelo OpenAI:', model.name);
+                                      });
+                                  }
+                                  
+                                  console.log('Carga de modelos completada');
+                              } else {
+                                  console.error('Respuesta no válida:', data);
+                              }
+                          } catch (error) {
+                              console.error('Error cargando modelos:', error);
+                              console.error('Detalles del error:', error.message);
+                          }
+                      }
+                      
+                      function cargarEjemplo() {
+                          const ejemplos = [
+                              { diagnostico: "Diabetes mellitus tipo 2 con retinopatía diabética proliferativa", edad: "58", sintomas: "Poliuria, polidipsia, visión borrosa, fatiga, pérdida de peso" },
+                              { diagnostico: "Neumonía adquirida en la comunidad por Streptococcus pneumoniae", edad: "45", sintomas: "Fiebre alta (39°C), tos productiva con esputo purulento, disnea, dolor torácico pleurítico" },
+                              { diagnostico: "Hipertensión arterial esencial con crisis hipertensiva", edad: "62", sintomas: "Cefalea intensa occipital, náuseas, visión borrosa, epistaxis, ansiedad" },
+                              { diagnostico: "Insuficiencia cardíaca congestiva clase funcional III", edad: "71", sintomas: "Disnea de esfuerzo, ortopnea, edema en miembros inferiores, fatiga, palpitaciones" },
+                              { diagnostico: "Accidente cerebrovascular isquémico agudo", edad: "68", sintomas: "Hemiparesia derecha, afasia, cefalea intensa, alteración del nivel de consciencia" },
+                              { diagnostico: "Cáncer de pulmón de células pequeñas estadio IV", edad: "55", sintomas: "Tos crónica, hemoptisis, disnea progresiva, pérdida de peso, dolor torácico" },
+                              { diagnostico: "Enfermedad renal crónica estadio 4", edad: "64", sintomas: "Edema generalizado, oliguria, fatiga, náuseas, prurito" },
+                              { diagnostico: "Artritis reumatoide seropositiva activa", edad: "49", sintomas: "Rigidez matutina, dolor articular simétrico, fatiga, fiebre baja" },
+                              { diagnostico: "Enfermedad pulmonar obstructiva crónica exacerbada", edad: "67", sintomas: "Disnea severa, tos productiva, sibilancias, cianosis periférica" },
+                              { diagnostico: "Sepsis por Escherichia coli", edad: "52", sintomas: "Fiebre alta (40°C), taquicardia, hipotensión, alteración del nivel de consciencia" },
+                              { diagnostico: "Infarto agudo de miocardio con elevación del ST", edad: "59", sintomas: "Dolor torácico opresivo, sudoración fría, náuseas, disnea" },
+                              { diagnostico: "Encefalitis viral por herpes simple", edad: "38", sintomas: "Fiebre alta, cefalea intensa, alteración del comportamiento, convulsiones" },
+                              { diagnostico: "Cirrosis hepática descompensada", edad: "61", sintomas: "Ascitis, ictericia, encefalopatía hepática, hemorragia digestiva" },
+                              { diagnostico: "Leucemia linfoblástica aguda", edad: "12", sintomas: "Fatiga, palidez, fiebre, petequias, dolor óseo" },
+                              { diagnostico: "Esclerosis múltiple remitente-recurrente", edad: "34", sintomas: "Parestesias en extremidades, alteración visual, fatiga, espasticidad" },
+                              { diagnostico: "Tuberculosis pulmonar activa", edad: "41", sintomas: "Tos crónica con esputo, hemoptisis, sudoración nocturna, pérdida de peso" },
+                              { diagnostico: "Enfermedad de Parkinson estadio 3", edad: "73", sintomas: "Temblor en reposo, bradicinesia, rigidez muscular, alteración de la marcha" },
+                              { diagnostico: "Lupus eritematoso sistémico activo", edad: "28", sintomas: "Erupción malar, artritis, fotosensibilidad, fatiga, fiebre" },
+                              { diagnostico: "Mieloma múltiple sintomático", edad: "66", sintomas: "Dolor óseo, fracturas patológicas, anemia, hipercalcemia" },
+                              { diagnostico: "Síndrome de distrés respiratorio agudo", edad: "44", sintomas: "Disnea severa, hipoxemia refractaria, infiltrados pulmonares bilaterales" }
+                          ];
+                          
+                          const ejemplo = ejemplos[Math.floor(Math.random() * ejemplos.length)];
+                          document.getElementById('diagnostico').value = ejemplo.diagnostico;
+                          document.getElementById('edad').value = ejemplo.edad;
+                          document.getElementById('sintomas').value = ejemplo.sintomas;
+                      }
+                      
+                      document.addEventListener('DOMContentLoaded', function() {
+                          console.log('DOM cargado, iniciando carga de modelos...');
+                          cargarModelos();
+                      });
+                  </script>
+              </body>
+              </html>
+              '''
+          
+          if __name__ == '__main__':
+              app.run(host='0.0.0.0', port=8091)
+          EOF
+          python /tmp/app.py
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
-  labels:
-    app: frontend-app
+  namespace: medical-only
 spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 3000
   selector:
-    app: frontend-app 
+    app: frontend-ricoh
+  ports:
+  - protocol: TCP
+    port: 8091
+    targetPort: 8091
+  type: ClusterIP
