@@ -1,0 +1,23 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Instalar dependencias de Python
+RUN pip install fastapi uvicorn requests python-dotenv pandas openpyxl scikit-learn
+
+# Copiar archivos del sistema RAG
+COPY backend_rag_integrated.py .
+COPY rag_cie10_optimized.py .
+COPY Diagnosticos_ES2024_TablaReferencia_30_06_2023_9096243130459179657.xlsx .
+COPY Procedimientos_ES2024_TablaReferencia_30062023_5537663830978566667.xlsx .
+
+# Exponer puerto
+EXPOSE 9999
+
+# Comando para ejecutar
+CMD ["python", "backend_rag_integrated.py"]

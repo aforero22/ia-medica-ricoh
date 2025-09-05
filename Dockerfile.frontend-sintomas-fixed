@@ -1,0 +1,24 @@
+# Dockerfile para Frontend RAG con síntomas - Versión corregida
+FROM nginx:alpine
+
+# Copiar archivo HTML
+COPY frontend_rag.html /usr/share/nginx/html/index.html
+
+# Configuración nginx corregida (sin bucles infinitos)
+RUN echo 'server { \
+    listen 80; \
+    root /usr/share/nginx/html; \
+    index index.html; \
+    location / { \
+        try_files $uri $uri/ =404; \
+    } \
+    location = / { \
+        try_files /index.html =404; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+
+# Exponer puerto
+EXPOSE 80
+
+# Comando por defecto
+CMD ["nginx", "-g", "daemon off;"]

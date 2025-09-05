@@ -1,0 +1,17 @@
+﻿FROM python:3.11-slim
+
+WORKDIR /app
+
+# Instalar dependencias
+RUN pip install flask
+
+# Copiar archivos del frontend
+COPY frontend_rag.html /app/templates/
+COPY static/ /app/static/
+
+# Copiar aplicacion Flask
+COPY app.py /app/
+
+EXPOSE 8091
+
+CMD ["python", "app.py"]
